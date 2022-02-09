@@ -1,0 +1,24 @@
+.progress-container {
+    width: 95%;
+    height: 2px;
+    background: #ccc;
+}
+
+.progress-bar {
+    height: 2px;
+    background: #009B72;
+}
+
+.arrow-left {
+    width: 45px;
+    height: 45px;
+    padding: 0.2rem;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.arrow-right{
+    width: 45px;
+    height: 45px;
+    padding: 0.3rem;
+    border-radius: 50%;
+}

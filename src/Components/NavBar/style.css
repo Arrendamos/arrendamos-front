@@ -1,0 +1,10 @@
+.btn-header {
+    padding: 0.5rem 2.5rem;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.header-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+}

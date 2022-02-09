@@ -1,0 +1,34 @@
+.card-property img {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.box-info-property {
+    grid-template-rows: 30% auto;
+}
+.price-property {
+    margin: 1rem;
+    font-size: 30px;
+    line-height: 48px;
+}
+
+.card-property {
+    background: #FFFFFF;
+    width: fit-content;
+    box-shadow: 7px 7px 20px rgba(0, 67, 101, 0.25), -7px -7px 20px rgba(0, 67, 101, 0.25);
+    border-radius: 10px;
+}
+
+.info-property p {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: #009B72;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 0.5rem 0.3rem;
+  }
