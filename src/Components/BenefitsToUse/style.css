@@ -1,0 +1,25 @@
+.benefits-items-container {
+    width: fit-content;
+    margin: auto;
+}
+
+.benefit-item {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+    width: 27vw;
+    height: 15vh;
+    padding: 1rem 2rem;
+    box-shadow: -4px -4px 10px rgba(46, 46, 46, 0.25), 4px 4px 10px rgba(0, 67, 101, 0.25);
+    border-radius: 20px;
+}
+
+.benefit-item p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 48px;
+}

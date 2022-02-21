@@ -1,4 +1,5 @@
 import { CardPropertyPropsI } from '../../Interfaces'
+import { BsShareFill, BsFillSuitHeartFill } from 'react-icons/bs'
 
 import './style.css'
 
@@ -9,7 +10,17 @@ export function CardPropertyAtom(props: CardPropertyPropsI): JSX.Element {
         <div className="card-property m-8">
             <img src="https://via.placeholder.com/350x200" alt="" />
             <div className='box-info-property grid grid-rows-2 gap-4'>
-                <p className='price-property text-greenCyan font-lato'>$320.000.000</p>
+                <div className='flex justify-between'>
+                    <p className='price-property text-greenCyan font-lato'>$320.000.000</p>
+                    <div className='icons-card-property text-greenCyan m-4'>
+                        <div className='circle'>
+                            <BsShareFill />
+                        </div>
+                        <div className='circle'>
+                            <BsFillSuitHeartFill />
+                        </div>
+                    </div>
+                </div>
                 <div className='grid grid-rows-2 p-4 pb-0 simple-text info-property'>
                     <div>
                         <p>{area} m<sup>2</sup></p>

@@ -1,0 +1,6 @@
+.partner-item img{
+    width: 9vw;
+}
+.partner-item img:hover{
+    transform: scale(1.5);
+}

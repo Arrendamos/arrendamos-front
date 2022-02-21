@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { CardProperty } from "../../Atoms/";
+import { CardProperty } from "../../Common/";
 import { CardPropertyPropsI } from "../../Interfaces";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import './style.css';
@@ -39,14 +39,14 @@ export function FeaturedPropertyComponent(): JSX.Element {
     const [slide, setSlide] = useState(0);
     const _next = () => {
         if (window.matchMedia('(min-width: 1400px)').matches) {
-            if (slide != 8) customeSlider.current.slickNext()
+            if (slide !== 8) customeSlider.current.slickNext()
         } else {
-            if (slide != 9) customeSlider.current.slickNext()
+            if (slide !== 9) customeSlider.current.slickNext()
         }
     }
 
     const _prev = () => {
-        if (slide != 0) customeSlider.current.slickPrev()
+        if (slide !== 0) customeSlider.current.slickPrev()
     }
 
     useEffect(() => {
@@ -58,7 +58,7 @@ export function FeaturedPropertyComponent(): JSX.Element {
     useEffect(() => {
         let barProgress = (document.getElementsByClassName('progress-bar')[0] as HTMLElement);
         barProgress.style.width = `${(slide + sliderSettings.slidesToScroll) * 100 / 12}%`;
-    }, [slide,sliderSettings.slidesToScroll])
+    }, [slide, sliderSettings.slidesToScroll])
 
     return (
         <div className="container-featured-properties my-4 p-8 px-12" >
@@ -82,6 +82,9 @@ export function FeaturedPropertyComponent(): JSX.Element {
                         )
                     })}
                 </Slider>
+            </div>
+            <div className="relative text-greenCyan font-lato float-right hover:text-greenCyanHover">
+                <a href="#" style={{ fontSize: 16, opacity: 0.8 }}>Ver más +</a>
             </div>
         </div >
     )
