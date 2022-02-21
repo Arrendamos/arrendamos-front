@@ -12,6 +12,7 @@ export function HomePage(): JSX.Element {
             <Banner {...BannersInfo[0]} />
             <OurPartners />
             <Testimony />
+            <Banner {...BannersInfo[1]} />
         </>
     );
 }

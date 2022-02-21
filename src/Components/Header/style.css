@@ -1,11 +1,13 @@
 .container-header {
     height: 70vh;
 }
-.container-header h1{
+
+.container-header h1 {
     font-size: 40px;
     line-height: 54px;
 }
-.img-header-container{
+
+.img-header-container {
     position: relative;
     margin: 5vw;
     left: 5vw;
@@ -13,7 +15,7 @@
 
 #img-header {
     position: relative;
-    margin-top:15%;
+    margin-top: 15%;
     width: 300px;
     height: 250px;
 }
@@ -27,14 +29,20 @@
     z-index: -999;
 }
 
-.filter-container{
+.filter-container {
     position: absolute;
     bottom: 15vh;
     left: 5vw;
 }
 
-@media screen and (min-width: 1400px) {
-    .container-header h1{
+@media screen and (min-width: 1500px) {
+    .container-header h1 {
         font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .filter-container {
+        bottom: 10vh;
     }
 }

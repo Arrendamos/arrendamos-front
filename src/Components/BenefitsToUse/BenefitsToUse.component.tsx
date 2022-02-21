@@ -7,7 +7,7 @@ export function BenefitsToUseComponent(): JSX.Element {
     const benefitsData: BenefitsData = BenefitInfo;
     const data: SimpleTitleParagraph = benefitsData.data;
     return (
-        <div className="container-benefits my-4 p-4">
+        <div className="container-benefits my-4 p-4 font-lato">
             <h1 className='tittle-text text-center'>{data.tittle}</h1>
             <h3 className='simple-text text-center w-2/6 mx-auto'>{data.subTittle}</h3>
             <div className='benefits-items-container grid grid-rows-2 grid-cols-2 gap-4 p-8'>

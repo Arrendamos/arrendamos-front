@@ -35,6 +35,14 @@
     border-radius: 0px 8px 8px 0px;
 }
 
+.select-filter {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+}
+
 .select-filter:focus, .select-filter:focus-visible {
     outline: none;
 }
@@ -63,11 +71,13 @@
     width: 100%;
     opacity: 0.6;
 }
+
 .area-option-values p {
     font-size: 18px;
     margin: 0px 0.5rem;
 }
-hr{
+
+hr {
     margin-top: 10px;
     border: 0.2px solid rgb(201, 201, 201);
     opacity: 0.5;

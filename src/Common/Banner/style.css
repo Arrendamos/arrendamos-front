@@ -1,7 +1,9 @@
-.banner-container{
+.banner-container {
     background-repeat: no-repeat;
     background-position: right;
+    background-size: 40%;
 }
+
 .banner-container h2 {
     margin: 0.8rem 0;
     color: #FFFFFF;
@@ -9,9 +11,7 @@
     font-size: 44px;
     line-height: 54px;
 }
-.banner-container {
-    background-image: url('../../Assets//images/Building1.png');
-}
+
 .banner-container p {
     margin: 1rem 0;
     width: 70%;
@@ -33,6 +33,7 @@
 }
 
 .banner-container .btn-container {
+    cursor: pointer;
     margin: 2.5rem 0px;
     margin-left: 5vw;
     border-radius: 20px;
@@ -40,4 +41,7 @@
     height: 100%;
     background-color: #FFFFFF;
     z-index: -1;
+}
+.banner-container .btn-container:hover {
+    background-color: #cacaca;
 }

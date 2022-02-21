@@ -34,10 +34,18 @@ export interface PartnersData {
 
 export interface TestimonyData {
     data: SimpleTitleParagraph
+    testimonies: testimonyItem[]
 }
 
 export type imageProps = {
     icon: string
     name: string
     iconSize?: string
+}
+
+export type testimonyItem = {
+    name: string
+    rol: string
+    testimony: string
+    stars: number
 }

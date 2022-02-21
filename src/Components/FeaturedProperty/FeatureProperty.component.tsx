@@ -50,7 +50,7 @@ export function FeaturedPropertyComponent(): JSX.Element {
     }
 
     useEffect(() => {
-        if (window.matchMedia('(min-width: 1400px)').matches) {
+        if (window.matchMedia('(min-width: 1500px)').matches) {
             setSliderSettings({ ...sliderSettings, slidesToShow: 4, slidesToScroll: 4 });
         }
     }, [])

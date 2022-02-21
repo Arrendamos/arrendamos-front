@@ -9,11 +9,11 @@ const BannersInfo: BannerPropertyPropsI[] = [
         'backgroundImg': 'Building1'
     },
     {
-        'backgroundColor': '',
-        'tittle': '',
-        'paragraph': '',
-        'btnText': '',
-        'backgroundImg': ''
+        'backgroundColor': '#009DDC',
+        'tittle': '¿Quieres arrendar tu oficina o local comercial?',
+        'paragraph': 'Publica tu inmueble con nosotros',
+        'btnText': 'Publicar',
+        'backgroundImg': 'Building2'
     },
 ]
 export default BannersInfo
