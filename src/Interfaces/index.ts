@@ -37,6 +37,16 @@ export interface TestimonyData {
     testimonies: testimonyItem[]
 }
 
+export interface ContactData {
+    socialMedia: socialMedia[]
+}
+
+export type socialMedia = {
+    icon: string
+    network: string
+    url: string
+}
+
 export type imageProps = {
     icon: string
     name: string

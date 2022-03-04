@@ -1,0 +1,47 @@
+.footer {
+    margin-top: 5rem;
+    border-top: 2px solid rgba(83, 83, 83, 0.3);
+}
+
+.footer-container {
+    grid-template-columns: 60% auto
+}
+
+.footer-container a {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.social-icon-box {
+    width: 45px;
+    height: 45px;
+    padding: 0.5rem;
+    color: white;
+    background-color: #1C2226;
+    border-radius: 8px;
+}
+
+.social-icon-box svg {
+    margin: auto;
+}
+
+.social-icon-container h2 {
+    color: #2E2E2E;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-left: 4.5vw;
+}
+
+.reserved-footer {
+    margin: 2rem;
+    color: #959da7;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.footer-img img{
+    margin-top: 2rem;
+    width: 35%;
+}

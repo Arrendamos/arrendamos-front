@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { MultiRangeSlider } from '../../Atoms'
 import { BiSearch } from 'react-icons/bi';
 
 import './style.css';
 
 type areaModel = {
-    de: number,
-    hasta: number
+    to: number,
+    from: number
 }
 
 type areaModalProps = {
@@ -16,17 +16,17 @@ type areaModalProps = {
     onChange: React.ChangeEventHandler<any>
 }
 
-export function FilterCommon(): JSX.Element {
+export function HeaderFilterCommon(): JSX.Element {
     const areaInitial: areaModel = {
-        de: 0,
-        hasta: 0
+        to: 0,
+        from: 0
     }
     const [area, setArea] = useState(areaInitial);
     const [visibleAreaModal, setVisibleAreaModal] = useState<boolean>(false);
     const _setAreaValues = ({ max, min }: any) => {
         setArea({
-            de: min,
-            hasta: max
+            to: min,
+            from: max
         })
     }
 
@@ -55,11 +55,11 @@ export function FilterCommon(): JSX.Element {
                 <div className='filter-select-area pb-1 flex justify-around' onClick={() => setVisibleAreaModal(true)}>
                     <div className='flex justify-around'>
                         <label>De:</label>
-                        <p >{area.de}m<sup>2</sup></p>
+                        <p >{area.to}m<sup>2</sup></p>
                     </div>
                     <div className='flex justify-around'>
                         <label >Hasta:</label>
-                        <p>{area.hasta}m<sup>2</sup></p>
+                        <p>{area.from}m<sup>2</sup></p>
                     </div>
                 </div>
             </div>
@@ -86,11 +86,11 @@ function CardAreaOption(props: areaModalProps): JSX.Element {
             <div className='grid grid-cols-2 gap-3'>
                 <div className='area-option-values'>
                     <label>Área mínima</label>
-                    <p>{area.de} m<sup>2</sup></p>
+                    <p>{area.to} m<sup>2</sup></p>
                 </div>
                 <div className='area-option-values'>
                     <label >Área máxima</label>
-                    <p>{area.hasta} m<sup>2</sup></p>
+                    <p>{area.from} m<sup>2</sup></p>
                 </div>
             </div>
             <hr />

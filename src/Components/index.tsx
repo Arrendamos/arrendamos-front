@@ -4,3 +4,6 @@ export { FeaturedPropertyComponent as FeaturedProperty } from './FeaturedPropert
 export { BenefitsToUseComponent as BenefitsToUse } from './BenefitsToUse/BenefitsToUse.component';
 export { OurPartnersComponent as OurPartners } from './OurPartners/OurPartners.component';
 export { TestimonyComponent as Testimony } from './Testimony/Testimony.component';
+export { FiltersComponent as Filters } from './Filters/Filters.component';
+export { PropertiesComponent as Properties } from './Properties/Properties.component';
+export { FooterComponent as Footer } from './Footer/Footer.component';

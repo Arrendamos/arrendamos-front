@@ -23,7 +23,6 @@ export function FeaturedPropertyComponent(): JSX.Element {
         cards.push(cardExample);
     }
 
-
     const customeSlider = React.createRef<any>();
     const onAfterSlideChange = (currentSlide: number) => {
         setSlide(currentSlide);

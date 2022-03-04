@@ -1,6 +1,6 @@
 import ImageExample from '../../Assets/Grey_full.png';
 import { SimpleData } from '../../Interfaces';
-import { FilterProperty } from '../../Common/';
+import { HeaderFilterProperty } from '../../Common/';
 import { HeaderInfo } from '../../Utils/Data/Header';
 import './style.css'
 
@@ -21,7 +21,7 @@ export function HeaderComponent(): JSX.Element {
             </div>
             <div className='relative top-0 left-0'>
                 <div className='filter-container'>
-                    <FilterProperty />
+                    <HeaderFilterProperty />
                 </div>
             </div>
 

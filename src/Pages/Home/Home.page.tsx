@@ -1,4 +1,4 @@
-import { Header, NavBar, FeaturedProperty, BenefitsToUse, OurPartners, Testimony } from '../../Components';
+import { Header, NavBar, FeaturedProperty, BenefitsToUse, OurPartners, Testimony, Footer } from '../../Components';
 import { Banner } from '../../Common';
 import BannersInfo from '../../Utils/Data/Banners'
 
@@ -13,6 +13,7 @@ export function HomePage(): JSX.Element {
             <OurPartners />
             <Testimony />
             <Banner {...BannersInfo[1]} />
+            <Footer />
         </>
     );
 }

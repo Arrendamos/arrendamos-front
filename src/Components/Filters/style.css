@@ -1,0 +1,25 @@
+.filters-item {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    width: 14vw;
+    background: #FFFFFF;
+    border: 1px solid #1b2b4283;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px rgba(28, 34, 38, 0.25);
+    border-radius: 10px;
+}
+
+.filters-item label {
+    font-size: 1.4rem;
+    color: #1B2B42;
+}
+
+.card-filter-options {
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    background-color: white;
+    box-shadow: -4px -4px 10px rgba(46, 46, 46, 0.25), 4px 4px 10px rgba(46, 46, 46, 0.25);
+    border-radius: 20px;
+    z-index: 1;
+}
