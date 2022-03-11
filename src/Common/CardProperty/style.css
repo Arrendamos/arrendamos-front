@@ -4,13 +4,13 @@
 }
 
 .box-info-property {
-    grid-template-rows: 30% auto;
+    margin-bottom: 1rem;
 }
 
 .price-property {
     margin: 1rem;
-    font-size: 30px;
-    line-height: 48px;
+    font-size: 28px;
+    line-height: 25px;
 }
 
 .card-property {
@@ -22,7 +22,7 @@
 
 .info-property p {
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .dot {
@@ -44,8 +44,25 @@
     margin: 0rem 0.2rem;
     box-shadow: -1px -1px 2px rgba(0, 67, 101, 0.1), 1px 1px 2px rgba(0, 67, 101, 0.1);
     border-radius: 25px;
-    padding: 0.5rem;
+    padding: 0.4rem;
 }
-@media screen and (max-width:1400px) {
+
+@media screen and (max-width:1200px) {
+    .card-property {
+        width: fit-content;
+        margin: 0.5rem 0.5rem;
+    }
+    .price-property {
+        margin: 0.5rem;
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .info-property p {
+        display: inline-block;
+        font-size: 12px;
+    }
+    .dot {
+        margin: 0px 0.3rem 0.1rem;
+    }
 
 }

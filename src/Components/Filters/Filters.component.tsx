@@ -1,51 +1,119 @@
-import { useState } from 'react';
+import { connect } from 'react-redux';
+
+import setFiltergAction from '../../redux/actions/filtersAction'
+import { PropertyFilter, StratumFilter, PriceFilter, AreaFilter, MoreFilter } from './FiltersOverlay';
+
+import Add from '../../Assets/Icons/Filters/add.svg';
+import Area from '../../Assets/Icons/Filters/Area.svg';
+import Estrato from '../../Assets/Icons/Filters/Estrato.svg';
+import Inmueble from '../../Assets/Icons/Filters/Inmueble.svg';
+import Precio from '../../Assets/Icons/Filters/Precio.svg';
+import Ubicacion from '../../Assets/Icons/Filters/Ubicacion.svg';
+
 import './style.css';
 
 type FilterOverlayProps = {
-    visible: boolean,
-    setVisible: any,
+    visible: string,
+    tag: string,
+    Component: any,
+    direction: string,
 }
 
-export function FiltersComponent(): JSX.Element {
-    const [visible, setVisible] = useState<boolean>(false);
-
-    const _openOverlay = () => {
-        setVisible(true);
-    }
+function FiltersComponent(props: any): JSX.Element {
     return (
         <div className="filters-container flex font-lato justify-evenly p-8 mt-4 pb-0">
-            <div className="filters-item" onClick={_openOverlay}>
+            <div className="filters-item">
                 <FilterOverlay
-                    visible={visible}
-                    setVisible={setVisible}
+                    visible={props.filtersState.filterOpen}
+                    tag={'property'}
+                    Component={PropertyFilter}
+                    direction={'left-0'}
                 />
-                <label className="filters-label">Ubicación</label>
+                <div className='filters-item-info' onClick={() => props.setFiltersActions('property')}>
+                    <img src={Inmueble} alt="" />
+                    <label>Inmueble</label>
+                </div>
             </div>
             <div className="filters-item">
-                <label className="filters-label">Inmueble</label>
+                <FilterOverlay
+                    visible={props.filtersState.filterOpen}
+                    tag={'location'}
+                    Component={PropertyFilter}
+                    direction={'left-0'}
+                />
+                <div className='filters-item-info' onClick={() => props.setFiltersActions('location')}>
+                    <img src={Ubicacion} alt="" />
+                    <label>Ubicación</label>
+                </div>
             </div>
             <div className="filters-item">
-                <label className="filters-label">Precio</label>
+                <FilterOverlay
+                    visible={props.filtersState.filterOpen}
+                    tag={'price'}
+                    Component={PriceFilter}
+                    direction={'left-0'}
+                />
+                <div className='filters-item-info' onClick={() => props.setFiltersActions('price')}>
+                    <img src={Precio} alt="" style={{ width: '2rem' }} />
+                    <label>Precio</label>
+                </div>
             </div>
             <div className="filters-item">
-                <label className="filters-label">Estrato</label>
+                <FilterOverlay
+                    visible={props.filtersState.filterOpen}
+                    tag={'status'}
+                    Component={StratumFilter}
+                    direction={'left-0'}
+                />
+                <div className='filters-item-info' onClick={() => props.setFiltersActions('status')}>
+                    <img src={Estrato} alt="" />
+                    <label>Estrato</label>
+                </div>
             </div>
             <div className="filters-item">
-                <label className="filters-label">Area</label>
+                <FilterOverlay
+                    visible={props.filtersState.filterOpen}
+                    tag={'area'}
+                    Component={AreaFilter}
+                    direction={'right-0'}
+                />
+                <div className='filters-item-info' onClick={() => props.setFiltersActions('area')}>
+                    <img src={Area} alt="" />
+                    <label>Area</label>
+                </div>
             </div>
             <div className="filters-item">
-                <label className="filters-label">Más Filtros</label>
+                <FilterOverlay
+                    visible={props.filtersState.filterOpen}
+                    tag={'more'}
+                    Component={MoreFilter}
+                    direction={'right-0'}
+                />
+                <div className='filters-item-info' onClick={() => props.setFiltersActions('more')}>
+                    <img src={Add} alt="" />
+                    <label>Más Filtros</label>
+                </div>
             </div>
         </div>
     )
 }
 
 function FilterOverlay(props: FilterOverlayProps): JSX.Element {
-    const { visible, setVisible } = props;
-
+    const { visible, tag, Component, direction } = props;
     return (
-        <div className='card-filter-options font-lato text-pursianBlue mb-4' style={{ visibility: (visible) ? 'visible' : 'hidden' }}>
-            <h1>Hola</h1>
+        <div style={{ display: (visible === tag) ? 'block' : 'none', position: 'relative' }}>
+            <div className={`card-filter-options font-lato text-pursianBlue mb-4 ${direction}`} >
+                <Component />
+            </div>
         </div>
     )
 }
+
+const _mapDispatchToProps = (dispatch: any) => ({
+    setFiltersActions: (filterOpen: string) => dispatch(setFiltergAction(filterOpen))
+})
+
+const mapStateToProps = (state: any) => ({
+    ...state
+})
+export default connect(mapStateToProps, _mapDispatchToProps)(FiltersComponent)

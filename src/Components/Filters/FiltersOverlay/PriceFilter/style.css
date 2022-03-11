@@ -1,0 +1,39 @@
+.label-price-filter {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    color: #C2C9D1;
+}
+
+.properties-price-container {
+    width: 22vw;
+    margin-bottom: 1rem;
+}
+
+.separate::after {
+    content: '_';
+    margin: 0 0.5rem;
+    position: relative;
+    top: 15px;
+    color: #1B2B42;
+    width: 5px;
+    height: 5px;
+}
+
+.price-option-values {
+    border: 1px solid rgb(201, 201, 201);
+    padding: 0.5rem;
+    padding-right: 1rem;
+    width: 10rem;
+}
+
+.price-option-values label {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.price-option-values p {
+    font-size: 18px;
+    margin: 0px 0.5rem;
+}

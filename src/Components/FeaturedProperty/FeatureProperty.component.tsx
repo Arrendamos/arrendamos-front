@@ -49,7 +49,7 @@ export function FeaturedPropertyComponent(): JSX.Element {
     }
 
     useEffect(() => {
-        if (window.matchMedia('(min-width: 1500px)').matches) {
+        if (window.matchMedia('(min-width: 1100px)').matches) {
             setSliderSettings({ ...sliderSettings, slidesToShow: 4, slidesToScroll: 4 });
         }
     }, [])
@@ -73,7 +73,7 @@ export function FeaturedPropertyComponent(): JSX.Element {
             <div className="progress-container mx-auto my-4">
                 <div className="progress-bar" id="myBar"></div>
             </div>
-            <div className='py-8'>
+            <div className='py-4'>
                 <Slider ref={customeSlider} {...sliderSettings}>
                     {cards.map((card, index) => {
                         return (
@@ -83,7 +83,7 @@ export function FeaturedPropertyComponent(): JSX.Element {
                 </Slider>
             </div>
             <div className="relative text-greenCyan font-lato float-right hover:text-greenCyanHover">
-                <a href="#" style={{ fontSize: 16, opacity: 0.8 }}>Ver más +</a>
+                <a href="/" style={{ fontSize: 16, opacity: 0.8 }}>Ver más +</a>
             </div>
         </div >
     )

@@ -1,0 +1,29 @@
+.properties-filter-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: auto;
+    width: 37vw;
+    margin-bottom: 2rem;
+}
+
+.properties-filter-item {
+    cursor: pointer;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 1rem;
+    width: 11vw;
+    background: #FFFFFF;
+    border: 1px solid #1b2b4283;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.properties-filter-item img{
+    width: 1.2rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+.properties-filter-item label {
+    font-size: 1rem !important;
+    margin-top: 0.2rem;
+}

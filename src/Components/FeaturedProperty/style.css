@@ -16,9 +16,17 @@
     border-radius: 50%;
     border: 1px solid black;
 }
-.arrow-right{
+
+.arrow-right {
     width: 45px;
     height: 45px;
     padding: 0.3rem;
     border-radius: 50%;
+}
+
+@media screen and (max-width:950px) {
+
+    .container-featured-properties {
+        padding: 1rem 0rem;
+    }
 }

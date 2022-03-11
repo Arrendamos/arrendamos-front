@@ -1,0 +1,53 @@
+.more-properties-container {
+    width: 22vw;
+    margin-bottom: 1rem;
+}
+
+.more-item {
+    margin: 1rem;
+}
+
+.more-item img {
+    display: inline-block;
+    margin: auto;
+    margin-right: 1.5rem;
+}
+
+.more-item h2 {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.more-item-count {
+    margin: 1rem 0rem;
+    margin-left: 4vw;
+}
+
+.more-item-count label {
+    font-size: 1.2rem;
+}
+
+.count-more-filter button {
+    background: #FFFFFF;
+    margin: 0 0.5rem;
+    font-size: 18px;
+    border: 1px solid #1b2b4283;
+    padding-bottom: 5px;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 600;
+    color: #1B2B42;
+    cursor: pointer;
+}
+
+.count-more-filter button:hover {
+    background: #c7c6c6;
+}
+
+.count-more-filter span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}

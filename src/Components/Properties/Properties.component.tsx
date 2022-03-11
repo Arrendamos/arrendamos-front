@@ -20,8 +20,8 @@ export function PropertiesComponent(): JSX.Element {
         <div className="property-grid-container grid">
             {cards.map((card, index) => {
                 return (
-                    <div className="flex justify-center">
-                        <CardProperty key={index} {...card} />
+                    <div className="flex justify-center" key={index}>
+                        <CardProperty {...card} />
                     </div>
                 )
             })}
