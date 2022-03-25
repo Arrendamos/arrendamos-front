@@ -1,0 +1,30 @@
+.description-items {
+    display: grid;
+    margin: 1.5rem 0rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.item-description {
+    display: flex;
+    padding: 1rem 1.5rem;
+    box-shadow: -4px 4px 15px rgba(0, 67, 101, 0.1), 4px 4px 15px rgba(0, 67, 101, 0.1);
+    border-radius: 10px;
+}
+
+.label-description {
+    color: #1B2B42;
+    opacity: 0.7;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.value-description {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #1B2B42;
+}

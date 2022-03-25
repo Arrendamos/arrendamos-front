@@ -1,5 +1,6 @@
 .card-property img {
     width: 100%;
+    cursor: pointer;
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -16,7 +17,7 @@
 .card-property {
     background: #FFFFFF;
     width: fit-content;
-    box-shadow: 7px 7px 20px rgba(0, 67, 101, 0.25), -7px -7px 20px rgba(0, 67, 101, 0.25);
+    box-shadow: 3px 3px 10px rgba(0, 67, 101, 0.25), -3px -3px 10px rgba(0, 67, 101, 0.25);
     border-radius: 10px;
 }
 

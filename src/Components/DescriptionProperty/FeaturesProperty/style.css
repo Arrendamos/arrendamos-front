@@ -1,0 +1,50 @@
+.feature-property {
+    display: grid;
+    grid-template-columns: 0.6fr 0.8fr;
+    grid-gap: 2rem 0rem;
+}
+
+.checkbox-feature {
+    display: inline-block;
+    position: relative;
+    padding-right: 0.8rem;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark-feature {
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: #009B72;
+}
+
+
+/* Style the checkmark/indicator */
+.checkbox-feature .checkmark-feature:after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    width: 8px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.label-feature {
+    color: #1B2B42;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    vertical-align: super;
+}

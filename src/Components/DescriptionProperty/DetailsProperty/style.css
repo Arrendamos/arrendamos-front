@@ -1,0 +1,19 @@
+.details-property {
+    display: grid;
+    grid-template-columns: 0.6fr 0.8fr;
+    grid-gap: 2rem 0rem;
+}
+
+.label-detail {
+    color: #828b94;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.value-detail {
+    color: #1B2B42;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+}

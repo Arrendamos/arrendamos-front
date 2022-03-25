@@ -7,9 +7,13 @@ import "slick-carousel/slick/slick-theme.css";
 import { CardProperty } from "../../Common/";
 import { CardPropertyPropsI } from "../../Interfaces";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+
+import HomeIcon from '../../Assets/Icons/Common/Home.svg';
+
 import './style.css';
 
 export function FeaturedPropertyComponent(): JSX.Element {
+    // ----- test enviroment -----
     const cardExample: CardPropertyPropsI = {
         area: '200',
         bathroom: '2',
@@ -22,14 +26,18 @@ export function FeaturedPropertyComponent(): JSX.Element {
     for (let i = 0; i < 12; i++) {
         cards.push(cardExample);
     }
-
+    // ----- test enviroment -----
+    const [isProperty, setIsProperty] = useState(false);
     const customeSlider = React.createRef<any>();
     const onAfterSlideChange = (currentSlide: number) => {
         setSlide(currentSlide);
     }
     const [sliderSettings, setSliderSettings] = useState({
         dots: false,
-        infinite: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 5000,
         slidesToShow: 3,
         slidesToScroll: 3,
         adaptiveHeight: true,
@@ -49,6 +57,9 @@ export function FeaturedPropertyComponent(): JSX.Element {
     }
 
     useEffect(() => {
+        if (window.location.href.indexOf("property") > -1) {
+            setIsProperty(true);
+        }
         if (window.matchMedia('(min-width: 1100px)').matches) {
             setSliderSettings({ ...sliderSettings, slidesToShow: 4, slidesToScroll: 4 });
         }
@@ -60,20 +71,25 @@ export function FeaturedPropertyComponent(): JSX.Element {
     }, [slide, sliderSettings.slidesToScroll])
 
     return (
-        <div className="container-featured-properties my-4 p-8 px-12" >
-            <h1 className="tittle-text font-lato mx-4 my-2 inline">Inmuebles Destacados</h1>
-            <div className="arrow-container flex relative float-right top-5 gap-4 mx-4">
-                <div className="arrow-left text-black text-4xl bg-white hover:bg-slate-200 cursor-pointer" onClick={_prev}>
-                    <AiOutlineLeft />
+        <div className="container-featured-properties my-4 p-8 px-0" >
+            <div className="flex justify-between px-8">
+                <div className="flex">
+                    <img src={HomeIcon} alt="Home" style={{ display: isProperty ? 'block' : 'none' }} />
+                    <h1 className="tittle-text font-lato mx-4 my-2 inline">Inmuebles Destacados</h1>
                 </div>
-                <div className="arrow-right text-white text-4xl bg-greenCyan hover:bg-greenCyanHover cursor-pointer" onClick={_next}>
-                    <AiOutlineRight />
+                <div className="arrow-container flex relative float-right top-5 gap-4 mx-4">
+                    <div className="arrow-left text-black text-4xl bg-white hover:bg-slate-200 cursor-pointer" onClick={_prev}>
+                        <AiOutlineLeft />
+                    </div>
+                    <div className="arrow-right text-white text-4xl bg-greenCyan hover:bg-greenCyanHover cursor-pointer" onClick={_next}>
+                        <AiOutlineRight />
+                    </div>
                 </div>
             </div>
             <div className="progress-container mx-auto my-4">
                 <div className="progress-bar" id="myBar"></div>
             </div>
-            <div className='py-4'>
+            <div className='py-4' style={{ width: '95%', margin: 'auto' }}>
                 <Slider ref={customeSlider} {...sliderSettings}>
                     {cards.map((card, index) => {
                         return (
@@ -82,8 +98,8 @@ export function FeaturedPropertyComponent(): JSX.Element {
                     })}
                 </Slider>
             </div>
-            <div className="relative text-greenCyan font-lato float-right hover:text-greenCyanHover">
-                <a href="/" style={{ fontSize: 16, opacity: 0.8 }}>Ver más +</a>
+            <div className="relative text-greenCyan font-lato float-right hover:text-greenCyanHover mr-8">
+                <a href="/property" style={{ fontSize: 16, opacity: 0.8 }}>Ver más +</a>
             </div>
         </div >
     )

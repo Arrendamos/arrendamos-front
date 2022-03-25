@@ -1,0 +1,40 @@
+.slider-image-carousel .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.img-container-carousel {
+    width: 30vw;
+    margin: 0.5rem 0.7rem;
+}
+
+.img-container-carousel img {
+    border-radius: 12px;
+}
+
+.big-img {
+    width: 45vw;
+}
+
+.slider-image-carousel .slick-arrow::before {
+    color: black;
+    font-size: 2rem;
+}
+.btn-interaction-container{
+    margin-right: 50%;
+    justify-content: flex-end;
+}
+.card-interaction {
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 8vw;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(17, 87, 134, 0.25);
+    border-radius: 8px;
+}
+.card-interaction:hover {
+    background: #F5F5F5;
+}

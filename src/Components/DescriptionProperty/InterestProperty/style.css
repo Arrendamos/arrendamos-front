@@ -1,0 +1,23 @@
+.interest-property {
+    display: grid;
+    grid-template-columns: 0.6fr 0.8fr;
+    grid-gap: 2rem 0rem;
+}
+
+.interest-places {
+    margin-left: 2rem;
+}
+
+.interest-label {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #1B2B42;
+}
+
+.interest-place-item {
+    color: #9ea4ac;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}

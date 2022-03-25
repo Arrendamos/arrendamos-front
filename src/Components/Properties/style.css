@@ -3,7 +3,23 @@
     align-items: center;
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.tittle-container{
+    display: flex;
+    margin: 0.5rem 0.5rem;
+    gap: 1rem;
+    padding-left: 2rem;
+}
+.progress-property-container {
+    width: 95%;
+    height: 2px;
+    background: #ccc;
+}
 
+.progress-property-container .progress-bar {
+    height: 2px;
+    width: 50%;
+    background: #009B72;
+}
 @media screen and (max-width:1400px) {
     .property-grid-container {
         grid-template-columns: repeat(3, minmax(0, 1fr));

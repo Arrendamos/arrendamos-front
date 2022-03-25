@@ -7,7 +7,7 @@ import './style.css';
 
 export function FooterComponent(): JSX.Element {
     return (
-        <footer className="footer p-8">
+        <footer id='footer' className="footer p-8">
             <div className='footer-container grid font-lato mb-8'>
                 <div className='flex justify-around w-4/5 pr-24 items-center'>
                     <a href="#">Nuestros inmuebles</a>
