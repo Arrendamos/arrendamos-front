@@ -40,9 +40,10 @@ export function HeaderFilterCommon(): JSX.Element {
                 <label className="label-filter">Inmueble</label>
                 <select className='select-filter block w-full simple-text font-lato' name="type" >
                     <option value="">Todos</option>
-                    <option value="1">Casa</option>
-                    <option value="2">Departamento</option>
-                    <option value="3">Terreno</option>
+                    <option value="1">Bodega</option>
+                    <option value="2">Local</option>
+                    <option value="3">Oficina</option>
+                    <option value="3">Edificio</option>
                 </select>
             </div>
             <div className='box-item-filter simple-text' >

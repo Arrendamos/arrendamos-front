@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick"
 
-import TestImg from '../../Assets/images/test/hotel_test.jpeg';
+import TestImg from '../../Assets/images/test/hotelTest.jpg';
 
 import Vr from '../../Assets/Icons/Common/VrIcon.svg';
 import { ImPlay2 } from 'react-icons/im';
