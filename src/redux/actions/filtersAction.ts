@@ -1,6 +1,6 @@
 import { SET_FILTER } from "./actionTypes";
 
-const setLoadingAction = (filterSelected: any) => async (dispatch: any) => {
+const setFilterAction = (filterSelected: any) => async (dispatch: any) => {
   dispatch({
     type: SET_FILTER,
     payload: {
@@ -9,4 +9,4 @@ const setLoadingAction = (filterSelected: any) => async (dispatch: any) => {
   });
 };
 
-export default setLoadingAction;
+export default setFilterAction;

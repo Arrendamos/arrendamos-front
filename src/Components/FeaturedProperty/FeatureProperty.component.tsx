@@ -12,12 +12,17 @@ import HomeIcon from '../../Assets/Icons/Common/Home.svg';
 
 import './style.css';
 
+import imgTest from '../../Assets/Images/test/Office.png';
+
 export function FeaturedPropertyComponent(): JSX.Element {
     // ----- test enviroment -----
     const cardExample: CardPropertyPropsI = {
-        area: '200',
-        bathroom: '2',
-        parking: '2',
+        id: 1,
+        image: imgTest,
+        price: 320000000,
+        area: 200,
+        bathroom: 2,
+        parking: 2,
         address: 'Calle 63 # 55-23',
         location: 'Los Rosales',
         city: 'Bogotá'
@@ -37,7 +42,7 @@ export function FeaturedPropertyComponent(): JSX.Element {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 5000,
-        speed: 5000,
+        speed: 2000,
         slidesToShow: 3,
         slidesToScroll: 3,
         adaptiveHeight: true,

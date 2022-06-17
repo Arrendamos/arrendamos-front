@@ -1,0 +1,27 @@
+.container-banners{
+    padding: 2rem;
+}
+.container-banners .banner-grid-container {
+    display: grid;
+    padding: 2rem;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem 2rem;
+    grid-template-areas:
+        "area1 area1 area1 area2 area2"
+        "area1 area1 area1 area2 area2"
+        "area1 area1 area1 area3 area3"
+        "area1 area1 area1 area3 area3";
+}
+
+.banner-item1 {
+    grid-area: area1;
+}
+
+.banner-item2 {
+    grid-area: area2;
+}
+
+.banner-item3 {
+    grid-area: area3;
+}

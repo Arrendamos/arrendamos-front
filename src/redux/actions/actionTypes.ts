@@ -1,2 +1,2 @@
-// Loading Action
+// Filter Action
 export const SET_FILTER = 'SET_FILTER';

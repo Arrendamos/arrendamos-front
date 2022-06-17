@@ -14,27 +14,29 @@ export function ContactCardComponent(): JSX.Element {
     })
 
     const listenToScroll = () => {
-        let contactElement = document.getElementById('contact-card')!;
-        let containerSingle = document.getElementById('single-property-container')!;
-        let footerElement = document.getElementById('footer')!;
-        var topPos = contactElement.offsetHeight + window.scrollY;
-        if (topPos + contactElement.offsetHeight >= footerElement.offsetTop - 10) {
-            contactElement.style.position = 'absolute';
-            contactElement.style.bottom = '-6vh';
-            contactElement.style.removeProperty('top');
-        }
-        if (contactElement.style.position === 'absolute') {
-            if (window.scrollY < containerSingle.offsetHeight) {
-                contactElement.style.position = 'fixed';
-                contactElement.style.top = '6vh';
-                contactElement.style.removeProperty('bottom');
-            }
-        }
-        if (contactElement.style.position === 'fixed') {
-            if (window.scrollY < containerSingle.offsetTop + 50) {
+        if (window.location.href.indexOf("single-property") > -1) {
+            let contactElement = document.getElementById('contact-card')!;
+            let containerSingle = document.getElementById('single-property-container')!;
+            let footerElement = document.getElementById('footer')!;
+            var topPos = contactElement.offsetHeight + window.scrollY;
+            if (topPos + contactElement.offsetHeight >= footerElement.offsetTop - 10) {
                 contactElement.style.position = 'absolute';
-                contactElement.style.top = '6vh';
-                contactElement.style.removeProperty('bottom');
+                contactElement.style.bottom = '-6vh';
+                contactElement.style.removeProperty('top');
+            }
+            if (contactElement.style.position === 'absolute') {
+                if (window.scrollY < containerSingle.offsetHeight) {
+                    contactElement.style.position = 'fixed';
+                    contactElement.style.top = '6vh';
+                    contactElement.style.removeProperty('bottom');
+                }
+            }
+            if (contactElement.style.position === 'fixed') {
+                if (window.scrollY < containerSingle.offsetTop + 50) {
+                    contactElement.style.position = 'absolute';
+                    contactElement.style.top = '6vh';
+                    contactElement.style.removeProperty('bottom');
+                }
             }
         }
     }

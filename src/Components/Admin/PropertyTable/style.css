@@ -1,0 +1,100 @@
+.property-table-header {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 70% auto;
+    background-color: #009B72;
+}
+
+.property-table-header .headers-table {
+    padding: 1rem 2.5rem;
+}
+
+.property-table-header p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.property-table-item {
+    align-items: center;
+    border-bottom: #C2C9D1 2px solid;
+}
+
+.property-image-item {
+    align-items: center;
+}
+
+.property-image-item img {
+    width: 18vw;
+    border-radius: 20px;
+    margin: 0rem 1rem;
+}
+
+/* Create a custom checkbox */
+.property-image-item .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    border: rgb(155, 151, 151) solid 1px;
+    background-color: white;
+}
+
+/* On mouse-over, add a grey background color */
+.property-image-item .checkbox-container:hover input~.checkmark {
+    background-color: rgb(221, 218, 218);
+}
+
+.property-image-info {
+    display: grid;
+    grid-gap: 2rem;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.property-image-info-item label {
+    color: #009B72;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0rem 0.5rem;
+}
+
+.property-image-info-item p {
+    font-size: 1.1rem;
+    color: #2E2E2E
+}
+
+.property-image-action-item {
+    margin: 0rem 2rem;
+}
+
+.property-image-action-item p {
+    font-size: 1.2rem;
+}
+
+.property-table-end {
+    background-color: #f3f3f3d0;
+    height: 60vh;
+    flex-direction: column;
+}
+.property-table-end  p{
+    color: #828b94;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.property-table-end button{
+    background-color: #009B72;
+    margin: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 0.5rem 2.5rem;
+    border-radius: 10px;
+}
+.property-table-end button:hover{
+    background-color: #004e39;
+}

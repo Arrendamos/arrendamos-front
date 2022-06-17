@@ -6,7 +6,7 @@ import rootReducer from "./reducers/rootReducer";
 const initialState = {
   filtersState: {
     filterOpen: '',
-  }
+  },
 };
 
 export const store = createStore(

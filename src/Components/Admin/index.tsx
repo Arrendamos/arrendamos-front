@@ -1,0 +1,1 @@
+export {PropertyTableComponent as PropertyTable} from './PropertyTable/PropertyTable.component';

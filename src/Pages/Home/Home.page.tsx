@@ -1,6 +1,4 @@
-import { Header, NavBar, FeaturedProperty, BenefitsToUse, OurPartners, Testimony, Footer } from '../../Components';
-import { Banner } from '../../Common';
-import BannersInfo from '../../Utils/Data/Banners'
+import { Header, NavBar, FeaturedProperty, BenefitsToUse, Banners, OurPartners, Testimony, Footer } from '../../Components';
 
 export function HomePage(): JSX.Element {
     return (
@@ -9,10 +7,9 @@ export function HomePage(): JSX.Element {
             <Header />
             <FeaturedProperty />
             <BenefitsToUse />
-            <Banner {...BannersInfo[0]} />
+            <Banners />
             <OurPartners />
             <Testimony />
-            <Banner {...BannersInfo[1]} />
             <Footer />
         </>
     );

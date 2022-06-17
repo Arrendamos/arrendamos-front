@@ -2,10 +2,10 @@ import { BannerPropertyPropsI } from "../../Interfaces";
 
 import './style.css';
 export function BannerCommon(props: BannerPropertyPropsI): JSX.Element {
-    const img = require(`../../Assets/images/${props.backgroundImg}.png`);
+    const img = require(`../../Assets/Images/${props.backgroundImg}.png`);
 
     return (
-        <div className="banner-container font-lato py-6 px-12 my-8" style={{ backgroundColor: props.backgroundColor, backgroundImage: `url(${img})` }}>
+        <div className="banner-container font-lato" style={{ backgroundColor: props.backgroundColor, backgroundImage: `url(${img})` }}>
             <h2>{props.tittle}</h2>
             <p>{props.paragraph}</p>
             <div className="btn-container text-center">

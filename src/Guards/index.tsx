@@ -1,0 +1,1 @@
+export { useAuth, adminAuth } from './Auth.guard';

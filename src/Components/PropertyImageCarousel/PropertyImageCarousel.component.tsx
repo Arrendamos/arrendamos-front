@@ -1,27 +1,39 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick"
 
-import TestImg from '../../Assets/images/test/hotelTest.jpg';
-
 import Vr from '../../Assets/Icons/Common/VrIcon.svg';
 import { ImPlay2 } from 'react-icons/im';
 import { IoMdImage } from 'react-icons/io';
 import { MdOutline360 } from 'react-icons/md'
+import { PropertyModel } from "../../models/Property.model";
+
+import { useParams } from "react-router-dom";
+import { PropertyService } from "../../Services/Property.service";
 
 import './style.css';
 
-export function PropertyImageCarouselComponent(): JSX.Element {
-    // ----- test enviroment -----
-    let img: JSX.Element[] = [];
-    for (let i = 0; i < 5; i++) {
-        img.push(ImageCarousel());
+type imgObject = {
+    link: string,
+}
+export function PropertyImageCarouselComponent(props: PropertyModel): JSX.Element {
+    const propertyService = new PropertyService();
+    const [images, setImages] = useState<imgObject[]>([]);
+    const { id } = useParams();
+
+    useEffect((): void => {
+        if (id) _getImageProperty(+id);
+    }, [id]);
+    const _getImageProperty = async (id: number) => {
+        const propertiyResponse: imgObject[] = await propertyService.getPropertyImage(id);
+        if (propertiyResponse) setImages(propertiyResponse);
     }
-    // ----- test enviroment -----
     const customeSlider = React.createRef<any>();
     const changeSizeFirstImg = () => {
         const slider = document.querySelector('.slick-current')!;
-        const firstImg = slider.querySelector('.img-container-carousel')!;
-        firstImg.classList.add('big-img');
+        if (slider) {
+            const firstImg = slider.querySelector('.img-container-carousel')!;
+            firstImg.classList.add('big-img');
+        }
     }
     const changeOtherSizeImg = () => {
         const otherImg = document.querySelectorAll('.img-container-carousel');
@@ -46,19 +58,25 @@ export function PropertyImageCarouselComponent(): JSX.Element {
     })
     useEffect(() => {
         changeOtherSizeImg();
-    }, [])
+    }, [images])
 
+    const _openLink = (link: string) => {
+        window.open(link);
+    }
     return (
         <div id="property-single-carousel" className='property-image-carousel'>
             <div className='slider-image-carousel py-4' style={{ width: '95%', margin: 'auto' }}>
-                <Slider ref={customeSlider} {...sliderSettings}>
-                    {img.map((item, index) => {
-                        return <div key={index}>{item}</div>
-                    })}
-                </Slider>
+                {images.length > 0
+                    ? <Slider ref={customeSlider} {...sliderSettings}>
+                        {images.map((item, index) => {
+                            return <div key={index}>{ImageCarousel({ img: item.link })}</div>
+                        })}
+                    </Slider>
+                    : null
+                }
             </div>
             <div className="btn-interaction-container flex">
-                <div className="card-interaction">
+                <div className="card-interaction" onClick={() => _openLink(props.link_360)}>
                     <MdOutline360 style={{ fontSize: '2.2rem' }} />
                 </div>
                 <div className="card-interaction">
@@ -95,10 +113,10 @@ function SampleNextArrow(props: any) {
         />
     );
 }
-function ImageCarousel(): JSX.Element {
+function ImageCarousel({ img }: any): JSX.Element {
     return (
         <div className="img-container-carousel">
-            <img src={TestImg} alt="img_test" />
+            <img src={img} alt="img_test" />
         </div>
     )
 }

@@ -10,10 +10,16 @@ const BannersInfo: BannerPropertyPropsI[] = [
     },
     {
         'backgroundColor': '#009DDC',
-        'tittle': '¿Quieres arrendar tu oficina o local comercial?',
-        'paragraph': 'Publica tu inmueble con nosotros',
+        'tittle': 'Arrienda tu oficina o local comercial',
         'btnText': 'Publicar',
         'backgroundImg': 'Building2'
+    },
+    {
+        'backgroundColor': '#009DDC',
+        'tittle': 'Invertir en inmuebles comerciales',
+        'btnText': 'Contactar un agente',
+        'backgroundImg': 'coffeShop',
+        'sizeBackground': '40% 100%'
     },
 ]
 export default BannersInfo

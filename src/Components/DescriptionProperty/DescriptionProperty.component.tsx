@@ -1,3 +1,9 @@
+import { useEffect, useState } from 'react'
+import { PriceStyle } from '../../Atoms'
+
+import { PropertyModel } from '../../models/Property.model'
+import { DescriptionItem, DetailsItem } from '../../Interfaces'
+
 import { DescriptionItems } from './DescriptionItems/DescriptionItems.component'
 import { DetailsProperty } from './DetailsProperty/DetailsProperty.component'
 import { FeaturesProperty } from './FeaturesProperty/FeaturesProperty.component'
@@ -7,26 +13,71 @@ import Location from '../../Assets/Icons/Common/Ubicacion.svg'
 
 import './style.css'
 
-export function DescriptionPropertyComponent(): JSX.Element {
+export function DescriptionPropertyComponent(props: PropertyModel): JSX.Element {
+    const property = props
+
+    const [descriptionItem, setDescriptionItem] = useState<DescriptionItem>();
+    const [detailsItem, setDetailsItem] = useState<DetailsItem>();
+    const [interestItem, setInterestItem] = useState<object[]>();
+
+    useEffect((): void => {
+        if (property) {
+            setDescriptionItem(
+                {
+                    bathroom: property.PropertyDetails.bathrooms,
+                    parking: property.parking,
+                    private_area: property.PropertyDetails.area,
+                    antiquity: property.PropertyDetails.antiquity,
+                    stratum: property.PropertyDetails.stratum,
+                    admin_price: property.PropertyDetails.admin,
+                }
+            );
+            setDetailsItem(
+                {
+                    canon_price: property.PropertyDetails.canon_price,
+                    admin: property.PropertyDetails.admin,
+                    address: property.PropertyDetails.address,
+                    street: property.PropertyDetails.street,
+                    type: property.PropertyDetails.type,
+                    antiquity: property.PropertyDetails.antiquity,
+                    floor: property.PropertyDetails.floor,
+                    area: property.PropertyDetails.area,
+                    garage: property.PropertyDetails.garage,
+                    bathrooms: property.PropertyDetails.bathrooms,
+                    stratum: property.PropertyDetails.stratum,
+                    elevator: property.PropertyDetails.elevator,
+                }
+            );
+            setInterestItem(property.interest)
+        }
+    }, [property]);
     return (
-        <div className="single-description-property p-4 px-8 font-lato">
-            <h2 className="tittle-description">Local en Arriendo en Cedritos, Usaquén</h2>
-            <label className='cod-description' >COD AC23</label>
-            <p className='price-description text-greenCyan'>$320.000.000</p>
-            <div className='flex'>
-                <img src={Location} alt="" style={{ marginRight: '0.5rem' }} width={22} />
-                <label className='city-description'>Bogotá</label>
-            </div>
-            <DescriptionItems />
-            <hr />
-            <h2 className='subtittle-description'>Descripción General</h2>
-            <p className='paragraph-description'>Área de 65m2 en piso 3 amueblada espacio amplio y vista exterior Oficina con excelente iluminación natural Amplia ventilación Baño y Cocina Comunales Piso laminado de alto tráfico estilo madera Características 21 Escritorios Disponibles 10 Puntos de Red Habilitados Baño comunal Cocina Comunal Servicios Públicos Todos los Servicios Ventilación Natural. Cerca a almacenes de cadena como Carulla, Éxito y Cafam; cerca a colegios John Dewey y Emmanuel d'Alzón.</p>
-            <hr />
-            <DetailsProperty />
-            <hr />
-            <FeaturesProperty />
-            <hr />
-            <InterestProperty />
-        </div>
+        <>
+            {
+                property
+                    ? <div className="single-description-property p-4 px-8 font-lato">
+                        < h2 className="tittle-description" > {property.name}</h2 >
+                        <label className='cod-description' >{property.code}</label>
+                        <p className='price-description text-greenCyan'>
+                            <PriceStyle number={property.PropertyDetails.canon_price} />
+                        </p>
+                        <div className='flex'>
+                            <img src={Location} alt="" style={{ marginRight: '0.5rem' }} width={22} />
+                            <label className='city-description'>{property.city}</label>
+                        </div>
+                        <DescriptionItems {...descriptionItem} />
+                        <hr />
+                        <h2 className='subtittle-description'>Descripción General</h2>
+                        <p className='paragraph-description'>{property.description}</p>
+                        <hr />
+                        <DetailsProperty {...detailsItem} />
+                        <hr />
+                        <FeaturesProperty {...property.features} />
+                        <hr />
+                        <InterestProperty {...interestItem} />
+                    </div >
+                    : null
+            }
+        </>
     )
 }

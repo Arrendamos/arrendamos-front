@@ -3,22 +3,28 @@ import { useNavigate } from 'react-router-dom'
 
 import { BsShareFill, BsFillSuitHeartFill } from 'react-icons/bs'
 
-import imgTest from '../../Assets/images/test/Office.png'
-
 import './style.css'
+import { FormattedNumber, IntlProvider } from 'react-intl'
 
 export function CardPropertyAtom(props: CardPropertyPropsI): JSX.Element {
     const { area, bathroom, parking, address, location, city } = props
     const navigation = useNavigate()
-    const _openSingleProperty = () => {
-        navigation('/single-property')
+    const _openSingleProperty = (id: number) => {
+        navigation('/single-property/' + id)
     }
     return (
         <div className="card-property my-4 mx-8 pb-2" >
-            <img src={imgTest} alt="" onClick={_openSingleProperty} />
+            <img src={props.image} alt="" onClick={() => _openSingleProperty(props.id)} />
             <div className='box-info-property'>
                 <div className='flex justify-between'>
-                    <p className='price-property text-greenCyan font-lato'>$320.000.000</p>
+                    <p className='price-property text-greenCyan font-lato'>$
+                        <IntlProvider locale='es'>
+                            <FormattedNumber
+                                value={props.price}
+                                // eslint-disable-next-line react/style-prop-object
+                                style="decimal"
+                                minimumFractionDigits={0} />
+                        </IntlProvider></p>
                     <div className='icons-card-property text-greenCyan m-4 mr-2'>
                         <div className='circle'>
                             <BsShareFill />

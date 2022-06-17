@@ -25,7 +25,31 @@ code {
 
 .tittle-text {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 64px;
   color: #1B2B42;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 50px;
+  padding: 30px;
+}
+
+.select-placeholder{
+  color: #d3cbcb;
+}
+
+.card-form-property {
+  box-shadow: -7px -7px 20px rgba(0, 157, 220, 0.25), 7px 7px 20px rgba(0, 157, 220, 0.25);
+  padding: 2rem 4vw;
+  width: 50%;
+  margin: 4rem auto;
+}
+
+.card-form-property .tittle {
+  color: #009DDC;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 1rem 0;
 }
