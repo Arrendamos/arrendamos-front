@@ -20,7 +20,7 @@ export function PropertyTableComponent() {
     }, []);
 
     const _getProperties = async () => {
-        const propertiesResponse = await propertyService.getAllPropertiesResume();
+        const propertiesResponse = await propertyService.getPropertiesResume();
         let propertiesArray: CardPropertyPropsI[] = [];
         propertiesResponse.forEach(async (property: PropertyModel) => {
             const card: CardPropertyPropsI = {
