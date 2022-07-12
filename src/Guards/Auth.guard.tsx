@@ -1,5 +1,5 @@
 
-const useAuth = () => {
+const userAuth = () => {
     const user = localStorage.getItem('user');
     return user ? true : false;
 };
@@ -13,4 +13,4 @@ const adminAuth = () => {
     const { rol, admin_token } = JSON.parse(user!);
     return (rol === 1) && admin_token ? true : false;
 }
-export { useAuth, adminAuth };
+export { userAuth, adminAuth };

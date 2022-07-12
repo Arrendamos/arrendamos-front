@@ -1,7 +1,7 @@
 import { Home, Property, SingleProperty } from './Pages';
 import { HomeAdmin, CreatePropertyAdmin } from './Pages/Admin';
 import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
-import { useAuth, adminAuth } from './Guards';
+import { userAuth, adminAuth } from './Guards';
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
@@ -28,13 +28,13 @@ function App() {
 }
 
 const ProtectedRoutes = () => {
-  const isAuth = useAuth();
+  const isAuth = userAuth();
 
   return isAuth ? <Outlet /> : <Navigate to="/" />;
 }
 
 const AdminProtectedRoutes = () => {
-  const isAuth = useAuth();
+  const isAuth = userAuth();
   const isAdmin = adminAuth();
   return isAuth && isAdmin ? <Outlet /> : <Navigate to="/" />;
 }
