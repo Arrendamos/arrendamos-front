@@ -1,4 +1,4 @@
-import { Home, Property, SingleProperty } from './Pages';
+import { Home, Property, SingleProperty,InProgress } from './Pages';
 import { HomeAdmin, CreatePropertyAdmin } from './Pages/Admin';
 import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import { userAuth, adminAuth } from './Guards';
@@ -13,7 +13,8 @@ function App() {
     <Provider store={store}>
       <Routes>
         <Route path="*" element={<h1>Not Found</h1>} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<InProgress />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/property" element={<Property />} />
         <Route path="/single-property/:id" element={<SingleProperty />} />
         <Route element={<ProtectedRoutes />}>

@@ -25,4 +25,4 @@ yarn-error.log*
 
 /*.pem
 
-deployAws.sh
+/deployAws.sh
