@@ -20,7 +20,7 @@
     line-height: 48px;
 }
 
-.text-container{
+.benefit-item .text-container {
     display: block;
     height: 4vh;
 }
@@ -33,14 +33,14 @@
     line-height: 20px;
 }
 
-.img-container{
+.benefit-item .img-container {
     display: block;
     position: relative;
     bottom: -2rem;
     width: 22vw;
 }
 
-.benefit-img{
+.benefit-img {
     position: relative;
     top: 2rem;
     float: right;
