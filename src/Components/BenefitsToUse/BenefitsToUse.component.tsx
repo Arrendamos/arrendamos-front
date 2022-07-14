@@ -3,7 +3,7 @@ import {
   SimpleTitleParagraph,
   BenefitsItems,
 } from "../../Interfaces";
-import { BenefitInfo } from "../../Utils/Data/Benefits";
+import { BenefitInfo } from "../../Utils/LandingData/Benefits";
 
 import "./style.css";
 
@@ -28,6 +28,7 @@ export function BenefitsToUseComponent(): JSX.Element {
 function BenefitItem(props: BenefitsItems): JSX.Element {
   const img = require(`../../Assets/Icons/Benefits/${props.icon}.svg`);
   const backImg = require(`../../Assets/Icons/Benefits/BenefitImage/${props.image}.svg`);
+  console.log(props);
   return (
     <div className="benefit-item">
       <div className="flex justify-start">
@@ -36,6 +37,11 @@ function BenefitItem(props: BenefitsItems): JSX.Element {
       </div>
       <div className="text-container">
         <p>{props.description}</p>
+        {props.url ? (
+          <a href={props.url} target="blank">
+            Publicalo aquí
+          </a>
+        ) : null}
       </div>
       <div className="img-container">
         <img className="benefit-img" src={backImg} alt="" />

@@ -12,7 +12,8 @@
     margin: 0.8rem 0;
     color: #FFFFFF;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: 600;
     line-height: 40px;
 }
 
@@ -21,7 +22,7 @@
     width: 70%;
     color: #FFFFFF;
     font-size: 25px;
-    line-height: 40px;
+    line-height: 30px;
 }
 
 .banner-container button {

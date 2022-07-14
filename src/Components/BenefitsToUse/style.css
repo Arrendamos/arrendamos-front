@@ -16,8 +16,8 @@
 .benefit-item label {
     margin-left: 0.5rem;
     font-weight: 600;
-    font-size: 22px;
-    line-height: 48px;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 .benefit-item .text-container {
@@ -46,10 +46,27 @@
     float: right;
 }
 
+.container-benefits .simple-text {
+    font-size: 1.2rem;
+    font-weight: 100;
+    width: 40%;
+    line-height: 30px;
+}
+
+.benefit-item .text-container a {
+    margin-top: 2rem;
+    color: #009ddc;
+    font-weight: 600;
+}
+
 @media screen and (max-width: 768px) {
     .container-benefits .tittle-text {
         font-size: 1.8rem;
         line-height: 28px;
+    }
+
+    .container-benefits .simple-text {
+        width: 90%;
     }
 
     .container-benefits h3 {
@@ -84,5 +101,11 @@
 
     .benefit-img {
         right: -2rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .benefit-item .text-container {
+        height: 3vh;
     }
 }
