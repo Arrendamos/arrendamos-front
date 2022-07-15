@@ -53,17 +53,37 @@
         width: fit-content;
         margin: 0.5rem 0.5rem;
     }
+
     .price-property {
         margin: 0.5rem;
         font-size: 22px;
         line-height: 35px;
     }
+
     .info-property p {
         display: inline-block;
         font-size: 12px;
     }
+
     .dot {
         margin: 0px 0.3rem 0.1rem;
     }
 
+}
+
+@media screen and (max-width:550px) {
+    .box-info-property {
+        margin-bottom: 0.2rem;
+    }
+
+    .info-property p {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        margin: 0px 0.5rem 0.2rem;
+    }
 }
