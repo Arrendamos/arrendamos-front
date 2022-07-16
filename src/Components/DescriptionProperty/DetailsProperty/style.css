@@ -17,3 +17,28 @@
     font-size: 20px;
     line-height: 28px;
 }
+
+@media screen and (max-width: 650px) {
+    .details-property {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem 1rem;
+    }
+
+    .label-detail {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .value-detail {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .details-property {
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
+    }
+}
