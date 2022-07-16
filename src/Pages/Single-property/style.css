@@ -7,3 +7,9 @@
     margin: 2rem 0;
     border: 0.5px solid #263a5594
 }
+
+@media screen and (max-width: 850px) {
+    .single-property-container {
+        grid-template-columns: 1fr;
+    }
+}

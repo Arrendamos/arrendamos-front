@@ -48,3 +48,22 @@
     line-height: 28px;
     vertical-align: super;
 }
+
+@media screen and (max-width: 650px) {
+    .feature-property {
+        grid-gap: 2rem 1rem;
+    }
+
+    .label-feature {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .feature-property {
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
+    }
+}
