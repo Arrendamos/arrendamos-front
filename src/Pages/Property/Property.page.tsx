@@ -13,7 +13,7 @@ export function PropertyPage(): JSX.Element {
       <Filters />
       {/* <FeaturedProperty /> */}
       <Properties />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

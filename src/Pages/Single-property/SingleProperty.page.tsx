@@ -44,7 +44,7 @@ export function SinglePropertyPage(): JSX.Element {
           </div>
         )}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
