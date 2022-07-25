@@ -1,6 +1,7 @@
-.container-banners{
+.container-banners {
     padding: 2rem;
 }
+
 .container-banners .banner-grid-container {
     display: grid;
     padding: 2rem;
@@ -24,4 +25,46 @@
 
 .banner-item3 {
     grid-area: area3;
+}
+
+@media screen and (max-width: 768px) {
+    .tittle-text {
+        font-size: 1.8rem;
+        padding-left: 0.5rem;
+    }
+
+    .container-banners .banner-grid-container {
+        padding: 0.5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "area1"
+            "area2"
+            "area3"
+    }
+
+    .container-banners {
+        padding: 0.5rem;
+    }
+
+    .banner-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .banner-container p {
+        font-size: 1.2rem;
+        line-height: 30px;
+        width: 100%;
+        margin: 0.2rem;
+    }
+
+    .container-banners .btn-container {
+        width: 90%;
+        margin: 2rem auto;
+    }
+
+    .little-banner-container h2 {
+        font-size: 1.7rem;
+        width: 80%;
+    }
 }
