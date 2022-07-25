@@ -1,6 +1,6 @@
 .box-filter {
     box-sizing: content-box;
-    grid-template-columns: 20vw 20vw 20vw 5vw;
+    grid-template-columns: 30% 30% 30% 10%;
     background: #FFFFFF;
     box-shadow: -7px -7px 15px rgba(0, 67, 101, 0.25), 7px 7px 15px rgba(0, 67, 101, 0.25);
     border-radius: 10px;

@@ -7,10 +7,16 @@
     line-height: 54px;
 }
 
+.text-class {
+    margin-left: 10%;
+    width: 100%;
+    margin-bottom: 20%;
+}
+
 .img-header-container {
     position: relative;
-    margin: 5vw;
     left: 5vw;
+    margin-bottom: 20%;
 }
 
 #img-header {
@@ -30,7 +36,7 @@
 }
 
 .filter-container {
-    position: absolute;
+    position: relative;
     bottom: 15vh;
     left: 5vw;
 }
@@ -42,7 +48,39 @@
 }
 
 @media screen and (max-width: 1500px) {
-    .filter-container {
-        bottom: 10vh;
+    .container-header h1 {
+        font-size: 38px;
+        line-height: inherit;
+    }
+
+    .text-class {
+        margin-bottom: 30%;
+    }
+
+    .img-header-container {
+        margin-bottom: 30%;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .container-header h1 {
+        font-size: 30px;
+        line-height: inherit;
+    }
+
+    .text-class {
+        margin-bottom: 50%;
+    }
+
+    .img-header-container {
+        margin-bottom: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .simple-text {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
