@@ -45,3 +45,44 @@
     top: 2rem;
     float: right;
 }
+
+@media screen and (max-width: 768px) {
+    .container-benefits .tittle-text {
+        font-size: 1.8rem;
+        line-height: 28px;
+    }
+
+    .container-benefits h3 {
+        font-size: 1.2rem;
+        line-height: 28px;
+        margin: 1.5rem auto;
+    }
+
+    .benefits-items-container {
+        grid-template-columns: 1fr;
+        padding: 0;
+        padding-right: 2rem;
+        gap: 1rem;
+    }
+
+    .benefit-item {
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .benefit-item .img-container {
+        width: 100%;
+    }
+
+    .benefit-item .text-container {
+        height: 2vh;
+    }
+
+    .benefit-item .text-container p {
+        font-size: 0.9rem;
+    }
+
+    .benefit-img {
+        right: -2rem;
+    }
+}
