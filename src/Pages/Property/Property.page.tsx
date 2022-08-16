@@ -1,13 +1,19 @@
-import { NavBar, Filters, FeaturedProperty, Properties, Footer} from '../../Components';
+import {
+  NavBar,
+  Filters,
+  FeaturedProperty,
+  Properties,
+  Footer,
+} from "../../Components";
 
 export function PropertyPage(): JSX.Element {
-    return (
-        <>
-            <NavBar />
-            <Filters />
-            <FeaturedProperty />
-            <Properties />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <NavBar />
+      <Filters />
+      {/* <FeaturedProperty /> */}
+      <Properties />
+      <Footer />
+    </>
+  );
 }

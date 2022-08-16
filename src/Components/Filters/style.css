@@ -7,7 +7,8 @@
     box-shadow: 5px 5px 10px rgba(28, 34, 38, 0.25);
     border-radius: 10px;
 }
-.filters-item-info{
+
+.filters-item-info {
     cursor: pointer;
     display: flex;
     justify-content: space-evenly;
@@ -18,10 +19,12 @@
     font-size: 1.4rem;
     color: #1B2B42;
 }
-.filters-item-info img{
+
+.filters-item-info img {
     width: 1.5rem;
     margin-right: 0.5rem;
 }
+
 .card-filter-options {
     width: fit-content;
     padding: 1rem 1.5rem;
@@ -31,7 +34,8 @@
     border-radius: 20px;
     z-index: 1;
 }
-.tittle-filter{
+
+.tittle-filter {
     font-size: 1.5rem;
     font-weight: 600;
     color: #1B2B42;
@@ -44,7 +48,27 @@ hr {
     opacity: 0.6;
 }
 
-.btn-container-filter button{
+.btn-container-filter button {
     font-size: 1.1rem;
     width: 40%;
+}
+
+@media screen and (max-width: 550px) {
+    .filters-item {
+        width: 45vw;
+    }
+
+    .filters-item-info label {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .filters-item {
+        width: 47vw;
+    }
+
+    .filters-item-info label {
+        font-size: 1.1rem;
+    }
 }

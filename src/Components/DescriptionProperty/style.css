@@ -40,3 +40,30 @@
     font-size: 20px;
     line-height: 32px;
 }
+
+@media screen and (max-width: 650px) {
+    .single-description-property {
+        padding: 1rem;
+    }
+
+    .tittle-description {
+        font-size: 1.2rem;
+        line-height: 25px;
+    }
+
+    .price-description {
+        font-size: 28px;
+    }
+
+    .subtittle-description {
+        font-size: 20px;
+        margin: 0.5rem 0rem;
+
+    }
+
+    .paragraph-description {
+        font-size: 18px;
+        margin: 0.5rem 0rem;
+        line-height: 25px;
+    }
+}
