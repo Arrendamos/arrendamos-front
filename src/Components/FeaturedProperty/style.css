@@ -38,15 +38,19 @@
 
 @media screen and (max-width: 550px) {
     .container-featured-properties-flex {
-        padding: 0;
+        padding: 0 1rem;
+    }
+
+    .container-featured-properties-flex img {
+        width: 10vw;
     }
 
     .container-featured-properties .tittle-text {
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 24px;
     }
 
-    .slider-container {
+    .container-featured-properties .slider-container {
         width: 95vw;
         overflow-x: hidden;
     }

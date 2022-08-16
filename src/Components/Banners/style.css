@@ -28,9 +28,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    .tittle-text {
-        font-size: 1.8rem;
-        padding-left: 0.5rem;
+    .container-banners .tittle-text {
+        font-size: 1.7rem;
+        padding-left: 0.8rem;
     }
 
     .container-banners .banner-grid-container {

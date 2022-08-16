@@ -11,7 +11,7 @@ export function PropertyPage(): JSX.Element {
     <>
       <NavBar />
       <Filters />
-      {/* <FeaturedProperty /> */}
+      <FeaturedProperty />
       <Properties />
       <Footer />
     </>
