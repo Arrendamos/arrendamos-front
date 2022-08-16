@@ -13,11 +13,11 @@ export function HomePage(): JSX.Element {
   return (
     <>
       <NavBar />
-      {/* <Header /> */}
-      {/* <FeaturedProperty /> */}
+      <Header />
+      <FeaturedProperty />
       <BenefitsToUse />
       <Banners />
-      {/* <OurPartners /> */}
+      <OurPartners />
       {/* <Testimony /> */}
       <Footer />
     </>
