@@ -18,7 +18,7 @@ export function HomePage(): JSX.Element {
       <BenefitsToUse />
       <Banners />
       <OurPartners />
-      {/* <Testimony /> */}
+      <Testimony />
       <Footer />
     </>
   );
