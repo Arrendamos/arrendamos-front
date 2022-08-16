@@ -46,3 +46,42 @@
         bottom: 10vh;
     }
 }
+
+@media screen and (max-width: 550px) {
+    .container-header {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .container-header h1 {
+        font-size: 26px;
+        line-height: 32px;
+        margin: 2rem 1rem;
+        padding: 0 1rem;
+        margin-bottom: 0;
+        width: 95%;
+    }
+
+    .img-header-container {
+        margin: 1rem auto;
+        margin-left: 13vw;
+        left: 0;
+    }
+
+    #img-header {
+        width: 65vw;
+        height: 50vw;
+    }
+
+    #logo-header-back {
+        width: 60vw;
+        height: 60vw;
+        top: 4vh;
+        margin-left: 40%;
+    }
+
+    .filter-container {
+        bottom: 6vh;
+    }
+}
