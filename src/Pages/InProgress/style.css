@@ -1,48 +1,74 @@
-.property-landing-container {
-    width: 90%;
-    margin: 1rem auto;
-    height: 60vh;
-    background-image: url('../../Assets/tmp/Propiedades.png');
-    background-size: 100% 100%;
+.construction-container {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+    gap: 3rem;
+    padding: 5rem;
 }
 
-.property-landing-container h1 {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.btn-landing {
-    padding: 0.5rem 2.5rem;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 1rem;
-}
-
-.property-landing-container p {
-    color: #009ddc;
-}
-
-.aliados-landing-container {
+.text-container {
     width: 80%;
-    margin: 1rem auto;
-    height: 50vh;
-    background-image: url('../../Assets/tmp/Aliados.png');
-    background-size: 100% 100%;
+}
+
+.text-container h1 {
+    font-size: 38px;
+    font-weight: 600;
+    color: #009B72;
+    margin-bottom: 2rem;
+}
+
+.text-container h3 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.img-container img {
+    width: 40vw;
 }
 
 @media screen and (max-width: 768px) {
-    .property-landing-container {
-        width: 100%;
-        background-size: auto;
-        background-position: 50% 100%;
-        height: 40vh;
+    .construction-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 38vh 38vh;
+        gap: 0;
+        padding: 2rem;
     }
 
-    .aliados-landing-container {
-        background-size: 180% 140%;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        height: 20vh;
+    .text-container h1 {
+        font-size: 36px;
+        margin-bottom: 1rem;
+    }
+
+    .text-container h3 {
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 36px;
+    }
+
+    .text-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .img-container img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .construction-container {
+        grid-template-rows: 50% 50%;
+        gap: 2rem;
+    }
+
+    .text-container h1 {
+        font-size: 30px;
+        margin-bottom: 1rem;
+    }
+
+    .text-container h3 {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 30px;
     }
 }

@@ -28,7 +28,6 @@ export function BenefitsToUseComponent(): JSX.Element {
 function BenefitItem(props: BenefitsItems): JSX.Element {
   const img = require(`../../Assets/Icons/Benefits/${props.icon}.svg`);
   const backImg = require(`../../Assets/Icons/Benefits/BenefitImage/${props.image}.svg`);
-  console.log(props);
   return (
     <div className="benefit-item">
       <div className="flex justify-start">
