@@ -1,47 +1,40 @@
-import { SimpleData } from "../../Interfaces";
-import {
-  HeaderFilterProperty,
-  HeaderMobileFilterProperty,
-} from "../../Common/";
+import { HeaderData } from "../../Interfaces";
 import { HeaderInfo } from "../../Utils/Data/Header";
-
-import Logo from "../../Assets/Images/local.jpg";
-import LogoBack from "../../Assets/Images/logoBack.svg";
+import Edificio from "../../Assets/Icons/Common/Building.svg";
 
 import "./style.css";
-import { useMediaQuery } from "react-responsive";
 
 export function HeaderComponent(): JSX.Element {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: "(min-width: 900px)",
-  });
-
-  let headerInfo: SimpleData = HeaderInfo;
+  let headerInfo: HeaderData = HeaderInfo;
 
   return (
-    <div className="container-header grid grid-cols-2">
-      <div className="container-header-text flex self-center flex-col">
-        <h1 className="text-pursianBlue font-lato font-bold w-4/5 block mx-auto">
-          {headerInfo.text}
+    <div className="container-header font-lato">
+      <div className="container-header-img">
+        <span className="filter-opacity"></span>
+        <h1 className="text-pursianBlue font-bold w-4/5 block mx-auto">
+          {headerInfo.tittle}
         </h1>
       </div>
-      <div className="img-header-container py-4">
-        <img id="img-header" src={Logo} alt="Header img" />
-        <img id="logo-header-back" src={LogoBack} alt="Header img" />
+      <div className="container-header-info">
+        <h1 className="text-greenCyan font-bold p-4">{headerInfo.question}</h1>
+        <p dangerouslySetInnerHTML={{ __html: headerInfo.paragraph }}></p>
+        <div className="container-header-info-boxes flex justify-evenly">
+          <div id="box1" className="header-box">
+            <h2>{headerInfo.box[0].tittle}</h2>
+            <p>{headerInfo.box[0].text}</p>
+          </div>
+          <div id="box2" className="header-box">
+            <h2>{headerInfo.box[1].tittle}</h2>
+            <p>{headerInfo.box[1].text}</p>
+          </div>
+        </div>
       </div>
-      {isDesktopOrLaptop ? (
-        <div className="relative top-0 left-0">
-          <div className="filter-container">
-            <HeaderFilterProperty />
-          </div>
-        </div>
-      ) : (
-        <div className="relative top-0 left-0">
-          <div className="filter-container">
-            <HeaderMobileFilterProperty />
-          </div>
-        </div>
-      )}
+      <div className="w-full text-center my-4">
+        <a className="btn-ref-header" href="/">
+          <img src={Edificio} alt="" style={{ marginRight: "0.8rem" }} />
+          Describe el inmueble que buscas
+        </a>
+      </div>
     </div>
   );
 }

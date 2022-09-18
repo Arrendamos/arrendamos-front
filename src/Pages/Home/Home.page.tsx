@@ -1,9 +1,8 @@
 import {
-  Header,
   NavBar,
-  FeaturedProperty,
-  BenefitsToUse,
-  Banners,
+  Header,
+  HowWorks,
+  Oportunities,
   OurPartners,
   Testimony,
   Footer,
@@ -14,9 +13,8 @@ export function HomePage(): JSX.Element {
     <>
       <NavBar />
       <Header />
-      <FeaturedProperty />
-      <BenefitsToUse />
-      <Banners />
+      <HowWorks />
+      <Oportunities />
       <OurPartners />
       <Testimony />
       <Footer />
