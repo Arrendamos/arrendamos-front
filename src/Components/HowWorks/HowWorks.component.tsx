@@ -16,7 +16,7 @@ export function HowWorksComponent(): JSX.Element {
     <div className="how-works-container font-lato">
       <h2 className="tittle-text">{howWorksData.tittle}</h2>
       <div className="progress-how-works-container mx-auto my-4">
-        <div className="progress-bar"></div>
+        <div className="how-works-progress-bar"></div>
       </div>
       <div className="how-works-container-items">
         {howWorksData.items.map((item, index) => (

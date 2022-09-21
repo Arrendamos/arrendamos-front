@@ -129,3 +129,11 @@ strong {
         padding: 0rem 0rem;
     }
 }
+
+@media screen and (max-width: 350px) {
+    .btn-ref-header {
+        font-size: 14px;
+        margin: 0.3rem auto;
+        padding: 0.5rem 0.8rem;
+    }
+}

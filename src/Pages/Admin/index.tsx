@@ -1,2 +1,1 @@
-export { HomeAdminPage as HomeAdmin } from './Home/HomeAdmin.page';
-export { CreatePropertyAdmin } from './Property';
+export { HomeAdminPage as HomeAdmin } from "./Home/HomeAdmin.page";
