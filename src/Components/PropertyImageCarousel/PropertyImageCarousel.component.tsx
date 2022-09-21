@@ -43,7 +43,7 @@ export function PropertyImageCarouselComponent(
     });
     changeSizeFirstImg();
   };
-  const [sliderSettings, setSliderSettings] = useState({
+  const sliderSettings = {
     dots: false,
     infinite: true,
     autoplay: isMobile ? false : true,
@@ -74,7 +74,7 @@ export function PropertyImageCarouselComponent(
         },
       },
     ],
-  });
+  };
   useEffect(() => {
     if (!isMobile) changeOtherSizeImg();
   }, [images]);

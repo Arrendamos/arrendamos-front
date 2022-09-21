@@ -1,12 +1,16 @@
 .form-input-container {
-    margin: 2rem auto;
+    margin: 1rem auto 0rem;
 }
 
-.form-input-container select, .form-input-container input, textarea {
+.label-color {
+    color: #1B2B42;
+}
+
+.form-input-container select, .form-input-container .input-form, textarea {
     border: 1px solid #9cacc4a8;
     margin: 0.5rem 0;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 0.5rem 0.8rem;
     width: 100%;
 }
 
@@ -19,17 +23,23 @@
 }
 
 .input-number-small {
+    border: 1px solid #9cacc4a8;
+    border-radius: 8px;
     width: 50px !important;
     padding: 0.1rem 0.6rem !important;
     text-align: center;
-    margin-right: 4vw !important;
 }
+
+.switch-container {
+    padding: 1rem;
+}
+
 .input-number-small input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.input-number-small input[type=number]{
+.input-number-small input[type=number] {
     -moz-appearance: textfield;
 }

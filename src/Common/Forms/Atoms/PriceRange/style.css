@@ -1,0 +1,60 @@
+.price-range-container {
+    margin: 1rem 0;
+}
+
+.price-range-container h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.price-range label {
+    font-size: 0.9rem;
+    color: #7e7e7e;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 550px) {
+    .price-range {
+        margin: auto;
+        width: 60vw;
+    }
+
+    .price-item label {
+        font-size: 14px;
+        line-height: 18px;
+        opacity: 0.6;
+    }
+
+    .price-item p {
+        font-size: 14px;
+    }
+}
+
+.price-item {
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+
+
+@media screen and (max-width: 350px) {
+
+    .price-range-container h3 {
+        font-size: 0.9rem;
+    }
+
+    .price-range {
+        width: 70vw;
+    }
+
+    .price-range label {
+        font-size: 14px;
+        line-height: 18px;
+        opacity: 0.6;
+    }
+
+    .price-range p {
+        font-size: 14px;
+    }
+
+}
