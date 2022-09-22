@@ -31,7 +31,7 @@
 }
 
 .slider__range {
-    background-color: #009B72;
+    background-color: #009DDC;
     z-index: 2;
 }
 
@@ -99,4 +99,21 @@
     margin-top: 4px;
     pointer-events: all;
     position: relative;
+}
+
+@media screen and (max-width: 550px) {
+    .container-range {
+        max-height: 5vh;
+    }
+
+    .thumb {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .thumb {
+        width: 70vw;
+    }
 }
