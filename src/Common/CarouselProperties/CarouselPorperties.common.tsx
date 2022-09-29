@@ -11,9 +11,9 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 import HomeIcon from "../../Assets/Icons/Common/Home.svg";
 
-import "./style.css";
-
 import imgTest from "../../Assets/Images/test/TestOportunity.png";
+
+import "./style.css";
 
 type CarouselPorpertiesCommonProps = {
   tittle: string;

@@ -1,0 +1,12 @@
+.switch-item {
+    justify-content: space-between;
+    margin: 0.8rem 0;
+}
+
+.switch-form p {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0.2rem 0.2rem;
+}

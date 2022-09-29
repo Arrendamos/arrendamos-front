@@ -1,14 +1,32 @@
 import { useState } from "react";
-import { MultiRangeSlider, PriceStyle } from "../../../Atoms";
+import { PriceRangeForm, SwitchForm } from "../Atoms";
 
 import "./style.css";
 
-type priceModel = {
-  min: number;
-  max: number;
-};
+export function PropertyOportunityInfoCommon(): JSX.Element {
+  const [switchState, setSwitchState] = useState([
+    {
+      title: "Baños",
+      state: false,
+    },
+    {
+      title: "Ascensores",
+      state: false,
+    },
+    {
+      title: "Parqueaderos",
+      state: false,
+    },
+    {
+      title: "Bodega",
+      state: false,
+    },
+    {
+      title: "Segundo Piso",
+      state: false,
+    },
+  ]);
 
-export function PropertyInfoFormCommon(): JSX.Element {
   return (
     <div className="card card-form-property font-lato">
       <h1 className="tittle">Describe el inmueble que buscas </h1>
@@ -79,48 +97,15 @@ export function PropertyInfoFormCommon(): JSX.Element {
           <option value="5">5</option>
           <option value="6">6</option>
         </select>
-      </div>
-    </div>
-  );
-}
-
-function PriceRangeForm(): JSX.Element {
-  const initialPrice: priceModel = {
-    min: 0,
-    max: 5000000,
-  };
-  const [price, setPrice] = useState(initialPrice);
-
-  const _setValues = ({ max, min }: any) => {
-    setPrice({
-      min,
-      max,
-    });
-  };
-  return (
-    <div className="price-range-container">
-      <h3 className="ml-2 mb-4">Rango del valor del arrendamiento </h3>
-      <div className="price-range">
-        <label>Cualquier precio</label>
-        <MultiRangeSlider
-          min={initialPrice.min}
-          max={initialPrice.max}
-          onChange={_setValues}
-        />
-        <div className="flex justify-around">
-          <div className="price-item">
-            <label>Precio mínima</label>
-            <p>
-              <PriceStyle number={price.min || 0} />
-            </p>
-          </div>
-          <span className="separate"></span>
-          <div className="price-item">
-            <label>Precio máximo</label>
-            <p>
-              <PriceStyle number={price.max || 0} />
-            </p>
-          </div>
+        <div className="switch-container">
+          {switchState.map((item, index) => (
+            <SwitchForm
+              key={index}
+              item={item}
+              state={switchState}
+              setState={setSwitchState}
+            />
+          ))}
         </div>
       </div>
     </div>

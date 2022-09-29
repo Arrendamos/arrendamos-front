@@ -51,6 +51,14 @@ code {
   color: #009DDC;
   font-size: 1.3rem;
   font-weight: 400;
+  margin: 1rem 0.3rem;
+}
+
+.card-form-property .subtitle {
+  color: #78818d;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 18px;
   margin: 1rem 0;
 }
 
@@ -75,15 +83,26 @@ code {
   background-repeat: no-repeat;
 }
 
+.separate::after {
+  content: '_';
+  margin: 0 0.5rem;
+  position: relative;
+  top: 15px;
+  color: #1B2B42;
+  width: 5px;
+  height: 5px;
+}
+
 @media screen and (max-width: 550px) {
   .card-form-property {
-    width: 85%;
+    width: 90%;
     margin: 2rem auto;
     padding: 1rem 4vw;
   }
 
   .card-form-property .tittle {
-    font-size: 1.2rem;
-    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.8rem 0.3rem;
   }
 }

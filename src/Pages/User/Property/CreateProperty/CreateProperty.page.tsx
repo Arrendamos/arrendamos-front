@@ -1,12 +1,17 @@
-import { PropertyForm, PropertyAddressForm, PropertyDetailsForm, PropertyImageForm } from "../../../../Common/Forms";
+import {
+  PropertyForm,
+  PropertyLocationInfoForm,
+  PropertyFeaturesForm,
+  PropertyImageForm,
+} from "../../../../Common/Forms";
 
 export function CreatePropertyAdminPage() {
-    return (
-        <>
-            <PropertyForm />
-            <PropertyAddressForm />
-            <PropertyDetailsForm />
-            <PropertyImageForm />
-        </>
-    );
+  return (
+    <>
+      <PropertyForm />
+      <PropertyLocationInfoForm />
+      <PropertyFeaturesForm />
+      <PropertyImageForm />
+    </>
+  );
 }

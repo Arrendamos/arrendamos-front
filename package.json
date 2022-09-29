@@ -23,6 +23,8 @@
     "react-scripts": "5.0.0",
     "react-slick": "^0.28.1",
     "react-social-icons": "^5.11.0",
+    "react-switch": "^7.0.0",
+    "reactjs-popup": "^2.0.5",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
     "slick-carousel": "^1.8.1",
