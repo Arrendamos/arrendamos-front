@@ -1,4 +1,4 @@
-import { Home, Property, SingleProperty } from "./Pages";
+import { Home, Property, SingleProperty, SingleOportunity } from "./Pages";
 import { HomeAdmin } from "./Pages/Admin";
 import { CreateOportunity } from "./Pages/User";
 import { Navigate, Outlet, Route, Routes } from "react-router-dom";
@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
         <Route path="/single-property/:id" element={<SingleProperty />} />
+        <Route path="/single-oportunity/:id" element={<SingleOportunity />} />
         <Route element={<ProtectedRoutes />}></Route>
         <Route element={<AdminProtectedRoutes />}>
           <Route path="/admin" element={<HomeAdmin />} />

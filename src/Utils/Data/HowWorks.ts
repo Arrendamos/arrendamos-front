@@ -7,25 +7,25 @@ export const HowWorksInfo: HowWorksData = {
       icon: "fas fa-search",
       tittle: "Registrate ",
       paragraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "Registrate como uno de nuestros aliados y disfruta de la magia de encontar el inmueble que buscas lo antes posible.",
     },
     {
       icon: "fas fa-search",
       tittle: "Publica el inmueble que estas buscando",
       paragraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "Especifica las caracteristicas que debe tener el inmueble que estas buscando.",
     },
     {
       icon: "fas fa-search",
       tittle: "Recibe ofertas ",
       paragraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "Recibiras ofertas de parte de propietarios e inmobiliarias que cumplan con la mayoria de las caracteristicas que estableciste.",
     },
     {
       icon: "fas fa-search",
       tittle: "Contacta al propietario del inmueble ",
       paragraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "Podrás tener acceso directamente al contacto del propietario ó inmobiliaria del inmueble, agilizando el proceso. ",
     },
   ],
 };

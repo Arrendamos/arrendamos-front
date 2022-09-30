@@ -36,7 +36,7 @@ export function SinglePropertyPage(): JSX.Element {
   return (
     <>
       <NavBar />
-      {property ? <PropertyImageCarousel {...property} /> : null}
+      {/* {property ? <PropertyImageCarousel {...property} /> : null} */}
       <div id="single-property-container" className="single-property-container">
         {property ? <DescriptionProperty {...property} /> : null}
         {isMobile ? null : (

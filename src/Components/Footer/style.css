@@ -25,6 +25,7 @@
 
 .social-icon-box svg {
     margin: auto;
+    filter: invert();
 }
 
 .social-icon-container h2 {

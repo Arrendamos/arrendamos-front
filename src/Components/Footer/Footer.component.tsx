@@ -30,13 +30,20 @@ export function FooterComponent(): JSX.Element {
 
 function SocialMediaIcon(): JSX.Element {
   const socialMediaInfo: socialMedia[] = ContactInfo.socialMedia;
+  const openLink = (link: string) => {
+    window.open(link, "_blank");
+  };
   return (
     <div className="flex justify-evenly">
       {socialMediaInfo.map((item: socialMedia, index: number) => {
         const icons = require("react-icons/gr");
         const SocialIcon = icons[`${item.icon}`];
         return (
-          <div key={index} className="social-icon-box">
+          <div
+            key={index}
+            className="social-icon-box"
+            onClick={() => openLink(item.url)}
+          >
             <SocialIcon size={30} />
           </div>
         );

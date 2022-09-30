@@ -52,7 +52,7 @@ export function OurPartnersComponent(): JSX.Element {
 }
 
 function ImgPartnerItem(props: any) {
-  const img = require(`../../Assets/Aliados/${props.icon}.svg`);
+  const img = require(`../../Assets/Aliados/${props.icon}.png`);
 
   return (
     <div className="partner-item">

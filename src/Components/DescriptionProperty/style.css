@@ -2,13 +2,13 @@
     font-size: 2rem;
     font-weight: 600;
     line-height: 40px;
-    color: #1B2B42;
-
+    color: #009B72;
+    margin-bottom: 0.5rem;
 }
 
 .cod-description {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 28px;
     color: #1B2B42;
 }
@@ -47,7 +47,7 @@
     }
 
     .tittle-description {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         line-height: 25px;
     }
 
@@ -58,12 +58,12 @@
     .subtittle-description {
         font-size: 20px;
         margin: 0.5rem 0rem;
-
     }
 
     .paragraph-description {
         font-size: 18px;
         margin: 0.5rem 0rem;
         line-height: 25px;
+        text-align: justify;
     }
 }

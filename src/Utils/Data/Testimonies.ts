@@ -1,28 +1,25 @@
-import { TestimonyData } from '../../Interfaces'
+import { TestimonyData } from "../../Interfaces";
 
 export const TestimonyInfo: TestimonyData = {
-    'data': {
-        'tittle': 'Testimonios',
-        'subTittle': 'Testimonios de empresas que decidieron confiar y arrendar con nosostros'
+  data: {
+    tittle: "Testimonios",
+    subTittle:
+      "Testimonios de empresas que decidieron confiar y arrendar con nosostros",
+  },
+  testimonies: [
+    {
+      name: "Jorge Flechas",
+      rol: "Propietario",
+      testimony:
+        "Gracias a arrendamos logre arrendar mi local comercial en menos de dos meses con una empresa nacional.",
+      stars: 5,
     },
-    'testimonies': [
-        {
-            'name': 'Stephen Shaw',
-            'rol': 'Gerente de Empresa',
-            'testimony': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-            'stars': 2
-        },
-        {
-            'name': 'Stephen Shaw',
-            'rol': 'Gerente de Empresa',
-            'testimony': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-            'stars': 5
-        },
-        {
-            'name': 'Stephen Shaw',
-            'rol': 'Gerente de Empresa',
-            'testimony': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
-            'stars': 3
-        }
-    ]
-}
+    {
+      name: "Jorge Flechas",
+      rol: "Propietario",
+      testimony:
+        "Gracias a arrendamos logre arrendar mi local comercial en menos de dos meses con una empresa nacional.",
+      stars: 5,
+    },
+  ],
+};

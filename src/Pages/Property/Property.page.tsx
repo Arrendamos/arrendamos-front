@@ -10,8 +10,7 @@ export function PropertyPage(): JSX.Element {
   return (
     <>
       <NavBar />
-      <Filters />
-      <FeaturedProperty />
+      {/* <Filters /> */}
       <Properties />
       <Footer />
     </>

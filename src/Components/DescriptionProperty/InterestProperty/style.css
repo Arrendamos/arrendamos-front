@@ -24,8 +24,9 @@
 
 @media screen and (max-width: 650px) {
     .interest-property {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem 1rem;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        padding: 1rem 2rem;
     }
 
     .interest-label {

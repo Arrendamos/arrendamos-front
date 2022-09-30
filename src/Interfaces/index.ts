@@ -69,6 +69,11 @@ export interface ContactData {
   socialMedia: socialMedia[];
 }
 
+export type TypeProperty = {
+  name: string;
+  icon: string;
+};
+
 export type socialMedia = {
   icon: string;
   network: string;

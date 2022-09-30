@@ -15,6 +15,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { TestimonyInfo } from "../../Utils/Data/Testimonies";
 import { AiFillStar } from "react-icons/ai";
 
+import TestimonyImg from "../../Assets/Images/Testimony.jpg";
+
 import "./style.css";
 
 export function TestimonyComponent(): JSX.Element {
@@ -69,11 +71,7 @@ function TestimonyCard(props: testimonyItem): JSX.Element {
   const { name, testimony, rol, stars } = props;
   return (
     <div className="testimony-card font-lato text-center text-pursianBlue">
-      <img
-        src="https://via.placeholder.com/350x200"
-        alt=""
-        className="img-testimony"
-      />
+      <img src={TestimonyImg} alt="" className="img-testimony" />
       <div className="relative bottom-8 h-16">
         <AvatarCircle />
       </div>
