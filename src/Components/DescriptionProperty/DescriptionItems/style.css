@@ -3,6 +3,13 @@
     margin: 1.5rem 0rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
+    grid-template-areas:
+        "area1 area2"
+        "area3 area3"
+}
+
+.item-full {
+    grid-area: area3;
 }
 
 .item-description {

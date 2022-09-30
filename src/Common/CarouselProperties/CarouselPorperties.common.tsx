@@ -28,17 +28,26 @@ export function CarouselPorpertiesCommon(
   const cardExample: CardPropertyPropsI = {
     id: 1,
     image: imgTest,
-    price: 320000000,
-    area: 200,
+    price: 0,
+    area: 120,
     bathroom: 2,
     parking: 2,
-    address: "Calle 63 # 55-23",
-    location: "Los Rosales",
+    address: "",
+    location: "",
     city: "Bogotá",
   };
   let cards: CardPropertyPropsI[] = [];
-  for (let i = 0; i < 12; i++) {
-    cards.push(cardExample);
+  for (let i = 0; i < 3; i++) {
+    let card = { ...cardExample };
+    if (i === 0) {
+      card.city = "Medellín";
+    } else if (i === 1) {
+      card.city = "Bogotá";
+    } else {
+      card.city = "Cali";
+    }
+    card.id = i + 1;
+    cards.push(card);
   }
   // ----- test enviroment -----
 

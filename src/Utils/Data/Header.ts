@@ -7,11 +7,11 @@ export const HeaderInfo: HeaderData = {
     "LLegaste al lugar indicado, somos un portal enfocado 100% en ayudar a empresas y empresarios a encontrar el <strong> inmueble comercial </strong> ideal para la expansón de sus negocios.",
   box: [
     {
-      tittle: "+1,500",
+      tittle: "+1,300",
       text: "Inmbuebles con los que te podemos conectar",
     },
     {
-      tittle: "+170",
+      tittle: "+90",
       text: "Propietarios, inmobiliarias y Brokers Aliados a Nivel Nacional.",
     },
   ],

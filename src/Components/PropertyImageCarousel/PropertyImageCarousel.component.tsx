@@ -6,28 +6,25 @@ import Vr from "../../Assets/Icons/Common/VrIcon.svg";
 import { useMediaQuery } from "react-responsive";
 import { ImPlay2 } from "react-icons/im";
 import { IoMdImage } from "react-icons/io";
-import { MdOutline360 } from "react-icons/md";
-import { PropertyModel } from "../../models/Property.model";
+// import { MdOutline360 } from "react-icons/md";
+import { PropertyImagesModel } from "../../models/Property.model";
 
-import { useParams } from "react-router-dom";
-import { PropertyService } from "../../Services/Property.service";
+// import { useParams } from "react-router-dom";
+// import { PropertyService } from "../../Services/Property.service";
 
 import "./style.css";
 
-type imgObject = {
-  link: string;
+type PropertyImageCarouselProps = {
+  PropertyImages: PropertyImagesModel[];
 };
 export function PropertyImageCarouselComponent(
-  props: PropertyModel
+  props: PropertyImageCarouselProps
 ): JSX.Element {
   const isMobile = useMediaQuery({
     query: "(max-width: 850px)",
   });
 
-  const propertyService = new PropertyService();
-
-  const [images, setImages] = useState<imgObject[]>([]);
-  const { id } = useParams();
+  const { PropertyImages: images } = props;
 
   const changeSizeFirstImg = () => {
     const slider = document.querySelector(".slick-current")!;
@@ -78,23 +75,17 @@ export function PropertyImageCarouselComponent(
   useEffect(() => {
     if (!isMobile) changeOtherSizeImg();
   }, [images]);
-  useEffect((): void => {
-    if (id) _getImageProperty(+id);
-  }, []);
-  const _getImageProperty = async (id: number) => {
-    const propertiyResponse: imgObject[] =
-      await propertyService.getPropertyImage(id);
-    if (propertiyResponse) setImages(propertiyResponse);
-  };
+
   const customeSlider = React.createRef<any>();
 
-  const _openLink = (link: string) => {
-    window.open(link);
-  };
+  // const _openLink = (link: string) => {
+  //   window.open(link);
+  // };
+
   return (
     <div id="property-single-carousel" className="property-image-carousel">
       <div className="slider-image-carousel py-4">
-        {images.length > 0 ? (
+        {images ? (
           <Slider ref={customeSlider} {...sliderSettings}>
             {images.map((item, index) => {
               return <div key={index}>{ImageCarousel({ img: item.link })}</div>;
@@ -102,7 +93,7 @@ export function PropertyImageCarouselComponent(
           </Slider>
         ) : null}
       </div>
-      <div className="btn-interaction-container flex">
+      {/* <div className="btn-interaction-container flex">
         <div
           className="card-interaction"
           onClick={() => _openLink(props.link_360)}
@@ -118,7 +109,7 @@ export function PropertyImageCarouselComponent(
         <div className="card-interaction">
           <img src={Vr} alt="" width={isMobile ? 40 : 60} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

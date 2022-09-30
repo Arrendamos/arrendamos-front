@@ -43,7 +43,7 @@ function HowWorksItem(props: HowWorksItemProps): JSX.Element {
         {item.tittle}
       </h3>
       <div {...getCollapseProps()}>
-        <div className="content">
+        <div className="content-how-works-item">
           <p className="text-gray-600">{item.paragraph}</p>
         </div>
       </div>

@@ -1,0 +1,36 @@
+.invert-property-container {
+    padding: 0.5rem 0.8rem;
+}
+
+.invert-property-container .tittle-text {
+    font-size: 1.4rem;
+    line-height: 28px;
+}
+
+.img-container-invert {
+    position: relative;
+    text-align: center;
+}
+
+.img-container-invert img {
+    margin: auto;
+    border-radius: 12px;
+    filter: brightness(0.8);
+}
+
+.img-container-invert p {
+    position: absolute;
+    text-align: center;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+    width: 60%;
+    top: 30%;
+    left: 20%;
+}
+
+.info-invert {
+    text-align: justify;
+    margin: 0.5rem 2rem;
+    color: rgb(126, 126, 126);
+}

@@ -55,7 +55,7 @@
 
     .img-container-carousel img {
         border-radius: 0px;
-        width: fit-content;
+        width: 100%;
         object-fit: cover;
     }
 

@@ -18,16 +18,29 @@ import "./style.css";
 export function DescriptionPropertyComponent(
   props: PropertyModel
 ): JSX.Element {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 850px)",
-  });
+  // const isMobile = useMediaQuery({
+  //   query: "(max-width: 850px)",
+  // });
   const property = props;
 
+  const [city, setCity] = useState("");
   const [descriptionItem, setDescriptionItem] = useState<DescriptionItem>();
   const [detailsItem, setDetailsItem] = useState<DetailsItem>();
   const [interestItem, setInterestItem] = useState<object[]>();
 
   useEffect((): void => {
+    let tmpCity = "";
+    if (window.location.href.indexOf("single-oportunity/1") > -1) {
+      tmpCity = "Medellin";
+    }
+    if (window.location.href.indexOf("single-oportunity/2") > -1) {
+      tmpCity = "Bogotá";
+    }
+    if (window.location.href.indexOf("single-oportunity/3") > -1) {
+      tmpCity = "Cali";
+    }
+    setCity(tmpCity);
+
     if (property) {
       setDescriptionItem({
         bathroom: property.PropertyDetails.bathrooms,
@@ -54,15 +67,16 @@ export function DescriptionPropertyComponent(
       setInterestItem(property.interest);
     }
   }, [property]);
+
   return (
     <>
       {property ? (
         <div className="single-description-property p-4 px-8 font-lato">
           <h2 className="tittle-description"> {property.name}</h2>
           <label className="cod-description">{property.code}</label>
-          <p className="price-description text-greenCyan">
+          {/* <p className="price-description text-greenCyan">
             <PriceStyle number={property.PropertyDetails.canon_price} />
-          </p>
+          </p> */}
           <div className="flex">
             <img
               src={Location}
@@ -70,21 +84,21 @@ export function DescriptionPropertyComponent(
               style={{ marginRight: "0.5rem" }}
               width={22}
             />
-            <label className="city-description">{property.city}</label>
+            <label className="city-description">{city}</label>
           </div>
           <DescriptionItems {...descriptionItem} />
-          {isMobile ? (
+          {/* {isMobile ? (
             <>
               <hr />
               <MobileBanner />
             </>
           ) : null}
-          <hr />
+          <hr /> */}
           <h2 className="subtittle-description">Descripción General</h2>
           <p className="paragraph-description">{property.description}</p>
           <hr />
-          <DetailsProperty {...detailsItem} />
-          <hr />
+          {/* <DetailsProperty {...detailsItem} />
+          <hr /> */}
           <FeaturesProperty {...property.features} />
           <hr />
           <InterestProperty {...interestItem} />

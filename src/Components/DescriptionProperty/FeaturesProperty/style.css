@@ -51,13 +51,17 @@
 
 @media screen and (max-width: 650px) {
     .feature-property {
-        grid-gap: 2rem 1rem;
+        grid-gap: 1rem;
     }
 
     .label-feature {
         font-weight: 400;
         font-size: 16px;
         line-height: 18px;
+    }
+
+    .checkbox-feature {
+        margin: 0.3rem;
     }
 }
 
