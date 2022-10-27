@@ -7,7 +7,7 @@
 .checkbox-feature {
     display: inline-block;
     position: relative;
-    padding-right: 0.3rem;
+    padding-right: 0.8rem;
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;
@@ -19,8 +19,8 @@
 /* Create a custom checkbox */
 .checkmark-feature {
     display: inline-block;
-    height: 26px;
-    width: 26px;
+    height: 28px;
+    width: 28px;
     border-radius: 50%;
     background-color: #009B72;
 }
@@ -30,10 +30,10 @@
 .checkbox-feature .checkmark-feature:after {
     content: "";
     position: absolute;
-    left: 9px;
-    top: 5px;
-    width: 7px;
-    height: 13px;
+    left: 10px;
+    top: 6px;
+    width: 8px;
+    height: 14px;
     border: solid white;
     border-width: 0 4px 4px 0;
     -webkit-transform: rotate(45deg);

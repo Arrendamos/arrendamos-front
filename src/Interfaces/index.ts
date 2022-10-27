@@ -66,6 +66,7 @@ export interface TestimonyData {
 }
 
 export interface ContactData {
+  whatsappText: string;
   socialMedia: socialMedia[];
 }
 
@@ -91,33 +92,4 @@ export type testimonyItem = {
   rol: string;
   testimony: string;
   stars: number;
-};
-
-export type DescriptionItem = {
-  bathroom?: number;
-  parking?: number;
-  private_area?: number;
-  stratum?: number;
-  antiquity?: number;
-  admin_price?: number;
-};
-
-export type DetailsItem = {
-  canon_price?: number;
-  admin?: number;
-  address?: string;
-  street?: string;
-  type?: string;
-  antiquity?: number;
-  floor?: number;
-  area?: number;
-  garage?: number;
-  bathrooms?: number;
-  stratum?: number;
-  elevator?: number;
-};
-
-export type InterestItem = {
-  name: string;
-  places: string[];
 };

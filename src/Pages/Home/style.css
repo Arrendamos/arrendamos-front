@@ -37,31 +37,40 @@
 
 /* QR Page */
 .construction-container {
-    display: grid;
-    grid-template-columns: 0.8fr 0.8fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 5rem;
+    background-color: #56e6c027;
+}
+
+.construction-container .construction-item {
+    text-align: center;
 }
 
 .text-container {
-    width: 80%;
+    width: 50%;
+    margin: auto;
 }
 
 .text-container h1 {
     font-size: 38px;
     font-weight: 600;
+    line-height: 40px;
     color: #009B72;
     margin-bottom: 2rem;
 }
 
-.text-container h3 {
-    font-size: 28px;
+.text-container p {
+    font-size: 20px;
+    line-height: 25px;
     font-weight: 300;
-    line-height: 40px;
+    margin: 1.5rem;
+    color: #2E2E2E;
 }
 
 .img-container img {
-    width: 30vw;
+    width: 20vw;
 }
 
 @media screen and (max-width: 768px) {

@@ -6,7 +6,7 @@ import {
   Footer,
 } from "../../Components";
 
-export function PropertyPage(): JSX.Element {
+export function PropertiesPage(): JSX.Element {
   return (
     <>
       <NavBar />

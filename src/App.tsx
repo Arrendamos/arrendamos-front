@@ -16,11 +16,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
         <Route path="/single-property/:id" element={<SingleProperty />} />
-        <Route path="/single-oportunity/:id" element={<SingleOportunity />} />
-        <Route element={<ProtectedRoutes />}></Route>
+        {/* <Route path="/single-oportunity/:id" element={<SingleOportunity />} /> */}
+        {/* <Route element={<ProtectedRoutes />}></Route>
         <Route element={<AdminProtectedRoutes />}>
           <Route path="/admin" element={<HomeAdmin />} />
-        </Route>
+        </Route> */}
         <Route element={<UserProtectedRoutes />}>
           <Route path="/create-oportunities" element={<CreateOportunity />} />
         </Route>

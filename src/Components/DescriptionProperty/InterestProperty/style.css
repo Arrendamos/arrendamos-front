@@ -1,7 +1,7 @@
 .interest-property {
     display: grid;
     grid-template-columns: 0.6fr 0.8fr;
-    grid-gap: 2rem 0rem;
+    grid-gap: 1rem 0rem;
 }
 
 .interest-places {
@@ -9,24 +9,22 @@
 }
 
 .interest-label {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 20px;
     line-height: 28px;
-    color: #1B2B42;
+    color: #2E2E2E;
 }
 
-.interest-place-item {
-    color: #9ea4ac;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+.interest-icon {
+    width: 30px;
+    margin-right: 0.3rem;
 }
 
 @media screen and (max-width: 650px) {
     .interest-property {
         grid-template-columns: 1fr;
-        grid-gap: 2rem;
-        padding: 1rem 2rem;
+        grid-gap: 0.5rem;
+        padding: 1rem 1.5rem;
     }
 
     .interest-label {
@@ -34,11 +32,6 @@
         line-height: 25px;
         font-weight: 600;
         margin: 0.3rem 0;
-    }
-
-    .interest-place-item {
-        font-size: 16px;
-        line-height: 18px;
     }
 }
 

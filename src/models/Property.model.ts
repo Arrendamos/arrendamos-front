@@ -1,37 +1,31 @@
 export interface PropertyModel {
-  id: number;
-  code: string;
-  link_360: string;
-  name: string;
-  parking: number;
-  private_area: number;
-  city: string;
-  description: string;
-  features: string[];
-  interest: any;
-  active: boolean;
-  PropertyDetails: PropertyDetailModel;
-  PropertyImages: PropertyImagesModel[];
-}
-
-export interface PropertyDetailModel {
-  canon_price: number;
-  admin: number;
-  address: string;
-  street: string;
   type: string;
-  antiquity: number;
-  floor: number;
-  area: number;
-  garage: number;
-  bathrooms: number;
+  price: number;
+  admin_price: number;
+  antiquity: string;
+  description: string;
   stratum: number;
-  elevator: number;
-  propertyId: number;
-}
-
-export interface PropertyImagesModel {
-  link: string;
-  isMainImage: boolean;
-  propertyId: number;
+  area: number;
+  private_area: number;
+  bathrooms: number;
+  parking: number;
+  elevators: number;
+  floors: number;
+  status: string;
+  features: string[] | null;
+  city: string;
+  neighborhood: string;
+  address: string;
+  address_complement: string | null;
+  link_map: string | null;
+  close_to: string[] | null;
+  virtual_tour: string | null;
+  youtube_video: string | null;
+  photos: {
+    idProperty: string;
+    images: {
+      url: string;
+      isMain: boolean;
+    }[];
+  } | null;
 }

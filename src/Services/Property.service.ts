@@ -31,7 +31,11 @@ export class PropertyService {
 
   public async getProperty(id: number): Promise<PropertyModel> {
     const response = await axios
-      .get(`${this.baseUrl}/id/${id}`)
+      .get(`${this.baseUrl}/${id}`, {
+        headers: {
+          "x-api-key": process.env.REACT_APP_ARRENDAMOS_API_KEY || "",
+        },
+      })
       .then((res) => {
         return res.data.data;
       })

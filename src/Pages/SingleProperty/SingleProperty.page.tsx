@@ -11,6 +11,10 @@ import {
 } from "../../Components";
 import { PropertyModel } from "../../models/Property.model";
 import { PropertyService } from "../../Services/Property.service";
+import {
+  RectangleImageSkeleton,
+  SinglePropertyDescriptionSkeleton,
+} from "../../Skeleton";
 
 import "./style.css";
 
@@ -28,17 +32,23 @@ export function SinglePropertyPage(): JSX.Element {
   }, [id]);
 
   const _getProperty = async (id: number) => {
-    const propertiyResponse: PropertyModel = await propertyService.getProperty(
-      id
-    );
-    if (propertiyResponse) setProperty(propertiyResponse);
+    const propertyResult: PropertyModel = await propertyService.getProperty(id);
+    if (propertyResult) setProperty(propertyResult);
   };
   return (
     <>
       <NavBar />
-      {/* {property ? <PropertyImageCarousel {...property} /> : null} */}
+      {property ? (
+        <PropertyImageCarousel {...property} />
+      ) : (
+        <RectangleImageSkeleton />
+      )}
       <div id="single-property-container" className="single-property-container">
-        {property ? <DescriptionProperty {...property} /> : null}
+        {property ? (
+          <DescriptionProperty {...property} />
+        ) : (
+          <SinglePropertyDescriptionSkeleton />
+        )}
         {isMobile ? null : (
           <div className="relative">
             <ContactCard />

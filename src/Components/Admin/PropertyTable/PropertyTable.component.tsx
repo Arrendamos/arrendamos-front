@@ -24,15 +24,15 @@ export function PropertyTableComponent() {
     const propertiesResponse = await propertyService.getPropertiesResume();
     let propertiesArray: CardPropertyPropsI[] = [];
     propertiesResponse.forEach(async (property: PropertyModel) => {
-      const card: CardPropertyPropsI = {
-        id: property.id,
-        code: property.code,
-        active: property.active,
-        price: property.PropertyDetails.canon_price,
-        area: property.PropertyDetails.area,
-        image: property.PropertyImages[0].link,
-      };
-      propertiesArray.push(card);
+      // const card: CardPropertyPropsI = {
+      //   id: property.id,
+      //   code: property.code,
+      //   active: property.active,
+      //   price: property.PropertyDetails.canon_price,
+      //   area: property.PropertyDetails.area,
+      //   image: property.PropertyImages[0].link,
+      // };
+      // propertiesArray.push(card);
     });
     setProperties(propertiesArray);
   };

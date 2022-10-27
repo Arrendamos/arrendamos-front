@@ -14,12 +14,5 @@ export const TestimonyInfo: TestimonyData = {
         "Gracias a arrendamos logre arrendar mi local comercial en menos de dos meses con una empresa nacional.",
       stars: 5,
     },
-    {
-      name: "Jorge Flechas",
-      rol: "Propietario",
-      testimony:
-        "Gracias a arrendamos logre arrendar mi local comercial en menos de dos meses con una empresa nacional.",
-      stars: 5,
-    },
   ],
 };

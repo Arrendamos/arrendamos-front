@@ -4,6 +4,7 @@ import { socialMedia } from "../../Interfaces";
 import logo from "../../Assets/Logo.png";
 
 import "./style.css";
+import { _openLink } from "../../Utils/functions/common.functions";
 
 export function FooterComponent(): JSX.Element {
   return (
@@ -30,9 +31,6 @@ export function FooterComponent(): JSX.Element {
 
 function SocialMediaIcon(): JSX.Element {
   const socialMediaInfo: socialMedia[] = ContactInfo.socialMedia;
-  const openLink = (link: string) => {
-    window.open(link, "_blank");
-  };
   return (
     <div className="flex justify-evenly">
       {socialMediaInfo.map((item: socialMedia, index: number) => {
@@ -42,7 +40,7 @@ function SocialMediaIcon(): JSX.Element {
           <div
             key={index}
             className="social-icon-box"
-            onClick={() => openLink(item.url)}
+            onClick={() => _openLink(item.url)}
           >
             <SocialIcon size={30} />
           </div>

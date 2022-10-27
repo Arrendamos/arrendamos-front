@@ -11,7 +11,6 @@ export function FeaturesProperty(features: string[]): JSX.Element {
 
 function FeaturesItem(features: string[]): JSX.Element[] {
   const featuresItem: JSX.Element[] = [];
-  if (!features) features = [];
   Object.entries(features).forEach(([key, value]) => {
     featuresItem.push(
       <div key={key} className="feature-item flex items-center">

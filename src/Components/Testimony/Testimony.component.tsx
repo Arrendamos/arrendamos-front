@@ -44,25 +44,15 @@ export function TestimonyComponent(): JSX.Element {
       <h3 className="simple-text text-center w-2/6 mx-auto">
         {infoPage.subTittle}
       </h3>
-      {isDesktopOrLaptop ? (
-        <div className="testimonies-container flex justify-between py-8 px-12">
-          {testimonysData.testimonies.map(
-            (testimony: testimonyItem, index: number) => {
-              return <TestimonyCard key={index} {...testimony} />;
-            }
-          )}
-        </div>
-      ) : (
-        <div className="slider-container py-4">
-          <Slider {...sliderSettings}>
-            {testimonysData.testimonies.map(
-              (testimony: testimonyItem, index: number) => {
-                return <TestimonyCard key={index} {...testimony} />;
-              }
-            )}
-          </Slider>
-        </div>
-      )}
+      <div className="slider-container py-4">
+        {/* <Slider {...sliderSettings}> */}
+        {testimonysData.testimonies.map(
+          (testimony: testimonyItem, index: number) => {
+            return <TestimonyCard key={index} {...testimony} />;
+          }
+        )}
+        {/* </Slider> */}
+      </div>
     </div>
   );
 }
