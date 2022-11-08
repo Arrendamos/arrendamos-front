@@ -20,7 +20,44 @@
     font-size: 1.2rem;
 }
 
-.img-add-bulding{
+.img-add-bulding {
     width: 1.7rem;
-    filter:  brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
+
+.add-image-box h1 {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 550px) {
+    .card-form-property .property-image-add {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0.5rem;
+        height: 35vh;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .add-image-box h1 {
+        font-size: 0.9rem;
+    }
+
+    .img-add-bulding {
+        width: 1.2rem;
+    }
+}
+
+@media screen and (max-height:700px) {
+    .main-image {
+        height: 12vh;
+    }
+
+    .property-image-add {
+        margin-bottom: 2rem;
+    }
 }

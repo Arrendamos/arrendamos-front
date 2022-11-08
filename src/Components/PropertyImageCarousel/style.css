@@ -1,3 +1,8 @@
+.slider-image-carousel {
+    width: 95%;
+    margin: auto;
+}
+
 .slider-image-carousel .slick-track {
     display: flex;
     align-items: center;
@@ -20,10 +25,12 @@
     color: black;
     font-size: 2rem;
 }
-.btn-interaction-container{
+
+.btn-interaction-container {
     margin-right: 50%;
     justify-content: flex-end;
 }
+
 .card-interaction {
     display: flex;
     justify-content: center;
@@ -35,6 +42,35 @@
     border: 1px solid rgba(17, 87, 134, 0.25);
     border-radius: 8px;
 }
+
 .card-interaction:hover {
     background: #F5F5F5;
+}
+
+@media screen and (max-width: 650px) {
+    .img-container-carousel {
+        width: 100vw;
+        margin: 0rem 0rem;
+    }
+
+    .img-container-carousel img {
+        border-radius: 0px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .slider-image-carousel {
+        width: 100vw;
+        padding: 0;
+    }
+
+    .btn-interaction-container {
+        margin-right: 0;
+        justify-content: space-evenly;
+    }
+
+    .card-interaction {
+        width: fit-content;
+        margin: 0.5rem 0;
+    }
 }

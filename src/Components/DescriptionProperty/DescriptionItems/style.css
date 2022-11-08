@@ -1,7 +1,7 @@
 .description-items {
     display: grid;
     margin: 1.5rem 0rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
 }
 
@@ -27,4 +27,52 @@
     display: flex;
     align-items: center;
     color: #1B2B42;
+}
+
+@media screen and (max-width: 850px) {
+    .description-items {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
+    }
+
+    .item-description {
+        padding: 0.2rem 0.8rem;
+        margin: 0 0.5rem;
+    }
+
+    .label-description {
+        opacity: 0.7;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .value-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .item-texts {
+        margin: 0.3rem 0.5rem;
+    }
+
+    .item-description img {
+        width: 6vw;
+        margin-right: 0.3rem;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .description-items {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .description-items {
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
+    }
 }

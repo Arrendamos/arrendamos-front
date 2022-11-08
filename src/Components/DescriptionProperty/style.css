@@ -1,14 +1,14 @@
-.tittle-description {
-    font-size: 2rem;
+.tittle-type {
+    font-size: 1.2rem;
     font-weight: 600;
-    line-height: 40px;
-    color: #1B2B42;
-
+    line-height: 28px;
+    color: #2E2E2E;
+    margin-bottom: 0.25rem;
 }
 
 .cod-description {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 28px;
     color: #1B2B42;
 }
@@ -20,10 +20,10 @@
 }
 
 .city-description {
-    color: #696e74;
+    color: #696e74c7;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 36px;
 }
 
 .subtittle-description {
@@ -39,4 +39,31 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
+}
+
+@media screen and (max-width: 650px) {
+    .single-description-property {
+        padding: 1rem;
+    }
+
+    .tittle-description {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    .price-description {
+        font-size: 28px;
+    }
+
+    .subtittle-description {
+        font-size: 20px;
+        margin: 0.5rem 0rem;
+    }
+
+    .paragraph-description {
+        font-size: 18px;
+        margin: 0.5rem 0rem;
+        line-height: 25px;
+        text-align: justify;
+    }
 }

@@ -1,30 +1,40 @@
-import ImageExample from '../../Assets/Grey_full.png';
-import { SimpleData } from '../../Interfaces';
-import { HeaderFilterProperty } from '../../Common/';
-import { HeaderInfo } from '../../Utils/Data/Header';
-import './style.css'
+import { HeaderData } from "../../Interfaces";
+import { HeaderInfo } from "../../Utils/Data/Header";
+import Edificio from "../../Assets/Icons/Common/Building.svg";
+
+import "./style.css";
 
 export function HeaderComponent(): JSX.Element {
+  let headerInfo: HeaderData = HeaderInfo;
 
-    let headerInfo: SimpleData = HeaderInfo;
-
-    return (
-        <div className="container-header grid grid-cols-2">
-            <div className="flex self-center flex-col">
-                <h1 className="text-pursianBlue font-lato font-bold w-4/5 block mx-auto">
-                    {headerInfo.text}
-                </h1>
-            </div>
-            <div className='img-header-container py-4'>
-                <img id='img-header' src={ImageExample} alt="Header img" />
-                <img id='logo-header-back' src={ImageExample} alt="Header img" />
-            </div>
-            <div className='relative top-0 left-0'>
-                <div className='filter-container'>
-                    <HeaderFilterProperty />
-                </div>
-            </div>
-
+  return (
+    <div className="container-header font-lato">
+      <div className="container-header-img">
+        <span className="filter-opacity"></span>
+        <h1 className="text-pursianBlue font-bold w-4/5 block mx-auto">
+          {headerInfo.tittle}
+        </h1>
+      </div>
+      <div className="container-header-info">
+        <h1 className="text-greenCyan font-bold p-4">{headerInfo.question}</h1>
+        <p dangerouslySetInnerHTML={{ __html: headerInfo.paragraph }}></p>
+        <div className="container-header-info-boxes flex justify-evenly">
+          <div id="box1" className="header-box">
+            <h2>{headerInfo.box[0].tittle}</h2>
+            <p>{headerInfo.box[0].text}</p>
+          </div>
+          <div id="box2" className="header-box">
+            <h2>{headerInfo.box[1].tittle}</h2>
+            <p>{headerInfo.box[1].text}</p>
+          </div>
         </div>
-    );
+      </div>
+      <div className="w-full text-center my-4">
+        <a className="btn-ref-header" href="/create-oportunities">
+          <img src={Edificio} alt="" style={{ marginRight: "0.8rem" }} />
+          Describe el inmueble que buscas
+        </a>
+      </div>
+    </div>
+  );
 }

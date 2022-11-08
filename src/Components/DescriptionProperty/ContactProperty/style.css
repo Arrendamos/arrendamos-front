@@ -1,0 +1,38 @@
+.contact-property label {
+    display: block;
+    font-size: 16px;
+    line-height: 28px;
+    margin-left: 0.5rem;
+    color: #667b97;
+}
+
+.contact-btn-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.btn-contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0rem;
+    cursor: pointer;
+}
+
+.contact-btn {
+    color: #009B72;
+    border: 1px solid #009B72;
+}
+
+.schedule-btn {
+    color: #009DDC;
+    border: 1px solid #009DDC;
+}

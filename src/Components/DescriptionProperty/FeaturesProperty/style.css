@@ -7,7 +7,7 @@
 .checkbox-feature {
     display: inline-block;
     position: relative;
-    padding-right: 0.8rem;
+    padding-right: 0.3rem;
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;
@@ -19,8 +19,8 @@
 /* Create a custom checkbox */
 .checkmark-feature {
     display: inline-block;
-    height: 28px;
-    width: 28px;
+    height: 26px;
+    width: 26px;
     border-radius: 50%;
     background-color: #009B72;
 }
@@ -30,10 +30,10 @@
 .checkbox-feature .checkmark-feature:after {
     content: "";
     position: absolute;
-    left: 10px;
-    top: 6px;
-    width: 8px;
-    height: 14px;
+    left: 9px;
+    top: 5px;
+    width: 7px;
+    height: 13px;
     border: solid white;
     border-width: 0 4px 4px 0;
     -webkit-transform: rotate(45deg);
@@ -47,4 +47,27 @@
     font-size: 20px;
     line-height: 28px;
     vertical-align: super;
+}
+
+@media screen and (max-width: 650px) {
+    .feature-property {
+        grid-gap: 1rem;
+    }
+
+    .label-feature {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .checkbox-feature {
+        margin: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .feature-property {
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
+    }
 }

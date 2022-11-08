@@ -1,0 +1,38 @@
+.switch-icon-form {
+    margin: 0.5rem 1rem;
+}
+
+.img-icon-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.img-form {
+    border-radius: 12px;
+    width: 100%;
+    margin: 0.8rem auto;
+}
+
+.icon-form {
+    position: absolute;
+    width: 125px;
+    top: -1.5rem;
+    right: -1.5rem;
+}
+
+.add-img-btn {
+    color: #009DDC;
+    text-decoration: underline;
+    font-size: 14px;
+    margin: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+.no-visible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

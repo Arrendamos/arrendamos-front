@@ -9,6 +9,10 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
 }
 
+.header-container .main-logo {
+    width: 250px;
+}
+
 .left-modal {
     background-color: rgba(70, 67, 67, 0.151);
     cursor: initial;
@@ -24,11 +28,48 @@
     font-weight: 600;
     margin: 0.2rem 0.5rem;
 }
-.modal-content a{
+
+.modal-content a {
     display: block;
     margin: 1rem 0;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 35px;
     color: #1B2B42;
+}
+
+@media screen and (max-width: 550px) {
+    .header-container {
+        padding: 0rem;
+    }
+
+    .header-container .main-logo {
+        max-width: 40vw !important;
+        margin-top: 0.5rem;
+    }
+
+    .header-container .burger-menu {
+        padding: 1rem 1.5rem;
+    }
+
+    .header-container .login-button {
+        padding: 1rem;
+    }
+
+    .btn-header {
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .header-container .main-logo {
+        max-width: 35vw !important;
+        margin-top: 0.5rem;
+    }
+
+    .btn-header {
+        padding: 0.3rem 0.8rem;
+        font-size: 12px;
+    }
 }

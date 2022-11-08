@@ -1,14 +1,14 @@
-import { Home, Property, SingleProperty } from './Pages';
-import { HomeAdmin, CreatePropertyAdmin } from './Pages/Admin';
-import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
-import { useAuth, adminAuth } from './Guards';
+import { Home, Property, SingleProperty, SingleOportunity } from "./Pages";
+import { HomeAdmin } from "./Pages/Admin";
+import { CreateOportunity } from "./Pages/User";
+import { Navigate, Outlet, Route, Routes } from "react-router-dom";
+import { userAuth, adminAuth } from "./Guards";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
-import './App.css';
+import "./App.css";
 
 function App() {
-
   return (
     <Provider store={store}>
       <Routes>
@@ -16,11 +16,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/property" element={<Property />} />
         <Route path="/single-property/:id" element={<SingleProperty />} />
-        <Route element={<ProtectedRoutes />}>
-        </Route>
+        {/* <Route path="/single-oportunity/:id" element={<SingleOportunity />} /> */}
+        {/* <Route element={<ProtectedRoutes />}></Route>
         <Route element={<AdminProtectedRoutes />}>
           <Route path="/admin" element={<HomeAdmin />} />
-          <Route path="/admin/create-property" element={<CreatePropertyAdmin />} />
+        </Route> */}
+        <Route element={<UserProtectedRoutes />}>
+          <Route path="/create-oportunities" element={<CreateOportunity />} />
         </Route>
       </Routes>
     </Provider>
@@ -28,15 +30,20 @@ function App() {
 }
 
 const ProtectedRoutes = () => {
-  const isAuth = useAuth();
+  const isAuth = userAuth();
 
   return isAuth ? <Outlet /> : <Navigate to="/" />;
-}
+};
+
+const UserProtectedRoutes = () => {
+  const isAuth = userAuth();
+
+  return isAuth ? <Outlet /> : <Navigate to="/" />;
+};
 
 const AdminProtectedRoutes = () => {
-  const isAuth = useAuth();
   const isAdmin = adminAuth();
-  return isAuth && isAdmin ? <Outlet /> : <Navigate to="/" />;
-}
+  return isAdmin ? <Outlet /> : <Navigate to="/" />;
+};
 
 export default App;

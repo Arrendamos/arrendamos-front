@@ -1,1 +1,1 @@
-export { useAuth, adminAuth } from './Auth.guard';
+export { userAuth, adminAuth } from './Auth.guard';

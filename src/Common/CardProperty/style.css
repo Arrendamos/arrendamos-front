@@ -12,6 +12,7 @@
     margin: 1rem;
     font-size: 28px;
     line-height: 25px;
+    font-weight: 600;
 }
 
 .card-property {
@@ -53,15 +54,71 @@
         width: fit-content;
         margin: 0.5rem 0.5rem;
     }
+
     .price-property {
         margin: 0.5rem;
         font-size: 22px;
         line-height: 35px;
     }
+
     .info-property p {
         display: inline-block;
         font-size: 12px;
     }
+
+    .dot {
+        margin: 0px 0.3rem 0.1rem;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .box-info-property {
+        margin-bottom: 0.2rem;
+    }
+
+    .info-property p {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        margin: 0px 0.5rem 0.2rem;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .card-property {
+        width: fit-content;
+        margin: 0.5rem 0.5rem;
+    }
+
+    .price-property {
+        margin: 0.5rem;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .icons-card-property {
+        margin: 0.5rem;
+    }
+
+    .info-property {
+        padding: 0.5rem;
+    }
+
+    .icons-card-property svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .info-property p {
+        display: inline-block;
+        font-size: 12px;
+    }
+
     .dot {
         margin: 0px 0.3rem 0.1rem;
     }
