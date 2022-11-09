@@ -22,17 +22,15 @@ export interface HowWorksData {
   }[];
 }
 export interface CardPropertyPropsI {
-  id: number;
-  code?: string;
-  active?: boolean;
-  image?: string;
+  id: string;
+  name: string;
   price: number;
   area: number;
-  bathroom?: number;
-  parking?: number;
-  address?: string;
-  location?: string;
-  city?: string;
+  bathroom: number;
+  parking: number;
+  neighborhood: string;
+  city: string;
+  image: string;
 }
 
 export interface BannerPropertyPropsI {
