@@ -6,7 +6,7 @@ import { RiPencilFill } from "react-icons/ri";
 import { BsPlusLg } from "react-icons/bs";
 import { PriceStyle } from "../../../Atoms";
 import { CardPropertyPropsI } from "../../../Interfaces";
-import { PropertyModel } from "../../../models/Property.model";
+import { PropertyResumeModel } from "../../../models/Property.model";
 import { PropertyService } from "../../../Services/Property.service";
 
 import "./style.css";
@@ -23,7 +23,7 @@ export function PropertyTableComponent() {
   const _getProperties = async () => {
     const propertiesResponse = await propertyService.getPropertiesResume();
     let propertiesArray: CardPropertyPropsI[] = [];
-    propertiesResponse.forEach(async (property: PropertyModel) => {
+    propertiesResponse.forEach(async (property: PropertyResumeModel) => {
       // const card: CardPropertyPropsI = {
       //   id: property.id,
       //   code: property.code,
@@ -82,8 +82,8 @@ function PropertyItem(props: CardPropertyPropsI) {
       </div>
       <div className="property-image-info">
         <div className="property-image-info-item flex">
-          <label>Codigo:</label>
-          <p>{props.code}</p>
+          <label>Tipo:</label>
+          <p>{props.name}</p>
         </div>
         <div className="property-image-info-item flex">
           <label>
@@ -93,7 +93,7 @@ function PropertyItem(props: CardPropertyPropsI) {
         </div>
         <div className="property-image-info-item flex">
           <label>Estado:</label>
-          <p>{props.active ? "Activo" : "Inactivo"}</p>
+          <p>{true ? "Activo" : "Inactivo"}</p>
         </div>
         <div className="property-image-info-item flex">
           <label>Valor:</label>

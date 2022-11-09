@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../../Assets/Logo.png";
 
 import "./style.css";
@@ -10,8 +10,26 @@ type modal = {
 
 export function NavBarComponent(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", navBarFixed);
+  });
+
+  const navBarFixed = () => {
+    let navBar = document.getElementById("nav-bar")!;
+    if (window.scrollY > 20) {
+      navBar.style.position = "fixed";
+      navBar.style.top = "0";
+    } else {
+      navBar.style.position = "relative";
+    }
+  };
+
   return (
-    <div className="grid w-full justify-between px-4 header-container">
+    <div
+      id="nav-bar"
+      className="grid w-full justify-between px-4 nav-container"
+    >
       <MenuLeft isOpen={isOpen} setIsOpen={setIsOpen} />
       <div
         className="burger-menu space-y-2 my-2 py-4 px-8 cursor-pointer"
@@ -48,18 +66,18 @@ function MenuLeft(props: modal): JSX.Element {
       <div className="relative w-4/5 max-w-md h-full md:h-auto ">
         <div className="modal-content relative bg-white rounded-lg shadow">
           <p
-            className="text-2xl px-12 py-4 font-bold cursor-pointer inline-block"
+            className="text-2xl px-5 float-right py-4 font-bold cursor-pointer inline-block"
             onClick={() => setIsOpen(false)}
           >
             x
           </p>
-          <div className="px-16 py-4">
+          <div className="px-6 py-4">
             <h3>Menu</h3>
             <div className="space-y-2 mx-4 w-4/5">
               <a href="/" className="hover:text-gray-500">
                 Publicar Inmuble
               </a>
-              <a href="/property" className="hover:text-gray-500">
+              <a href="/properties" className="hover:text-gray-500">
                 Buscar Inmueble
               </a>
               <a href="/" className="hover:text-gray-500">

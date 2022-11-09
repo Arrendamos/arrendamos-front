@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="*" element={<h1>Not Found</h1>} />
         <Route path="/" element={<Home />} />
-        <Route path="/property" element={<Property />} />
+        <Route path="/properties" element={<Property />} />
         <Route path="/single-property/:id" element={<SingleProperty />} />
         {/* <Route path="/single-oportunity/:id" element={<SingleOportunity />} /> */}
         {/* <Route element={<ProtectedRoutes />}></Route>

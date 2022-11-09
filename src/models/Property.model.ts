@@ -29,3 +29,15 @@ export interface PropertyModel {
     }[];
   } | null;
 }
+
+export interface PropertyResumeModel {
+  id: string;
+  type: string;
+  price: number;
+  area: number;
+  bathrooms: number;
+  parking: number;
+  city: string;
+  neighborhood: string;
+  imageUrl: string;
+}
