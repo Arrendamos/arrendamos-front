@@ -11,9 +11,9 @@ export function FooterComponent(): JSX.Element {
     <footer id="footer" className="footer p-8">
       <div className="footer-container grid font-lato mb-8">
         <div className="footer-text-container flex justify-around w-4/5 pr-24 items-center">
-          <a href="/property">Nuestros inmuebles</a>
-          <a href="/property">Publicar inmuble</a>
-          <a href="/property">Contáctanos</a>
+          <a href="/properties">Nuestros inmuebles</a>
+          <a href="/properties">Publicar inmuble</a>
+          <a href="/properties">Contáctanos</a>
         </div>
         <div className="social-icon-container pl-8">
           <h2>Siguenos</h2>

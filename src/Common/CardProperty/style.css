@@ -8,6 +8,14 @@
     margin-bottom: 1rem;
 }
 
+.name-property {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 600;
+}
+
 .price-property {
     margin: 1rem;
     font-size: 28px;
@@ -56,8 +64,8 @@
     }
 
     .price-property {
-        margin: 0.5rem;
-        font-size: 22px;
+        margin-top: 0.5rem;
+        font-size: 25px;
         line-height: 35px;
     }
 

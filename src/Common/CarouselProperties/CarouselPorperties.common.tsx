@@ -26,14 +26,14 @@ export function CarouselPorpertiesCommon(
 
   // ----- test enviroment -----
   const cardExample: CardPropertyPropsI = {
-    id: 1,
+    id: "1",
     image: imgTest,
     price: 0,
     area: 120,
     bathroom: 2,
     parking: 2,
-    address: "",
-    location: "",
+    neighborhood: "-",
+    name: "Domino's",
     city: "Bogotá",
   };
   let cards: CardPropertyPropsI[] = [];
@@ -46,7 +46,7 @@ export function CarouselPorpertiesCommon(
     } else {
       card.city = "Cali";
     }
-    card.id = i + 1;
+    card.id = (i + 1).toString();
     cards.push(card);
   }
   // ----- test enviroment -----
@@ -150,7 +150,9 @@ export function CarouselPorpertiesCommon(
         <div className="mobile-container">
           <Slider ref={customeSlider} {...sliderSettings}>
             {cards.map((card, index) => {
-              return <CardProperty key={index} {...card} />;
+              return (
+                <CardProperty key={index} card={card} urlName="oportunity" />
+              );
             })}
           </Slider>
         </div>
