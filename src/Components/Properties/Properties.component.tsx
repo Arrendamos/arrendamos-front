@@ -47,7 +47,7 @@ export function PropertiesComponent(): JSX.Element {
     <>
       <div className="tittle-container font-lato">
         <img src={HomeIcon} alt="Home" />
-        <h2 className="tittle-text">Lo que las empresas nescesitan </h2>
+        <h2 className="tittle-text">Inmuebles</h2>
       </div>
       <FilterTypeProperty />
       <div className="progress-property-container mx-auto my-4">
