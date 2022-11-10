@@ -14,5 +14,4 @@ export { TestimonyComponent as Testimony } from "./Testimony/Testimony.component
 export { PropertiesComponent as Properties } from "./Properties/Properties.component";
 export { PropertyImageCarouselComponent as PropertyImageCarousel } from "./PropertyImageCarousel/PropertyImageCarousel.component";
 export { DescriptionPropertyComponent as DescriptionProperty } from "./DescriptionProperty/DescriptionProperty.component";
-export { ContactCardComponent as ContactCard } from "./ContactCard/ContactCard.component";
 export { FooterComponent as Footer } from "./Footer/Footer.component";

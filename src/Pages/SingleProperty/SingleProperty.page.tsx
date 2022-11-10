@@ -1,16 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
 import { useParams } from "react-router-dom";
+import { PropertyModel } from "../../models/Property.model";
+import { PropertyService } from "../../Services/Property.service";
 import {
   NavBar,
   PropertyImageCarousel,
   DescriptionProperty,
-  ContactCard,
   Footer,
 } from "../../Components";
-import { PropertyModel } from "../../models/Property.model";
-import { PropertyService } from "../../Services/Property.service";
 import {
   RectangleImageSkeleton,
   SinglePropertyDescriptionSkeleton,
@@ -19,9 +17,6 @@ import {
 import "./style.css";
 
 export function SinglePropertyPage(): JSX.Element {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 850px)",
-  });
   const propertyService = new PropertyService();
   const [property, setProperty] = useState<PropertyModel>();
 
@@ -48,11 +43,6 @@ export function SinglePropertyPage(): JSX.Element {
           <DescriptionProperty {...property} />
         ) : (
           <SinglePropertyDescriptionSkeleton />
-        )}
-        {isMobile ? null : (
-          <div className="relative">
-            <ContactCard />
-          </div>
         )}
       </div>
       <Footer />
