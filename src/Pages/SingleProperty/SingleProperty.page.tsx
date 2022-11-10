@@ -2,15 +2,14 @@
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useParams } from "react-router-dom";
+import { PropertyModel } from "../../models/Property.model";
+import { PropertyService } from "../../Services/Property.service";
 import {
   NavBar,
   PropertyImageCarousel,
   DescriptionProperty,
-  ContactCard,
   Footer,
 } from "../../Components";
-import { PropertyModel } from "../../models/Property.model";
-import { PropertyService } from "../../Services/Property.service";
 import {
   RectangleImageSkeleton,
   SinglePropertyDescriptionSkeleton,
@@ -48,11 +47,6 @@ export function SinglePropertyPage(): JSX.Element {
           <DescriptionProperty {...property} />
         ) : (
           <SinglePropertyDescriptionSkeleton />
-        )}
-        {isMobile ? null : (
-          <div className="relative">
-            <ContactCard />
-          </div>
         )}
       </div>
       <Footer />
