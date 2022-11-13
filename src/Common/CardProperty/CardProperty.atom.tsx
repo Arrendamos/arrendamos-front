@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { BsShareFill, BsFillSuitHeartFill } from "react-icons/bs";
 import { FormattedNumber, IntlProvider } from "react-intl";
 
+import { RectangleImageSkeleton } from "../../Skeleton";
+
 import "./style.css";
 
 type CardPropertyProps = {
@@ -18,11 +20,15 @@ export function CardPropertyAtom(props: CardPropertyProps): JSX.Element {
   };
   return (
     <div className="card-property my-4 mx-8 pb-2">
-      <img
-        src={card.image}
-        alt=""
-        onClick={() => _openSingleProperty(card.id)}
-      />
+      {card.image ? (
+        <img
+          src={card.image}
+          alt=""
+          onClick={() => _openSingleProperty(card.id)}
+        />
+      ) : (
+        <RectangleImageSkeleton />
+      )}
       <div className="box-info-property font-lato">
         <div className="flex justify-between">
           <p className="name-property text-greenCyan">{card.name}</p>

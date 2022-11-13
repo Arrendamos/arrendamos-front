@@ -21,7 +21,7 @@ export class PropertyService {
     return response;
   }
 
-  public async getProperty(id: number): Promise<PropertyModel> {
+  public async getProperty(id: string): Promise<PropertyModel> {
     const response = await axios
       .get(`${this.baseUrl}/${id}`, {
         headers: {
