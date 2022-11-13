@@ -23,10 +23,10 @@ export function SinglePropertyPage(): JSX.Element {
   const { id } = useParams();
 
   useEffect((): void => {
-    if (id) _getProperty(+id);
+    if (id) _getProperty(id);
   }, [id]);
 
-  const _getProperty = async (id: number) => {
+  const _getProperty = async (id: string) => {
     const propertyResult: PropertyModel = await propertyService.getProperty(id);
     if (propertyResult) setProperty(propertyResult);
   };
