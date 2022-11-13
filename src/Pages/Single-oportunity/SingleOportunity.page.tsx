@@ -8,7 +8,6 @@ import {
   NavBar,
   PropertyImageCarousel,
   DescriptionProperty,
-  ContactCard,
   Footer,
 } from "../../Components";
 import { PropertyModel } from "../../models/Property.model";
@@ -72,11 +71,6 @@ export function SingleOportunityPage(): JSX.Element {
       {/* <PropertyImageCarousel PropertyImages={property.PropertyImages} /> */}
       <div id="single-property-container" className="single-property-container">
         {/* <DescriptionProperty {...property} /> */}
-        {isMobile ? null : (
-          <div className="relative">
-            <ContactCard />
-          </div>
-        )}
       </div>
       <button
         className="btn-send-oportunity flex m-auto"

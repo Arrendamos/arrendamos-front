@@ -38,7 +38,7 @@ export function PropertiesComponent(): JSX.Element {
           city: property.city,
           image: property.imageUrl,
         };
-        setProperties([...properties, card]);
+        setProperties((properties) => [...properties, card]);
       });
     }
   };

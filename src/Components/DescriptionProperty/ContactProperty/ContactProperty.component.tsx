@@ -13,7 +13,7 @@ export function ContactProperty(): JSX.Element {
     <>
       <h2 className="subtittle-description">Contacto</h2>
       <div className="contact-property">
-        <label>3126576103</label>
+        <label>3118388696</label>
         <label>contacto@arrendamos.co </label>
         <div className="contact-btn-container">
           <button className="btn-contact-item schedule-btn">
