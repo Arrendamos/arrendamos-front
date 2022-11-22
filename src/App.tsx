@@ -1,6 +1,5 @@
-import { Home, Property, SingleProperty, SingleOportunity } from "./Pages";
-import { HomeAdmin } from "./Pages/Admin";
-import { CreateOportunity } from "./Pages/User";
+import { Home, Property, SingleProperty } from "./Pages";
+import { CreateOportunity, CreateProperty } from "./Pages/User";
 import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 import { userAuth, adminAuth } from "./Guards";
 import { Provider } from "react-redux";
@@ -22,7 +21,8 @@ function App() {
           <Route path="/admin" element={<HomeAdmin />} />
         </Route> */}
         <Route element={<UserProtectedRoutes />}>
-          <Route path="/create-oportunities" element={<CreateOportunity />} />
+          <Route path="/create-oportunity" element={<CreateOportunity />} />
+          <Route path="/create-property" element={<CreateProperty />} />
         </Route>
       </Routes>
     </Provider>

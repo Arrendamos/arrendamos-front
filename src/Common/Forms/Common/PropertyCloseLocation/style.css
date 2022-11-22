@@ -18,7 +18,7 @@
     margin: 0.5rem 1rem;
 }
 
-.input-location-container input {
+.input-close-location-container input {
     border: 1px solid #9cacc4a8;
     margin: 0.5rem 0;
     border-radius: 10px;
@@ -26,7 +26,7 @@
     width: 70%;
 }
 
-.input-location-container button {
+.input-close-location-container button {
     border: 2px solid white;
     background-color: #2eb8ee;
     margin: 0.5rem;
