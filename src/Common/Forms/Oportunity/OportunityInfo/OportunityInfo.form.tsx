@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { PriceRangeForm, SwitchForm } from "../Atoms";
+import { PriceRangeForm, SwitchForm } from "../../Atoms";
 
 import "./style.css";
 
-export function PropertyOportunityInfoCommon(): JSX.Element {
+export function OportunityInfoForm(): JSX.Element {
   const [switchState, setSwitchState] = useState([
     {
       title: "Baños",
