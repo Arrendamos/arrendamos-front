@@ -1,3 +1,4 @@
+import { useMediaQuery } from "react-responsive";
 import {
   NavBar,
   Header,
@@ -8,16 +9,13 @@ import {
   Footer,
 } from "../../Components";
 
+import { _openLink } from "../../Utils/functions/common.functions";
+
 import QR from "../../Assets/Qr.png";
 import LaptopnBuilding from "../../Assets/LaptopnBuilding.png";
-
-import "./style.css";
-
 import Ribera from "../../Assets/Images/Ribera.png";
 
 import "./style.css";
-import { useMediaQuery } from "react-responsive";
-import { _openLink } from "../../Utils/functions/common.functions";
 
 export function HomePage(): JSX.Element {
   const isDesktopOrLaptop = useMediaQuery({
