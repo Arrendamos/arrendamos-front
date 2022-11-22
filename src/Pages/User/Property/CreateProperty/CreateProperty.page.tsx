@@ -108,21 +108,28 @@ export function CreatePropertyPage() {
       },
       user_id: "1",
     };
+
     Swal.fire({
       allowOutsideClick: false,
       icon: "info",
       text: "Espere por favor",
     });
+
     Swal.showLoading(null);
     const response = await propertyService.createProperty(property);
     Swal.close();
-    console.log(response);
+
     if (response) {
       Swal.fire(
         "Inmueble creado con exito ",
         "Tu inmueble ha sido creado con exito",
         "success"
       );
+      setPropertyInfo(initStatePropertyInfo);
+      setPropertyFeatures(initStatePropertyFeatures);
+      setPropertyLocationInfo(initStatePropertyLocationInfo);
+      setPropertyCloseLocation(initStatePropertyCloseLocation);
+      setPropertyImage(initStatePropertyImage);
     } else {
       Swal.fire(
         "Error al crear el inmueble",
