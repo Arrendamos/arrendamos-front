@@ -75,7 +75,7 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
           className="input-form"
           type="text"
           value={priceCurrency.price}
-          pattern="\d*"
+          inputMode="numeric"
           onChange={(e) => _convertToCurrency(e.target.value, "price")}
           placeholder="Valor del arriendo"
         />
@@ -83,7 +83,7 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
           className="input-form"
           type="text"
           value={priceCurrency.admin_price}
-          pattern="\d*"
+          inputMode="numeric"
           onChange={(e) => _convertToCurrency(e.target.value, "admin_price")}
           placeholder="Valor de la administración"
         />
