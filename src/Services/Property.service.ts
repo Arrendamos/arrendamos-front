@@ -37,4 +37,22 @@ export class PropertyService {
       });
     return response;
   }
+
+  public async createProperty(property: PropertyModel): Promise<PropertyModel> {
+    const response = await axios
+      .post(`${this.baseUrl}`, property, {
+        headers: {
+          "x-api-key": process.env.REACT_APP_ARRENDAMOS_API_KEY || "",
+        },
+      })
+      .then((res) => {
+        console.log(res);
+        return res.data;
+      })
+      .catch((err) => {
+        console.log(JSON.parse(err.request.response));
+        return null;
+      });
+    return response;
+  }
 }

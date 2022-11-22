@@ -1,16 +1,4 @@
-.input-form {
-    border: 1px solid #9cacc4a8;
-    margin: 0.5rem 0;
-    border-radius: 10px;
-    padding: 0.5rem 0.8rem;
-    width: 100%;
-}
-
-.short-register-container {
-    padding: 0.5rem 1rem;
-}
-
-.short-register-checkbox {
+.accept-terms-checkbox {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -26,7 +14,7 @@
 }
 
 /* Hide the browser's default checkbox */
-.short-register-checkbox input {
+.accept-terms-checkbox input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -35,7 +23,7 @@
 }
 
 /* Create a custom checkbox */
-.short-register-checkbox .checkmark {
+.accept-terms-checkbox .checkmark {
     position: absolute;
     top: 0.2vh;
     left: 1vw;
@@ -46,13 +34,13 @@
 }
 
 /* On mouse-over, add a grey background color */
-.short-register-checkbox:hover input~.checkmark {
+.accept-terms-checkbox:hover input~.checkmark {
     background-color: white;
     border: 1px solid #9cacc4a8;
 }
 
 /* When the checkbox is checked, add a blue background */
-.short-register-checkbox input:checked~.checkmark {
+.accept-terms-checkbox input:checked~.checkmark {
     background-color: #2196F3;
 }
 
@@ -64,12 +52,12 @@
 }
 
 /* Show the checkmark when checked */
-.short-register-checkbox input:checked~.checkmark:after {
+.accept-terms-checkbox input:checked~.checkmark:after {
     display: block;
 }
 
 /* Style the checkmark/indicator */
-.short-register-checkbox .checkmark:after {
+.accept-terms-checkbox .checkmark:after {
     left: 7px;
     top: 3px;
     width: 5px;
@@ -81,7 +69,7 @@
     transform: rotate(45deg);
 }
 
-.btn-short-register {
+.btn-create-property {
     background-color: #009DDC;
     color: white;
     border-radius: 10px;
@@ -93,11 +81,16 @@
     width: 80%;
 }
 
-.btn-short-register:hover {
+.btn-create-property:hover {
     background-color: #36b9ec;
 }
 
-.info-short-register {
+.btn-create-property:disabled {
+    background-color: #9cacc4a8;
+    color: #78818d;
+}
+
+.info-create-property {
     color: #009DDC;
     font-size: 13px;
     margin: 0.3rem 0;

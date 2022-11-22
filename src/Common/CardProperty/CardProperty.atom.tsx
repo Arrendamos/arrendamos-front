@@ -1,5 +1,7 @@
-import { CardPropertyPropsI } from "../../Interfaces";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { CardPropertyPropsI } from "../../Interfaces";
 
 import { BsShareFill, BsFillSuitHeartFill } from "react-icons/bs";
 import { FormattedNumber, IntlProvider } from "react-intl";
@@ -15,12 +17,24 @@ type CardPropertyProps = {
 export function CardPropertyAtom(props: CardPropertyProps): JSX.Element {
   const { card, urlName } = props;
   const navigation = useNavigate();
+
+  const [image, setImage] = useState<string>("");
+
+  useEffect(() => {
+    if (card.image) {
+      setTimeout(() => {
+        setImage(card.image);
+      }, 1000);
+    }
+  }, [card]);
+
   const _openSingleProperty = (id: string) => {
     navigation(`/single-${urlName}/${id}`);
   };
+
   return (
     <div className="card-property my-4 mx-8 pb-2">
-      {card.image ? (
+      {image !== "" ? (
         <img
           src={card.image}
           alt=""

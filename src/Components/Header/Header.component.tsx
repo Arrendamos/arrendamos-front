@@ -30,7 +30,7 @@ export function HeaderComponent(): JSX.Element {
         </div>
       </div>
       <div className="w-full text-center my-4">
-        <a className="btn-ref-header" href="/create-oportunities">
+        <a className="btn-ref-header" href="/create-oportunity">
           <img src={Edificio} alt="" style={{ marginRight: "0.8rem" }} />
           Describe el inmueble que buscas
         </a>
