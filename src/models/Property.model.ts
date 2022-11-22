@@ -28,6 +28,7 @@ export interface PropertyModel {
       isMain: boolean;
     }[];
   } | null;
+  user_id: string | null;
 }
 
 export interface PropertyResumeModel {

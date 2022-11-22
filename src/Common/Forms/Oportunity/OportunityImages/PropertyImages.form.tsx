@@ -1,10 +1,10 @@
-import Edificio from "../../../Assets/Icons/Filters/Property/Edificio.svg";
+import Edificio from "../../../../Assets/Icons/Filters/Property/Edificio.svg";
 import { GrAddCircle } from "react-icons/gr";
 
 import "./style.css";
 import { useRef } from "react";
 
-export function PropertyImageFormCommon(): JSX.Element {
+export function OportunityImageForm(): JSX.Element {
   const inputFile = useRef<any>(null);
 
   const onButtonClick = () => {
