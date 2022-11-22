@@ -1,12 +1,12 @@
 import { useRef, useState } from "react";
 import Switch from "react-switch";
-import imgTest from "../../../Assets/Images/test/TestOportunity.png";
-import imgTest2 from "../../../Assets/Images/test/TestOportunityBlack.png";
-import iconTest from "../../../Assets/Icons/Test/IconTest.svg";
+import imgTest from "../../../../Assets/Images/test/TestOportunity.png";
+import imgTest2 from "../../../../Assets/Images/test/TestOportunityBlack.png";
+import iconTest from "../../../../Assets/Icons/Test/IconTest.svg";
 
 import "./style.css";
 
-export function PropertyImageIconFormCommon(): JSX.Element {
+export function OportunityImageIconForm(): JSX.Element {
   const [checked, setChecked] = useState(true);
   const inputFile = useRef<any>(null);
 
