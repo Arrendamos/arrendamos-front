@@ -1,6 +1,15 @@
-export { PropertyOportunityInfoCommon as PropertyForm } from "./PropertyOportunityInfo/PropertyInfo.form";
-export { PropertyLocationInfoFormCommon as PropertyLocationInfoForm } from "./PropertyLocationInfo/PropertyLocationInfo.form";
-export { PropertyFeaturesFormCommon as PropertyFeaturesForm } from "./PropertyFeatures/PropertyFeatures.form";
-export { PropertyImageFormCommon as PropertyImageForm } from "./PropertyImages/PropertyImages.form";
-export { PropertyImageIconFormCommon as PropertyImageIconForm } from "./PropertyImageIcon/PropertyImageIcon.form";
-export { ShortRegisterUserFormCommon as ShortRegisterUserForm } from "./ShortRegisterUser/ShortRegisterUser.form";
+//Property
+export { PropertyInfoForm } from "./Property/PropertyInfo/PropertyInfo.form";
+export { PropertyLocationInfoForm } from "./Property/PropertyLocationInfo/PropertyLocationInfo.form";
+export { PropertyImageForm } from "./Property/PropertyImages/PropertyImages.form";
+
+//Oportunity
+export { OportunityInfoForm } from "./Oportunity/OportunityInfo/OportunityInfo.form";
+export { OportunityLocationInfoForm } from "./Oportunity/OportunityLocationInfo/OportunityLocationInfo.form";
+export { OportunityImageForm } from "./Oportunity/OportunityImages/PropertyImages.form";
+export { OportunityImageIconForm } from "./Oportunity/OportunityImageIcon/OportunityImageIcon.form";
+
+//Common
+export { PropertyFeaturesForm } from "./Common/PropertyFeatures/PropertyFeatures.form";
+export { PropertyCloseLocationForm } from "./Common/PropertyCloseLocation/PropertyCloseLocation.form";
+export { ShortRegisterUserForm } from "./Common/ShortRegisterUser/ShortRegisterUser.form";

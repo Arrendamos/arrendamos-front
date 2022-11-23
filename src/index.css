@@ -93,6 +93,47 @@ code {
   height: 5px;
 }
 
+/* Inputs forms */
+.form-input-container {
+  margin: 1rem auto 0rem;
+}
+
+.label-color {
+  color: #1B2B42;
+}
+
+.form-input-container select, .input-form, textarea {
+  border: 1px solid #9cacc4a8;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+}
+
+.form-input-container select:focus, input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #009DDC;
+}
+
+.input-number-small {
+  border: 1px solid #9cacc4a8;
+  border-radius: 8px;
+  width: 50px !important;
+  padding: 0.1rem 0.6rem !important;
+  text-align: center;
+}
+
+.alert-input {
+  border-color: #fa4444 !important;
+  box-shadow: 0 0 6px #fa4444;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.switch-container {
+  padding: 1rem;
+}
+
 @media screen and (max-width: 550px) {
   .card-form-property {
     width: 90%;

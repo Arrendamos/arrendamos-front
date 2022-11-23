@@ -1,0 +1,29 @@
+.property-info-items-container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.property-info-items-container label {
+    font-size: 1rem;
+    color: #1B2B42;
+}
+
+.property-info-items-container input {
+    width: 20%;
+    text-align: center;
+}
+
+.property-info-items-container select {
+    background-position:
+        calc(100% - 16px) calc(1em + -3px),
+        calc(100% - 12px) calc(1em + -3px),
+        calc(100% - 2.5em) 0.5em;
+    background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%);
+    width: 20% !important;
+    padding: 0.2rem 0.8rem;
+    padding-left: 1.2rem;
+    text-align: left;
+}
