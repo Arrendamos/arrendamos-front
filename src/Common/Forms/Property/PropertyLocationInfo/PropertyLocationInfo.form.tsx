@@ -39,6 +39,7 @@ export function PropertyLocationInfoForm(
             onChange={_onChangeSetPropertyLocationInfo}
             type="text"
             placeholder="Ciudad"
+            required
           />
           <input
             className="input-form"
@@ -47,6 +48,7 @@ export function PropertyLocationInfoForm(
             value={propertyLocationInfo.neighborhood}
             onChange={_onChangeSetPropertyLocationInfo}
             placeholder="Barrio"
+            required
           />
           <input
             className="input-form"
@@ -55,6 +57,7 @@ export function PropertyLocationInfoForm(
             value={propertyLocationInfo.address}
             onChange={_onChangeSetPropertyLocationInfo}
             placeholder="Direccion"
+            required
           />
           <input
             className="input-form"

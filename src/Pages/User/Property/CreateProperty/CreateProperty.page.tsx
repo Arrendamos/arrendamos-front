@@ -1,6 +1,7 @@
 import { useState } from "react";
-// import Popup from "reactjs-popup";
 
+// import Popup from "reactjs-popup";
+import Swal from "sweetalert2";
 import { NavBar } from "../../../../Components";
 import {
   PropertyInfoForm,
@@ -19,13 +20,13 @@ import { PropertyModel } from "../../../../models/Property.model";
 
 import "reactjs-popup/dist/index.css";
 import "./style.css";
-import Swal from "sweetalert2";
 
 export function CreatePropertyPage() {
   const propertyService = new PropertyService();
 
   // const [open, setOpen] = useState(false);
   const [checkTerms, setCheckTerms] = useState(false);
+  const [alert, setAlert] = useState(false);
 
   const initStatePropertyInfo = {
     type: "0",
@@ -40,7 +41,7 @@ export function CreatePropertyPage() {
     bathrooms: 0,
     parking: 0,
     elevators: 0,
-    floors: 0,
+    floors: 1,
   };
 
   const initStatePropertyFeatures: {
@@ -78,7 +79,27 @@ export function CreatePropertyPage() {
   );
   const [propertyImage, setPropertyImage] = useState(initStatePropertyImage);
 
-  const _createProperty = async () => {
+  const _validateForm = () => {
+    if (
+      propertyInfo.type === "0" ||
+      propertyInfo.status === "0" ||
+      propertyInfo.antiquity === "0"
+    ) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Por favor, completa todos los campos del formulario",
+      });
+      setAlert(true);
+      return false;
+    }
+    setAlert(false);
+    return true;
+  };
+
+  const _createProperty = async (e: any) => {
+    e.preventDefault();
+    if (!_validateForm()) return;
     const property: PropertyModel = {
       type: propertyInfo.type,
       price: Number.parseInt(propertyInfo.price.toString()),
@@ -138,52 +159,55 @@ export function CreatePropertyPage() {
       );
     }
   };
+
   return (
     <>
       <NavBar />
-      <PropertyInfoForm
-        propertyInfo={propertyInfo}
-        setPropertyInfo={setPropertyInfo}
-      />
-      <PropertyFeaturesForm setPropertyFeatures={setPropertyFeatures} />
-      <PropertyLocationInfoForm
-        propertyLocationInfo={propertyLocationInfo}
-        setPropertyLocationInfo={setPropertyLocationInfo}
-      />
-      <PropertyCloseLocationForm
-        propertyCloseLocations={propertyCloseLocation}
-        setPropertyCloseLocations={setPropertyCloseLocation}
-      />
-      <PropertyImageForm
-        propertyImages={propertyImage}
-        setPropertyImages={setPropertyImage}
-      />
-      <div className="card card-form-property font-lato mb-4">
-        <label className="accept-terms-checkbox mt-4">
-          Acepto el Tratamiento de mis datos personales y Terminos y
-          Condiciones.
-          <input
-            type="checkbox"
-            className="checked"
-            checked={checkTerms}
-            onChange={(e) => setCheckTerms(e.target.checked)}
-          />
-          <span className="checkmark"></span>
-        </label>
-        <div className="w-full text-center">
-          <button
-            className="btn-create-property"
-            onClick={_createProperty}
-            disabled={!checkTerms}
-          >
-            Publicar Inmueble
-          </button>
+      <form onSubmit={_createProperty}>
+        <PropertyInfoForm
+          propertyInfo={propertyInfo}
+          setPropertyInfo={setPropertyInfo}
+          alert={alert}
+        />
+        <PropertyFeaturesForm setPropertyFeatures={setPropertyFeatures} />
+        <PropertyLocationInfoForm
+          propertyLocationInfo={propertyLocationInfo}
+          setPropertyLocationInfo={setPropertyLocationInfo}
+        />
+        <PropertyCloseLocationForm
+          propertyCloseLocations={propertyCloseLocation}
+          setPropertyCloseLocations={setPropertyCloseLocation}
+        />
+        <PropertyImageForm
+          propertyImages={propertyImage}
+          setPropertyImages={setPropertyImage}
+        />
+        <div className="card card-form-property font-lato mb-4">
+          <label className="accept-terms-checkbox mt-4">
+            Acepto el Tratamiento de mis datos personales y Terminos y
+            Condiciones.
+            <input
+              type="checkbox"
+              className="checked"
+              checked={checkTerms}
+              onChange={(e) => setCheckTerms(e.target.checked)}
+            />
+            <span className="checkmark"></span>
+          </label>
+          <div className="w-full text-center">
+            <input
+              type="submit"
+              className="btn-create-property"
+              disabled={!checkTerms}
+              value="Crear Inmueble"
+            />
+          </div>
+          <p className="info-create-property">
+            *Se publicará en las proximas 24 Horas.
+          </p>
+          {/* <PopupRegisterUser open={open} setOpen={setOpen} /> */}
         </div>
-        <p className="info-create-property">
-          *Se publicará en las proximas 24 Horas.
-        </p>
-        {/* <PopupRegisterUser open={open} setOpen={setOpen} /> */}
-      </div>
+      </form>
     </>
   );
 }

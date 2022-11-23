@@ -123,6 +123,13 @@ code {
   text-align: center;
 }
 
+.alert-input {
+  border-color: #fa4444 !important;
+  box-shadow: 0 0 6px #fa4444;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
 .switch-container {
   padding: 1rem;
 }

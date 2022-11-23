@@ -21,14 +21,21 @@ type PropertyInfoInterface = {
 type PropertyInfoProps = {
   propertyInfo: PropertyInfoInterface;
   setPropertyInfo: React.Dispatch<React.SetStateAction<PropertyInfoInterface>>;
+  alert: boolean;
 };
 
 export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
-  const { propertyInfo, setPropertyInfo } = props;
+  const { propertyInfo, setPropertyInfo, alert } = props;
 
   const [priceCurrency, setPriceCurrency] = useState({
     price: "",
     admin_price: "",
+  });
+
+  const [focusInput, setFocusInput] = useState({
+    bathrooms: false,
+    parking: false,
+    elevators: false,
   });
 
   const _convertToCurrency = (value: any, key: string) => {
@@ -58,7 +65,9 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
       <h1 className="tittle">Información del inmueble</h1>
       <div className="form-input-container">
         <select
-          className="minimal-select"
+          className={`minimal-select ${
+            alert && propertyInfo.type === "0" ? "alert-input" : ""
+          }`}
           name="type"
           value={propertyInfo.type}
           onChange={_onChangeSetPropertyInfo}
@@ -78,6 +87,7 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
           inputMode="numeric"
           onChange={(e) => _convertToCurrency(e.target.value, "price")}
           placeholder="Valor del arriendo"
+          required
         />
         <input
           className="input-form"
@@ -86,9 +96,12 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
           inputMode="numeric"
           onChange={(e) => _convertToCurrency(e.target.value, "admin_price")}
           placeholder="Valor de la administración"
+          required
         />
         <select
-          className="minimal-select"
+          className={`minimal-select ${
+            alert && propertyInfo.antiquity === "0" ? "alert-input" : ""
+          }`}
           name="antiquity"
           value={propertyInfo.antiquity}
           onChange={_onChangeSetPropertyInfo}
@@ -109,6 +122,7 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
           value={propertyInfo.description}
           onChange={_onChangeSetPropertyInfo}
           placeholder="Describe tu inmueble (Ingresa información adicional)"
+          required
         ></textarea>
         <SelectItemCount
           name="stratum"
@@ -123,6 +137,7 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
           onChange={_onChangeSetPropertyInfo}
           type="number"
           placeholder="Área (m2)"
+          required
         />
         <input
           className="input-form"
@@ -133,9 +148,12 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
           onChange={_onChangeSetPropertyInfo}
           type="number"
           placeholder="Área privada (m2)"
+          required
         />
         <select
-          className="label-color minimal-select"
+          className={`label-color minimal-select ${
+            alert && propertyInfo.status === "0" ? "alert-input" : ""
+          }`}
           name="status"
           value={propertyInfo.status}
           onChange={_onChangeSetPropertyInfo}
@@ -153,9 +171,15 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
             id="bathroom"
             className="input-form"
             name="bathrooms"
-            onChange={_onChangeSetPropertyInfo}
-            value={propertyInfo.bathrooms}
+            onFocus={() => setFocusInput({ ...focusInput, bathrooms: true })}
+            onBlur={() => setFocusInput({ ...focusInput, bathrooms: false })}
+            onChange={(e) => {
+              setFocusInput({ ...focusInput, bathrooms: false });
+              _onChangeSetPropertyInfo(e);
+            }}
+            value={!focusInput.bathrooms ? propertyInfo.bathrooms : ""}
             type="number"
+            required
           />
         </div>
         <div className="property-info-items-container flex">
@@ -164,9 +188,15 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
             id="parking"
             className="input-form"
             name="parking"
-            onChange={_onChangeSetPropertyInfo}
-            value={propertyInfo.parking}
+            onFocus={() => setFocusInput({ ...focusInput, parking: true })}
+            onBlur={() => setFocusInput({ ...focusInput, parking: false })}
+            onChange={(e) => {
+              setFocusInput({ ...focusInput, parking: false });
+              _onChangeSetPropertyInfo(e);
+            }}
+            value={!focusInput.parking ? propertyInfo.parking : ""}
             type="number"
+            required
           />
         </div>
         <div className="property-info-items-container flex">
@@ -175,9 +205,15 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
             id="elevators"
             className="input-form"
             name="elevators"
-            onChange={_onChangeSetPropertyInfo}
-            value={propertyInfo.elevators}
+            onFocus={() => setFocusInput({ ...focusInput, elevators: true })}
+            onBlur={() => setFocusInput({ ...focusInput, elevators: false })}
+            onChange={(e) => {
+              setFocusInput({ ...focusInput, elevators: false });
+              _onChangeSetPropertyInfo(e);
+            }}
+            value={!focusInput.elevators ? propertyInfo.elevators : ""}
             type="number"
+            required
           />
         </div>
         <div className="property-info-items-container flex">
