@@ -151,6 +151,8 @@ export function CreatePropertyPage() {
       setPropertyLocationInfo(initStatePropertyLocationInfo);
       setPropertyCloseLocation(initStatePropertyCloseLocation);
       setPropertyImage(initStatePropertyImage);
+      setCheckTerms(false);
+      window.scrollTo(0, 0);
     } else {
       Swal.fire(
         "Error al crear el inmueble",

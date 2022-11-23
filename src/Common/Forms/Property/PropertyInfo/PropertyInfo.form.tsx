@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./style.css";
 
@@ -37,6 +37,13 @@ export function PropertyInfoForm(props: PropertyInfoProps): JSX.Element {
     parking: false,
     elevators: false,
   });
+
+  useEffect(() => {
+    if (propertyInfo.price === 0 && propertyInfo.admin_price === 0) {
+      setPriceCurrency({ price: "", admin_price: "" });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [propertyInfo.price, propertyInfo.admin_price]);
 
   const _convertToCurrency = (value: any, key: string) => {
     const number = value.replace(/\D/g, "");
