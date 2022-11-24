@@ -1,9 +1,15 @@
+import { useEffect } from "react";
+
 import { PropertyFormData } from "../../../../Interfaces/Forms";
 import { PropertyFormInfo } from "../../../../Utils/Forms/Property";
 
 import "./style.css";
 
 type PropertyFeaturesProps = {
+  propertyFeatures: {
+    features: string[];
+    other_features: string;
+  };
   setPropertyFeatures: React.Dispatch<
     React.SetStateAction<{
       features: string[];
@@ -15,8 +21,19 @@ type PropertyFeaturesProps = {
 export function PropertyFeaturesForm(
   props: PropertyFeaturesProps
 ): JSX.Element {
-  const { setPropertyFeatures } = props;
+  const { propertyFeatures, setPropertyFeatures } = props;
   const propertyFormInfo: PropertyFormData = PropertyFormInfo;
+
+  useEffect(() => {
+    if (propertyFeatures.features.length === 0) {
+      const featuresCheckbox = document.getElementsByClassName(
+        "property-features-item-checkbox"
+      );
+      for (let i = 0; i < featuresCheckbox.length; i++) {
+        (featuresCheckbox[i] as HTMLInputElement).checked = false;
+      }
+    }
+  }, [propertyFeatures]);
 
   const _onChangeSetPropertyFeatures = (e: any) => {
     const { name, checked } = e.target;
@@ -42,6 +59,7 @@ export function PropertyFeaturesForm(
       other_features: value,
     }));
   };
+
   return (
     <div className="card card-form-property font-lato">
       <h1 className="tittle">Características</h1>
@@ -63,6 +81,7 @@ export function PropertyFeaturesForm(
         placeholder="Apto para modificaciones"
         cols={30}
         rows={3}
+        value={propertyFeatures.other_features}
         onChange={_onChangeTextArea}
       ></textarea>
     </div>
@@ -81,6 +100,7 @@ function PropertyFeaturesItem(props: PropertyFeaturesItemProps): JSX.Element {
       <label className="container-radio">
         {feature}
         <input
+          className="property-features-item-checkbox"
           name={feature}
           type="checkbox"
           onChange={_onChangeSetPropertyFeatures}

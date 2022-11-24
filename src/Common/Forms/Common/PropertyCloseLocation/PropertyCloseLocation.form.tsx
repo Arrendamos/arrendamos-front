@@ -46,7 +46,7 @@ export function PropertyCloseLocationForm(
               event.key === "Enter" ? _addCloseLocation() : null
             }
           />
-          <button>
+          <button type="button">
             <BsPlusLg
               style={{ margin: "auto", color: "white" }}
               onClick={_addCloseLocation}
