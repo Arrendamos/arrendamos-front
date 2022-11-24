@@ -1,6 +1,17 @@
-.container-header-img h1 {
-    font-size: 40px;
-    line-height: 54px;
+.container-header {
+    background-color: #EDF8FD;
+}
+
+.img-header {
+    width: 100%;
+}
+
+.container-header-info {
+    position: relative;
+    top: -1.5rem;
+    padding-top: 2rem;
+    border-radius: 34px 34px 0 0;
+    background-color: #EDF8FD;
 }
 
 .container-header-info h1 {
@@ -53,46 +64,21 @@
 }
 
 strong {
-    color: #009B72;
-}
-
-@media screen and (min-width: 1500px) {
-    .container-header-img h1 {
-        font-size: 48px;
-    }
+    color: #009DDC;
 }
 
 @media screen and (max-width: 550px) {
-    .container-header-img {
-        position: relative;
-        height: 45vh;
-        background-image: url("../../Assets/Images/HomeHeader.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .container-header-img h1 {
-        position: absolute;
-        font-size: 26px;
-        line-height: 32px;
-        color: white;
-        bottom: 0;
-        margin: 1rem 0.8rem;
-        z-index: 2;
-        width: 95%;
-    }
-
     .container-header-info h1 {
-        font-size: 26px;
-        line-height: 34px;
+        font-size: 24px;
+        line-height: 32px;
         font-weight: 600;
     }
 
     .container-header-info p {
-        font-size: 19px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 22px;
         font-weight: 400;
-        padding: 0.5rem 1rem;
+        padding: 0rem 1rem;
     }
 
     .filter-opacity {
@@ -101,12 +87,6 @@ strong {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.35);
         z-index: 1;
-    }
-
-    .container-header-img img {
-        width: 100%;
-        position: absolute;
-        z-index: -99;
     }
 
     .header-box {
@@ -130,10 +110,32 @@ strong {
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 380px) {
     .btn-ref-header {
         font-size: 14px;
         margin: 0.3rem auto;
         padding: 0.5rem 0.8rem;
     }
+
+    .container-header-info h1 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .container-header-info p {
+        font-size: 16px;
+    }
+
+    .header-box {
+        padding: 0.5rem 0.4rem 0.6rem;
+    }
+
+    .header-box h2 {
+        font-size: 25px;
+    }
+
+    .header-box p {
+        font-size: 14px;
+    }
+
 }

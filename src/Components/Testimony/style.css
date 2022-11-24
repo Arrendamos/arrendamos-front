@@ -1,5 +1,5 @@
 .testimonies-container {
-    column-gap: 5vw;
+    background-color: #EDF8FD;
 }
 
 .testimony-card {
@@ -52,28 +52,28 @@
 
 .star-selected {
     font-size: 2rem;
-    color: #009B72;
+    color: #009DDC;
 }
 
 @media screen and (max-width: 550px) {
-    .testimonies-container-text {
+    .testimonies-container {
         padding-top: 0;
         margin-top: 0;
     }
 
-    .testimonies-container-text h1 {
-        font-size: 24px;
+    .testimonies-container h1 {
+        font-size: 1.6rem;
         line-height: 18px;
         margin-bottom: 0.5rem;
     }
 
-    .testimonies-container-text h3 {
-        font-size: 20px;
-        line-height: 24px;
+    .testimonies-container h3 {
+        font-size: 1.2rem;
+        line-height: 20px;
         width: 80%;
     }
 
-    .testimonies-container-text .slider-container {
+    .testimonies-container .slider-container {
         margin: 0 auto;
     }
 
@@ -114,7 +114,6 @@
 
     .star-selected {
         font-size: 1.8rem;
-        color: #009B72;
         margin-bottom: 1rem;
     }
 }

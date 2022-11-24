@@ -1,3 +1,7 @@
+.parthners-container {
+    background-color: #EDF8FD;
+}
+
 .partner-item img {
     width: 9vw;
 }
@@ -8,7 +12,7 @@
 
 @media screen and (max-width: 550px) {
     .parthners-container h1 {
-        font-size: 24px;
+        font-size: 1.6rem;
         line-height: 28px;
         margin-bottom: 0.5rem;
     }

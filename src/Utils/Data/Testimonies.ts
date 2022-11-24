@@ -1,17 +1,30 @@
-import { TestimonyData } from "../../Interfaces";
+import { SimpleTitleParagraph } from "../../Interfaces";
 
-export const TestimonyInfo: TestimonyData = {
+export type testimonyItemInterface = {
+  name: string;
+  rol: string;
+  image?: string;
+  testimony: string;
+  stars: number;
+};
+
+export interface TestimonyDataInterface {
+  data: SimpleTitleParagraph;
+  testimonies: testimonyItemInterface[];
+}
+
+export const TestimonyInfo: TestimonyDataInterface = {
   data: {
-    tittle: "Testimonios",
-    subTittle:
-      "Testimonios de empresas que decidieron confiar y arrendar con nosostros",
+    title: "Testimonios",
+    paragraph: "Testimonios de los usuarios que han confiado en nosotros",
   },
   testimonies: [
     {
-      name: "Jorge Flechas",
-      rol: "Propietario",
+      name: "Alejandra Arteaga",
+      image: "Alejandra",
+      rol: "CEO J2C Services",
       testimony:
-        "Gracias a arrendamos logre arrendar mi local comercial en menos de dos meses con una empresa nacional.",
+        "Gracias a arrendamos encontramos nuestra nueva oficina, tiene una vista increible.",
       stars: 5,
     },
   ],
