@@ -171,7 +171,10 @@ export function CreatePropertyPage() {
           setPropertyInfo={setPropertyInfo}
           alert={alert}
         />
-        <PropertyFeaturesForm setPropertyFeatures={setPropertyFeatures} />
+        <PropertyFeaturesForm
+          propertyFeatures={propertyFeatures}
+          setPropertyFeatures={setPropertyFeatures}
+        />
         <PropertyLocationInfoForm
           propertyLocationInfo={propertyLocationInfo}
           setPropertyLocationInfo={setPropertyLocationInfo}
