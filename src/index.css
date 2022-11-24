@@ -23,11 +23,24 @@ code {
   color: #1B2B42;
 }
 
-.tittle-text {
+.title-text {
   font-weight: 600;
   font-size: 44px;
   line-height: 64px;
   color: #1B2B42;
+}
+
+.progress-static-container {
+  width: 95%;
+  height: 5px;
+  background: #ccc;
+}
+
+.progress-static-container .progress-static-bar {
+  height: 5px;
+  width: 50%;
+  border-radius: 12px;
+  background: #009DDC;
 }
 
 .card {
@@ -93,6 +106,16 @@ code {
   height: 5px;
 }
 
+/* Property and Oportunity common style */
+.title-container {
+  display: flex;
+  margin-left: 0.5rem;
+  gap: 1rem;
+  padding-left: 2rem;
+}
+
+/* Property and Oportunity common style */
+
 /* Inputs forms */
 .form-input-container {
   margin: 1rem auto 0rem;
@@ -135,6 +158,25 @@ code {
 }
 
 @media screen and (max-width: 550px) {
+
+  /* Property and Oportunity common style */
+  .title-container {
+    padding-left: 1rem;
+  }
+
+  .title-container img {
+    width: 2.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .title-container .title-text {
+    font-size: 1.6rem;
+    line-height: 32px;
+    margin: 1rem 0rem 0.3rem;
+  }
+
+  /*End Property and Oportunity common style */
+
   .card-form-property {
     width: 90%;
     margin: 2rem auto;

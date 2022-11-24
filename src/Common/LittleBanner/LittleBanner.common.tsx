@@ -1,4 +1,4 @@
-import { BannerPropertyPropsI } from "../../Interfaces";
+import { BannerPropertyPropsI } from "../../Utils/Data/Banners";
 
 import "./style.css";
 export function LittleBannerCommon(props: BannerPropertyPropsI): JSX.Element {

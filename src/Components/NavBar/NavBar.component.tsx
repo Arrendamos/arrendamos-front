@@ -45,7 +45,7 @@ export function NavBarComponent(): JSX.Element {
         </a>
       </div>
       <div className="login-button py-4 px-8 text-right">
-        <button className="btn-header bg-greenCyan hover:bg-greenCyanHover text-white font-lato">
+        <button className="btn-header bg-primaryColor hover:bg-primaryColorHover text-white font-lato">
           Ingresar
         </button>
       </div>

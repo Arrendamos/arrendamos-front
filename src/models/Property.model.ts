@@ -42,3 +42,12 @@ export interface PropertyResumeModel {
   neighborhood: string;
   imageUrl: string;
 }
+
+export interface OportunityResumeModel {
+  id: string;
+  type: string;
+  area: number;
+  city: string;
+  neighborhood: string;
+  image?: string;
+}

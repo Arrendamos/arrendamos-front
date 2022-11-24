@@ -1,6 +1,14 @@
-import { ContactData } from "../../Interfaces";
+export type socialMediaInterface = {
+  icon: string;
+  network: string;
+  url: string;
+};
+export interface ContactDataInterface {
+  whatsappText: string;
+  socialMedia: socialMediaInterface[];
+}
 
-export const ContactInfo: ContactData = {
+export const ContactInfo: ContactDataInterface = {
   whatsappText:
     "&text=Hola,%20vi%20un%20inmueble%20en%20arrendamos.co%20y%20quisiera%20agendar%20una%20cita%20contigo",
   socialMedia: [

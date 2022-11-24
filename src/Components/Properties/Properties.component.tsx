@@ -1,16 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { CardProperty } from "../../Common";
-import { CardPropertyPropsI, TypeProperty } from "../../Interfaces";
-import HomeIcon from "../../Assets/Icons/Common/Home.svg";
+
+import { CardProperty, FilterTypeProperty } from "../../Common";
+import { CardSkeleton } from "../../Skeleton";
 
 import { PropertyService } from "../../Services/Property.service";
 
+import { CardPropertyPropsI } from "../../Interfaces";
+
 import { PropertyResumeModel } from "../../models/Property.model";
 
-import { CardSkeleton } from "../../Skeleton";
-
-import { TypePropertyInfo } from "../../Utils/Data/TypeProperty";
+import HomeIcon from "../../Assets/Icons/Common/Home.svg";
 
 import "./style.css";
 
@@ -45,13 +45,13 @@ export function PropertiesComponent(): JSX.Element {
 
   return (
     <>
-      <div className="tittle-container font-lato">
-        <img src={HomeIcon} alt="Home" />
-        <h2 className="tittle-text">Inmuebles</h2>
+      <div className="title-container font-lato mt-4">
+        <img style={{ marginTop: "0.8rem" }} src={HomeIcon} alt="Home" />
+        <h2 className="title-text">Inmuebles</h2>
       </div>
       <FilterTypeProperty />
-      <div className="progress-property-container mx-auto my-4">
-        <div className="progress-bar"></div>
+      <div className="progress-static-container mx-auto my-4">
+        <div className="progress-static-bar"></div>
       </div>
       <div className="property-grid-container">
         {properties.length > 0 ? (
@@ -76,26 +76,4 @@ function SkeletonCards(): JSX.Element {
     skeletonCards.push(<CardSkeleton key={index} />);
   }
   return <>{skeletonCards}</>;
-}
-function FilterTypeProperty(): JSX.Element {
-  const typePropertyInfo: TypeProperty[] = TypePropertyInfo;
-  return (
-    <div className="filter-type-property-container font-lato">
-      {typePropertyInfo.map((typeProperty, index) => {
-        const img = require(`../../Assets/Icons/Filters/Property/${typeProperty.icon}.svg`);
-
-        return (
-          <div
-            className={`filter-type-property-item flex ${
-              index === 0 ? "active-filter" : ""
-            }`}
-            key={index}
-          >
-            <img src={img} alt={typeProperty.name} />
-            <p>{typeProperty.name}</p>
-          </div>
-        );
-      })}
-    </div>
-  );
 }

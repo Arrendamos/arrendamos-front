@@ -40,7 +40,7 @@
     cursor: pointer;
     margin: 1rem 0px;
     margin-bottom: 2rem;
-    border-radius: 20px;
+    border-radius: 8px;
     width: 16vw;
     height: 100%;
     background-color: #FFFFFF;
@@ -49,4 +49,27 @@
 
 .little-banner-container .btn-container:hover {
     background-color: #cacaca;
+}
+
+@media screen and (max-width: 550px) {
+    .little-banner-container {
+        padding: 0.8rem;
+    }
+
+    .little-banner-container .btn-container {
+        width: 50%;
+        margin: 1rem 0.2rem;
+    }
+
+    .little-banner-container button {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.1rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .little-banner-container button {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.1rem;
+    }
 }
