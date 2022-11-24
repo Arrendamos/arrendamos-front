@@ -1,21 +1,21 @@
-import { AvatarCircle } from "../../Atoms";
-
-import {
-  SimpleTitleParagraph,
-  TestimonyData,
-  testimonyItem,
-} from "../../Interfaces";
-
 import { useMediaQuery } from "react-responsive";
-
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-import { TestimonyInfo } from "../../Utils/Data/Testimonies";
 import { AiFillStar } from "react-icons/ai";
 
-import TestimonyImg from "../../Assets/Images/Testimony.jpg";
+import { AvatarCircle } from "../../Atoms";
+
+import { SimpleTitleParagraph } from "../../Interfaces";
+import {
+  TestimonyInfo,
+  TestimonyDataInterface,
+  testimonyItemInterface,
+} from "../../Utils/Data/Testimonies";
+
+import TestimonyImg from "../../Assets/Images/Testimony.png";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import "./style.css";
 
@@ -24,7 +24,7 @@ export function TestimonyComponent(): JSX.Element {
     query: "(min-width: 750px)",
   });
 
-  const testimonysData: TestimonyData = TestimonyInfo;
+  const testimonysData: TestimonyDataInterface = TestimonyInfo;
   const infoPage: SimpleTitleParagraph = testimonysData.data;
 
   const sliderSettings = {
@@ -39,15 +39,18 @@ export function TestimonyComponent(): JSX.Element {
   };
 
   return (
-    <div className="testimonies-container-text my-4 p-4 font-lato">
-      <h1 className="tittle-text text-center">{infoPage.tittle}</h1>
+    <div className="container-testimonies p-4 pt-12 font-lato">
+      <h1 className="title-text">{infoPage.title}</h1>
+      <div className="progress-static-container">
+        <div className="progress-static-bar"></div>
+      </div>
       <h3 className="simple-text text-center w-2/6 mx-auto">
-        {infoPage.subTittle}
+        {infoPage.paragraph}
       </h3>
       <div className="slider-container py-4">
         {/* <Slider {...sliderSettings}> */}
         {testimonysData.testimonies.map(
-          (testimony: testimonyItem, index: number) => {
+          (testimony: testimonyItemInterface, index: number) => {
             return <TestimonyCard key={index} {...testimony} />;
           }
         )}
@@ -57,13 +60,18 @@ export function TestimonyComponent(): JSX.Element {
   );
 }
 
-function TestimonyCard(props: testimonyItem): JSX.Element {
-  const { name, testimony, rol, stars } = props;
+function TestimonyCard(props: testimonyItemInterface): JSX.Element {
+  const { name, image, testimony, rol, stars } = props;
+
+  const imageTestimony = image
+    ? require(`../../Assets/Images/Testimonies/${image}.png`)
+    : null;
+
   return (
     <div className="testimony-card font-lato text-center text-pursianBlue">
       <img src={TestimonyImg} alt="" className="img-testimony" />
       <div className="relative bottom-8 h-16">
-        <AvatarCircle />
+        <AvatarCircle image={imageTestimony} />
       </div>
       <h1 className="testimony-name">{name}</h1>
       <p className="testimony-rol">{rol}</p>

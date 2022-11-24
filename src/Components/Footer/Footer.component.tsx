@@ -1,5 +1,7 @@
-import { ContactInfo } from "../../Utils/Data/ContactInfo";
-import { socialMedia } from "../../Interfaces";
+import {
+  ContactInfo,
+  socialMediaInterface,
+} from "../../Utils/Data/ContactInfo";
 
 import logo from "../../Assets/Logo.png";
 
@@ -30,10 +32,10 @@ export function FooterComponent(): JSX.Element {
 }
 
 function SocialMediaIcon(): JSX.Element {
-  const socialMediaInfo: socialMedia[] = ContactInfo.socialMedia;
+  const socialMediaInfo: socialMediaInterface[] = ContactInfo.socialMedia;
   return (
     <div className="flex justify-evenly">
-      {socialMediaInfo.map((item: socialMedia, index: number) => {
+      {socialMediaInfo.map((item: socialMediaInterface, index: number) => {
         const icons = require("react-icons/gr");
         const SocialIcon = icons[`${item.icon}`];
         return (

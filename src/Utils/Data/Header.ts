@@ -1,7 +1,13 @@
-import { HeaderData } from "../../Interfaces";
+export interface HeaderDataInterface {
+  question: string;
+  paragraph: string;
+  box: {
+    tittle: string;
+    text: string;
+  }[];
+}
 
-export const HeaderInfo: HeaderData = {
-  tittle: "Encontramos el inmueble ideal para la expansón de tú empresa",
+export const HeaderInfo: HeaderDataInterface = {
   question: "¿Estas buscando un inmueble comercial?",
   paragraph:
     "LLegaste al lugar indicado, somos un portal enfocado 100% en ayudar a empresas y empresarios a encontrar el <strong> inmueble comercial </strong> ideal para la expansón de sus negocios.",

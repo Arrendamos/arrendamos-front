@@ -1,6 +1,6 @@
 .footer {
-    margin-top: 5rem;
     border-top: 2px solid rgba(83, 83, 83, 0.3);
+    background-color: #edf7fb7d;
 }
 
 .footer-container {
@@ -49,9 +49,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .footer {
-        margin-top: 2rem;
-    }
 
     .footer-container {
         grid-template-columns: 1fr;

@@ -1,6 +1,41 @@
-.oportunities-container {
-    background-image: url("../../Assets/Images/BackGround_2.svg");
-    background-repeat: no-repeat;
-    background-position-y: 15vh;
-    background-position-x: 32vh;
+.paragraph-oportunities {
+    font-size: 1rem;
+    width: 85%;
+    line-height: 24px;
+    float: right;
+    color: #3f3f3f;
+    padding: 0 0.7rem;
+}
+
+.container-oportunities hr {
+    display: inline-block;
+    width: 100%;
+}
+
+.oportunities-grid-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media screen and (max-width:1400px) {
+    .oportunities-grid-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width:900px) {
+    .oportunities-grid-container {
+        padding: 0.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    .oportunities-grid-container {
+        padding: 0.5rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }

@@ -2,18 +2,16 @@ import { useMediaQuery } from "react-responsive";
 import {
   NavBar,
   Header,
-  HowWorks,
+  CustomYouExperience,
+  Banners,
   Oportunities,
   OurPartners,
   Testimony,
   Footer,
 } from "../../Components";
 
-import { _openLink } from "../../Utils/functions/common.functions";
-
 import QR from "../../Assets/Qr.png";
 import LaptopnBuilding from "../../Assets/LaptopnBuilding.png";
-import Ribera from "../../Assets/Images/Ribera.png";
 
 import "./style.css";
 
@@ -24,34 +22,19 @@ export function HomePage(): JSX.Element {
 
   return (
     <>
-      {}
       {isDesktopOrLaptop ? (
         <QrPage />
       ) : (
         <>
           <NavBar />
           <Header />
-          <HowWorks />
-          <Oportunities />
+          <CustomYouExperience />
+          <Banners />
+          <div className="container-oportunities-home">
+            <Oportunities />
+          </div>
           <OurPartners />
           <Testimony />
-          <div
-            className="invert-property-container font-lato"
-            onClick={() => _openLink("https://lariberacc.com/")}
-          >
-            <h1 className="tittle-text">Invierte en inmuebles comerciales </h1>
-            <div className="progress-property-container mx-auto my-4">
-              <div className="progress-bar"></div>
-            </div>
-            <div className="img-container-invert">
-              <img src={Ribera} alt="" />
-              <p>La Ribera Centro Comercial</p>
-            </div>
-            <p className="info-invert">
-              Es una realidad el centro comercial que merece Zipaquirá y la
-              región norte.
-            </p>
-          </div>
           <Footer />
         </>
       )}

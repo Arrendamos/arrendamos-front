@@ -1,6 +1,13 @@
-import { HowWorksData } from "../../Interfaces";
+export interface HowWorksDataInterface {
+  tittle: string;
+  items: {
+    icon: string;
+    tittle: string;
+    paragraph: string;
+  }[];
+}
 
-export const HowWorksInfo: HowWorksData = {
+export const HowWorksInfo: HowWorksDataInterface = {
   tittle: "Como funciona arrendamos",
   items: [
     {

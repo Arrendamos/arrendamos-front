@@ -1,4 +1,7 @@
-import { TypeProperty } from "../../Interfaces";
+export type TypeProperty = {
+  name: string;
+  icon: string;
+};
 
 export const TypePropertyInfo: TypeProperty[] = [
   {

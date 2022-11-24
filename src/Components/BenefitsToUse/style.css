@@ -47,7 +47,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .container-benefits .tittle-text {
+    .container-benefits .title-text {
         font-size: 1.8rem;
         line-height: 28px;
     }

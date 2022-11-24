@@ -1,6 +1,5 @@
 import useCollapse from "react-collapsed";
-import { HowWorksData } from "../../Interfaces";
-import { HowWorksInfo } from "../../Utils/Data/HowWorks";
+import { HowWorksInfo, HowWorksDataInterface } from "../../Utils/Data/HowWorks";
 
 import "./style.css";
 
@@ -10,11 +9,11 @@ type HowWorksItemProps = {
 };
 
 export function HowWorksComponent(): JSX.Element {
-  const howWorksData: HowWorksData = HowWorksInfo;
+  const howWorksData: HowWorksDataInterface = HowWorksInfo;
 
   return (
     <div className="how-works-container font-lato">
-      <h2 className="tittle-text">{howWorksData.tittle}</h2>
+      <h2 className="title-text">{howWorksData.tittle}</h2>
       <div className="progress-how-works-container mx-auto my-4">
         <div className="how-works-progress-bar"></div>
       </div>
