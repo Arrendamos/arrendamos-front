@@ -126,7 +126,7 @@ export function CarouselPorpertiesCommon(
             alt="Home"
             style={{ display: isProperty ? "block" : "none" }}
           />
-          <h1 className="tittle-text font-lato mx-4 my-2 inline">{tittle}</h1>
+          <h1 className="title-text font-lato mx-4 my-2 inline">{tittle}</h1>
         </div>
         <div className="arrow-container flex relative float-right top-5 gap-4 mx-4">
           <div
@@ -136,7 +136,7 @@ export function CarouselPorpertiesCommon(
             <AiOutlineLeft />
           </div>
           <div
-            className="arrow-right text-white text-4xl bg-greenCyan hover:bg-greenCyanHover cursor-pointer"
+            className="arrow-right text-white text-4xl bg-primaryColor hover:bg-primaryColorHover cursor-pointer"
             onClick={_next}
           >
             <AiOutlineRight />
@@ -157,7 +157,7 @@ export function CarouselPorpertiesCommon(
           </Slider>
         </div>
       </div>
-      <div className="relative text-greenCyan font-lato float-right hover:text-greenCyanHover mr-8">
+      <div className="relative text-primaryColor font-lato float-right hover:text-primaryColorHover mr-8">
         <a href="/property" style={{ fontSize: 16, opacity: 0.8 }}>
           Ver más +
         </a>

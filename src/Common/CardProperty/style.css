@@ -30,18 +30,28 @@
     border-radius: 10px;
 }
 
+.info-property {
+    flex-wrap: wrap;
+}
+
+.info-property div {
+    flex: inherit;
+}
+
 .info-property p {
     display: inline-block;
+    max-width: 75vw;
     font-size: 14px;
 }
 
 .dot {
+    vertical-align: top;
     height: 5px;
     width: 5px;
-    background-color: #009B72;
+    background-color: #009DDC;
     border-radius: 50%;
     display: inline-block;
-    margin: 0px 0.5rem 0.3rem;
+    margin: 0.7rem 0.5rem 0.3rem;
 }
 
 .icons-card-property {
@@ -59,7 +69,7 @@
 
 @media screen and (max-width:1200px) {
     .card-property {
-        width: fit-content;
+        width: 95vw;
         margin: 0.5rem 0.5rem;
     }
 
@@ -70,12 +80,11 @@
     }
 
     .info-property p {
-        display: inline-block;
         font-size: 12px;
     }
 
     .dot {
-        margin: 0px 0.3rem 0.1rem;
+        margin: 0.7rem 0.3rem 0.1rem;
     }
 
 }
@@ -87,13 +96,13 @@
 
     .info-property p {
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 400;
     }
 
     .dot {
         width: 6px;
         height: 6px;
-        margin: 0px 0.5rem 0.2rem;
+        margin: 0.75rem 0.5rem 0.2rem;
     }
 }
 

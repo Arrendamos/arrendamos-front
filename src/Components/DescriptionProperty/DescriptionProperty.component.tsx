@@ -83,7 +83,7 @@ export function DescriptionPropertyComponent(
     <>
       <div className="single-description-property p-4 px-8 font-lato">
         <h2 className="tittle-type"> {property.type}</h2>
-        <p className="price-description text-greenCyan">
+        <p className="price-description text-primaryColor">
           <PriceStyle number={property.price} />
         </p>
         <div className="flex mt-2">

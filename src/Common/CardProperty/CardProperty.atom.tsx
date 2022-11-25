@@ -23,7 +23,7 @@ export function CardPropertyAtom(props: CardPropertyProps): JSX.Element {
   useEffect(() => {
     if (card.image) {
       setTimeout(() => {
-        setImage(card.image);
+        setImage(card.image as string);
       }, 1000);
     }
   }, [card]);
@@ -45,8 +45,8 @@ export function CardPropertyAtom(props: CardPropertyProps): JSX.Element {
       )}
       <div className="box-info-property font-lato">
         <div className="flex justify-between">
-          <p className="name-property text-greenCyan">{card.name}</p>
-          <div className="icons-card-property text-greenCyan mt-4 mr-2">
+          <p className="name-property text-primaryColor">{card.name}</p>
+          <div className="icons-card-property text-primaryColor mt-4 mr-2">
             <div className="circle">
               <BsShareFill />
             </div>
@@ -55,33 +55,46 @@ export function CardPropertyAtom(props: CardPropertyProps): JSX.Element {
             </div>
           </div>
         </div>
-        {card.price > 0 ? (
-          <p className="price-property text-greenCyan">
-            $
-            <IntlProvider locale="es">
-              <FormattedNumber
-                value={card.price}
-                // eslint-disable-next-line react/style-prop-object
-                style="decimal"
-                minimumFractionDigits={0}
-              />
-            </IntlProvider>
-          </p>
+        {card.price ? (
+          card.price > 0 ? (
+            <p className="price-property text-primaryColor">
+              $
+              <IntlProvider locale="es">
+                <FormattedNumber
+                  value={card.price}
+                  // eslint-disable-next-line react/style-prop-object
+                  style="decimal"
+                  minimumFractionDigits={0}
+                />
+              </IntlProvider>
+            </p>
+          ) : null
         ) : null}
-        <div className="grid grid-rows-2 px-4 pb-0 simple-text info-property">
+        <div className="flex px-6 pb-0 simple-text info-property">
           <div>
+            <p>{card.city}</p>
+          </div>
+          <div>
+            <span className="dot"></span>
             <p>
               {card.area} m<sup>2</sup>
             </p>
-            <span className="dot"></span>
-            <p>{card.bathroom} Baños</p>
-            <span className="dot"></span>
-            <p>{card.parking} Parqueaderos</p>
           </div>
+          {card.bathroom ? (
+            <div>
+              <span className="dot"></span>
+              <p>{card.bathroom} Baños</p>
+            </div>
+          ) : null}
+          {card.parking ? (
+            <div>
+              <span className="dot"></span>
+              <p>{card.parking} Parqueaderos</p>
+            </div>
+          ) : null}
           <div>
-            <p>{card.neighborhood}</p>
             <span className="dot"></span>
-            <p>{card.city}</p>
+            <p>{card.neighborhood}</p>
           </div>
         </div>
       </div>
