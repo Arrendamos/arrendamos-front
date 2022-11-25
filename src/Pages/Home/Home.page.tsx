@@ -10,11 +10,8 @@ import {
   Footer,
 } from "../../Components";
 
-import { _openLink } from "../../Utils/functions/common.functions";
-
 import QR from "../../Assets/Qr.png";
 import LaptopnBuilding from "../../Assets/LaptopnBuilding.png";
-import Ribera from "../../Assets/Images/Ribera.png";
 
 import "./style.css";
 
