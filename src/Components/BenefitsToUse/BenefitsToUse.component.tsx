@@ -1,31 +1,34 @@
+import { SimpleTitleParagraph } from "../../Interfaces";
 import {
-  BenefitsData,
-  SimpleTitleParagraph,
-  BenefitsItems,
-} from "../../Interfaces";
-import { BenefitInfo } from "../../Utils/Data/Benefits";
+  BenefitsItemsInterface,
+  BenefitInfo,
+  BenefitsDataInterface,
+} from "../../Utils/Data/Benefits";
 
 import "./style.css";
 
 export function BenefitsToUseComponent(): JSX.Element {
-  const benefitsData: BenefitsData = BenefitInfo;
+  const benefitsData: BenefitsDataInterface = BenefitInfo;
   const data: SimpleTitleParagraph = benefitsData.data;
+
   return (
     <div className="container-benefits my-4 p-4 font-lato">
-      <h1 className="tittle-text text-center">{data.tittle}</h1>
+      <h1 className="title-text text-center">{data.title}</h1>
       <h3 className="simple-text text-center w-3/4 mx-auto">
-        {data.subTittle}
+        {data.paragraph}
       </h3>
       <div className="benefits-items-container grid grid-rows-2 grid-cols-2 gap-16 p-8">
-        {benefitsData.benefits.map((benefit: BenefitsItems, index: number) => {
-          return <BenefitItem key={index} {...benefit} />;
-        })}
+        {benefitsData.benefits.map(
+          (benefit: BenefitsItemsInterface, index: number) => {
+            return <BenefitItem key={index} {...benefit} />;
+          }
+        )}
       </div>
     </div>
   );
 }
 
-function BenefitItem(props: BenefitsItems): JSX.Element {
+function BenefitItem(props: BenefitsItemsInterface): JSX.Element {
   const img = require(`../../Assets/Icons/Benefits/${props.icon}.svg`);
   const backImg = require(`../../Assets/Icons/Benefits/BenefitImage/${props.image}.svg`);
   return (

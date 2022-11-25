@@ -4,6 +4,7 @@ export { Filters };
 
 export { NavBarComponent as NavBar } from "./NavBar/NavBar.component";
 export { HeaderComponent as Header } from "./Header/Header.component";
+export { CustomYouExperienceComponent as CustomYouExperience } from "./CustomYourExperience/CustomYourExperience.component";
 export { HowWorksComponent as HowWorks } from "./HowWorks/HowWorks.component";
 export { OportunitiesComponent as Oportunities } from "./Oportunities/Oportunities.component";
 export { FeaturedPropertyComponent as FeaturedProperty } from "./FeaturedProperty/FeatureProperty.component";

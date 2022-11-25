@@ -5,7 +5,7 @@
     padding-bottom: 5rem;
 }
 
-.how-works-container .tittle-text {
+.how-works-container .title-text {
     font-size: 28px;
     margin: 0.5rem 0.5rem;
 }
@@ -70,7 +70,7 @@
         height: max-content;
     }
 
-    .how-works-container .tittle-text {
+    .how-works-container .title-text {
         font-size: 24px;
         height: 5vh;
     }
@@ -82,7 +82,7 @@
         padding: 0.5rem 1rem 3rem;
     }
 
-    .how-works-container .tittle-text {
+    .how-works-container .title-text {
         font-size: 24px;
         margin: 0rem 0rem 2.3rem 0.3rem;
         line-height: 28px;

@@ -1,0 +1,105 @@
+.container-custom-your-experience {
+    background-color: #EDF8FD;
+}
+
+.container-custom-your-experience h1 {
+    font-size: 40px;
+    line-height: 54px;
+}
+
+.container-custom-your-experience p {
+    margin-top: 1rem;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.custom-experience-item-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem 0.5rem;
+}
+
+.custom-experience-item {
+    border-radius: 20px;
+    height: 16vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title-blur-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 11vh;
+    margin: auto;
+    padding: 0.2rem 0.5rem;
+    width: 95%;
+    background: rgba(195, 195, 195, 0.6);
+    backdrop-filter: blur(1.5px);
+    border-radius: 20px;
+}
+
+.title-blur-container h2 {
+    font-size: 15px;
+    margin-bottom: 0.1rem;
+    color: white;
+    font-weight: 600;
+}
+
+.span-arrow-right {
+    display: block;
+    margin: 0 0.3rem;
+    margin-top: 0.1rem;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotate(135deg);
+}
+
+.span-arrow-right::after {
+    content: "";
+    display: block;
+    width: 1.5px;
+    height: 16px;
+    background-color: white;
+    transform: rotate(-45deg) translate(5px, 0px);
+    left: 0;
+    top: 0;
+}
+
+@media screen and (max-width: 550px) {
+    .container-custom-your-experience h1 {
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+
+    .container-custom-your-experience p {
+        font-size: 18px;
+    }
+
+    .title-blur-container h2 {
+        font-size: 16px;
+        color: white;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .custom-experience-item-container {
+        padding: 1rem 0rem;
+        grid-gap: 0.3rem;
+    }
+
+    .title-blur-container {
+        padding: 0.2rem 0.35rem;
+    }
+
+    .title-blur-container h2 {
+        font-size: 14px;
+    }
+}
