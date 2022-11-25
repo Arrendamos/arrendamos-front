@@ -50,7 +50,7 @@ export function PropertiesComponent(): JSX.Element {
         <h2 className="title-text">Inmuebles</h2>
       </div>
       <FilterTypeProperty />
-      <div className="progress-static-container mx-auto my-4">
+      <div className="progress-static-container">
         <div className="progress-static-bar"></div>
       </div>
       <div className="property-grid-container">

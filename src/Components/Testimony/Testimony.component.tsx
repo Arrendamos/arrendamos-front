@@ -39,9 +39,9 @@ export function TestimonyComponent(): JSX.Element {
   };
 
   return (
-    <div className="testimonies-container mt-4 p-4 font-lato">
+    <div className="container-testimonies p-4 pt-12 font-lato">
       <h1 className="title-text">{infoPage.title}</h1>
-      <div className="progress-static-container mx-auto my-4">
+      <div className="progress-static-container">
         <div className="progress-static-bar"></div>
       </div>
       <h3 className="simple-text text-center w-2/6 mx-auto">

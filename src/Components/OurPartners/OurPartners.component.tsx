@@ -26,9 +26,9 @@ export function OurPartnersComponent(): JSX.Element {
   };
 
   return (
-    <div className="parthners-container pt-8 p-4 font-lato">
+    <div className="container-parthners pt-8 p-4 font-lato">
       <h1 className="title-text text-left">{partnersData.title}</h1>
-      <div className="progress-static-container mx-auto my-4">
+      <div className="progress-static-container">
         <div className="progress-static-bar"></div>
       </div>
       {isDesktopOrLaptop ? (

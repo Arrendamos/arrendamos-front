@@ -1,4 +1,4 @@
-.testimonies-container {
+.container-testimonies {
     background-color: #EDF8FD;
 }
 
@@ -56,28 +56,24 @@
 }
 
 @media screen and (max-width: 550px) {
-    .testimonies-container {
-        padding-top: 0;
-        margin-top: 0;
-    }
 
-    .testimonies-container h1 {
+    .container-testimonies h1 {
         font-size: 1.6rem;
         line-height: 18px;
         margin-bottom: 0.5rem;
     }
 
-    .testimonies-container h3 {
+    .container-testimonies h3 {
         font-size: 1.2rem;
         line-height: 20px;
         width: 80%;
     }
 
-    .testimonies-container .slider-container {
+    .container-testimonies .slider-container {
         margin: 0 auto;
     }
 
-    .testimonies-container {
+    .container-testimonies {
         column-gap: 3vw;
     }
 
