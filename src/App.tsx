@@ -1,9 +1,13 @@
-import { Home, Property, SingleProperty } from "./Pages";
-import { CreateOportunity, CreateProperty } from "./Pages/User";
 import { Navigate, Outlet, Route, Routes } from "react-router-dom";
-import { userAuth, adminAuth } from "./Guards";
+
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+
+import { Home, Property, SingleProperty } from "./Pages";
+import { CreateOportunity, CreateProperty } from "./Pages/User";
+import { OportunityForm } from "./Pages/Forms";
+
+import { userAuth, adminAuth } from "./Guards";
 
 import "./App.css";
 
@@ -16,6 +20,9 @@ function App() {
         <Route path="/properties" element={<Property />} />
         <Route path="/single-property/:id" element={<SingleProperty />} />
         {/* <Route path="/single-oportunity/:id" element={<SingleOportunity />} /> */}
+        <Route path="/form">
+          <Route path="oportunity" element={<OportunityForm />} />
+        </Route>
         {/* <Route element={<ProtectedRoutes />}></Route>
         <Route element={<AdminProtectedRoutes />}>
           <Route path="/admin" element={<HomeAdmin />} />
