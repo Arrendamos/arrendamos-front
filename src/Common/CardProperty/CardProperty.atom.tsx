@@ -33,7 +33,7 @@ export function CardPropertyAtom(props: CardPropertyProps): JSX.Element {
   };
 
   return (
-    <div className="card-property my-4 mx-8 pb-2">
+    <div className="card-property pb-2">
       {image !== "" ? (
         <img
           src={card.image}
