@@ -12,8 +12,6 @@
 
 @media screen and (max-width: 550px) {
     .container-parthners h1 {
-        font-size: 1.6rem;
-        line-height: 28px;
         margin-bottom: 0.5rem;
     }
 
@@ -24,7 +22,7 @@
     }
 
     .partner-item img {
-        width: 20vw;
+        width: 4rem;
     }
 
     .container-parthners .slider-container {
@@ -35,7 +33,7 @@
         display: flex;
         vertical-align: middle;
         justify-content: center;
-        height: 15vh;
+        height: max-content;
     }
 
     .partner-item img:hover {

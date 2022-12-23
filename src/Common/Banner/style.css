@@ -49,6 +49,11 @@
     background-color: #cacaca;
 }
 
+.p-terms-condictions {
+    font-size: 12px;
+    margin: 0;
+}
+
 @media screen and (max-width: 550px) {
     .banner-container .btn-container {
         width: 60%;

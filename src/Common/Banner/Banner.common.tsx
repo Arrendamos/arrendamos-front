@@ -17,6 +17,7 @@ export function BannerCommon(props: BannerPropertyPropsI): JSX.Element {
       <div className="btn-container text-center">
         <button>{props.btnText}</button>
       </div>
+      <p className="p-terms-condictions">Aplican terminos y condiciones*</p>
     </div>
   );
 }

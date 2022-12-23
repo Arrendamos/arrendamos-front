@@ -88,6 +88,11 @@
         line-height: 22px;
     }
 
+    .p-terms-condictions {
+        font-size: 0.8rem !important;
+        line-height: 20px;
+    }
+
     .banner-container button {
         font-size: 0.9rem;
         padding: 0.5rem 0.2rem;
@@ -108,7 +113,6 @@
     }
 
     .banner-container p {
-        font-size: 0.9rem;
         line-height: 20px;
     }
 

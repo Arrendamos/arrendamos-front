@@ -1,11 +1,15 @@
 export type socialMediaInterface = {
-  icon: string;
+  icon: {
+    name: string;
+    library: string;
+  };
   network: string;
   url: string;
 };
 export interface ContactDataInterface {
   whatsappText: string;
   socialMedia: socialMediaInterface[];
+  infoFooter: string;
 }
 
 export const ContactInfo: ContactDataInterface = {
@@ -17,25 +21,35 @@ export const ContactInfo: ContactDataInterface = {
     //     'network': 'facebook',
     //     'url': 'https://www.facebook.com/'
     // },
-    // {
-    //     'icon': 'GrTwitter',
-    //     'network': 'twitter',
-    //     'url': 'https://www.twitter.com/'
-    // },
-    // {
-    //     'icon': 'GrLinkedinOption',
-    //     'network': 'linkedin',
-    //     'url': 'https://www.linkedin.com/'
-    // },
-    // {
-    //     'icon': 'GrInstagram',
-    //     'network': 'instagram',
-    //     'url': 'https://www.instagram.com/'
-    // },
     {
-      icon: "GrPhone",
-      network: "whatsapp",
-      url: "tel:+573118388696",
+      icon: {
+        name: "GrInstagram",
+        library: "gr",
+      },
+      network: "instagram",
+      url: "https://www.instagram.com/",
     },
+    {
+      icon: {
+        name: "GrLinkedinOption",
+        library: "gr",
+      },
+      network: "linkedin",
+      url: "https://www.linkedin.com/",
+    },
+    {
+      icon: {
+        name: "FaTiktok",
+        library: "fa",
+      },
+      network: "TikTok",
+      url: "https://www.twitter.com/",
+    },
+    // {
+    //   icon: "GrPhone",
+    //   network: "whatsapp",
+    //   url: "tel:+573118388696",
+    // },
   ],
+  infoFooter: "Encontramos el inmueble ideal para la expansión de tú empresa.",
 };
