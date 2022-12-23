@@ -15,19 +15,23 @@ export const PartnersInfo: PartnersDataInterface = {
   partners: [
     {
       icon: "1",
-      name: "Domino's Pizza",
+      name: "Service",
     },
     {
       icon: "2",
-      name: "PPC",
+      name: "Domino's Pizza",
     },
     {
       icon: "3",
-      name: "Audifarma",
+      name: "Creppes & Waffles",
     },
     {
       icon: "4",
-      name: "Kumon",
+      name: "D1",
+    },
+    {
+      icon: "5",
+      name: "InLash",
     },
   ],
 };

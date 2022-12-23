@@ -21,13 +21,13 @@ export function OurPartnersComponent(): JSX.Element {
     autoplay: true,
     autoplaySpeed: 5000,
     speed: 2000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 3,
   };
 
   return (
     <div className="container-parthners pt-8 p-4 font-lato">
-      <h1 className="title-text text-left">{partnersData.title}</h1>
+      <h1 className="title-text">{partnersData.title}</h1>
       <div className="progress-static-container">
         <div className="progress-static-bar"></div>
       </div>
